@@ -15,12 +15,12 @@ export const cvData = {
     { type: 'github', icon: Github, value: 'GitHub', href: 'https://github.com/JonathanPolezel', displayValue: 'github.com/JonathanPolezel' },
   ],
   skills: [
-    { name: 'Infraestrutura de Redes & Servidores', level: 95 },
+    { name: 'Infraestrutura de Redes & Servidores', level: 65 },
     { name: 'Suporte Técnico N1/N2 & Help Desk', level: 90 },
-    { name: 'DevOps & Cloud Computing', level: 75 },
+    { name: 'DevOps & Cloud Computing', level: 35 },
     { name: 'Hardware & Reparo Eletrônico', level: 98 },
-    { name: 'Sistemas ERP (TOTVS, GVDasa)', level: 85 },
-    { name: 'Segurança da Informação', level: 80 },
+    { name: 'Sistemas ERP (TOTVS, GVDasa)', level: 75 },
+    { name: 'Segurança da Informação', level: 50 },
   ],
   experience: [
     { role: 'Analista de Suporte de TI N2', company: 'Colégio Jean Piaget', period: 'Jan/2024 - Presente', tasks: ['Suporte técnico especializado (N2) e apoio a usuários.', 'Manutenção da infraestrutura de rede, servidores e equipamentos de rack.', 'Elaboração de laudos técnicos e documentação de sistemas.', 'Suporte ao sistema ERP GVDasa.'] },
