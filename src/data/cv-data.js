@@ -40,7 +40,7 @@ courses: [
       date: 'Mai de 2025',
       category: 'Infraestrutura',
       link: 'https://on.fiap.com.br/validar-certificado/', 
-      credentialId: '05e817d7c6d9fa2bbd4666842551511',
+      credentialId: '05e817d7c6d9fa2bbd466d6842551511',
       description: 'Governança de TI, gerenciamento de serviços (ITIL), segurança e planejamento estratégico de infraestrutura.'
     },
     {
