@@ -1,0 +1,191 @@
+// src/data/cv-data.js
+import { Mail, Phone, Linkedin, Github } from 'lucide-react';
+
+export const cvData = {
+  profile: {
+    name: 'Jonathan Souza Moyano',
+    title: 'Analista de Infraestrutura | Especialista em Suporte N2',
+    image: '/jonathan.jpeg',
+    summary: 'Profissional de TI com mais de 17 anos de experiência, combinando sólida base técnica com formação superior e Pós-Graduação em DevOps & Cloud na FIAP. Minha trajetória única, incluindo 4 anos de liderança como bombeiro civil, forjou uma capacidade ímpar de resolver problemas complexos e gerenciar crises com precisão e calma.',
+  },
+  contact: [
+    { type: 'email', icon: Mail, value: 'jonathan.moyano@outlook.com.br', href: 'mailto:jonathan.moyano@outlook.com.br' },
+    { type: 'phone', icon: Phone, value: '(13) 97412-4438', href: 'tel:+5513974124438' },
+    { type: 'linkedin', icon: Linkedin, value: 'LinkedIn', href: 'https://www.linkedin.com/in/jonathansouzamoyano/', displayValue: 'linkedin.com/in/jonathansouzamoyano' },
+    { type: 'github', icon: Github, value: 'GitHub', href: 'https://github.com/JonathanPolezel', displayValue: 'github.com/JonathanPolezel' },
+  ],
+  skills: [
+    { name: 'Infraestrutura de Redes & Servidores', level: 95 },
+    { name: 'Suporte Técnico N1/N2 & Help Desk', level: 90 },
+    { name: 'DevOps & Cloud Computing', level: 75 },
+    { name: 'Hardware & Reparo Eletrônico', level: 98 },
+    { name: 'Sistemas ERP (TOTVS, GVDasa)', level: 85 },
+    { name: 'Segurança da Informação', level: 80 },
+  ],
+  experience: [
+    { role: 'Analista de Suporte de TI N2', company: 'Colégio Jean Piaget', period: 'Jan/2024 - Presente', tasks: ['Suporte técnico especializado (N2) e apoio a usuários.', 'Manutenção da infraestrutura de rede, servidores e equipamentos de rack.', 'Elaboração de laudos técnicos e documentação de sistemas.', 'Suporte ao sistema ERP GVDasa.'] },
+    { role: 'Assistente de Suporte de TI', company: 'Colégio Jean Piaget', period: 'Out/2023 - Jan/2024', tasks: ['Manutenção preventiva e corretiva de computadores, Chromebooks e notebooks.', 'Suporte em Help Desk para toda a comunidade acadêmica.', 'Análise e modernização do sistema de CFTV.'] },
+    { role: 'Estágio de Suporte de TI', company: 'Colégio da Polícia Militar - Cruz Azul SP', period: 'Out/2022 - Out/2023', tasks: ['Suporte ao Sistema ERP TOTVS (RM e RM Saúde).', 'Gerenciamento de contas e permissões no Active Directory.', 'Manutenção preventiva no servidor local e sistemas de monitoramento.'] },
+    { role: 'Técnico de Hardware (Autônomo)', company: 'Device Now', period: 'Jan/2010 - Out/2023', tasks: ['Diagnóstico e reparo avançado em placas eletrônicas.', 'Instalação e configuração de sistemas operacionais e software.', 'Recuperação de dados e remoção de vírus.'] },
+    { role: 'Bombeiro Civil (Líder)', company: 'Bracell, Grupo Mendes, Santos FC, etc.', period: 'Aprox. 4 anos (2018 - 2022)', tasks: ['Liderança e coordenação de equipes de resposta a emergências.', 'Implementação de protocolos de segurança.', 'Desenvolvimento de habilidades em gestão de crises e tomada de decisão sob pressão.'] },
+  ],
+  education: [
+    { degree: 'Pós-Graduação em DevOps & Arquitetura Cloud', institution: 'FIAP', status: 'Cursando' },
+    { degree: 'Análise e Desenvolvimento de Sistemas', institution: 'UNIBR', status: 'Concluído' },
+  ],
+courses: [
+    {
+      title: 'Gestão de Infraestrutura de TI',
+      institution: 'FIAP',
+      date: 'Mai de 2025',
+      category: 'Infraestrutura',
+      link: 'https://on.fiap.com.br/validar-certificado/', 
+      credentialId: '05e817d7c6d9fa2bbd4666842551511',
+      description: 'Governança de TI, gerenciamento de serviços (ITIL), segurança e planejamento estratégico de infraestrutura.'
+    },
+    {
+      title: 'Introdução ao Desenvolvimento Moderno de Software',
+      institution: 'DIO',
+      date: 'Jun de 2024',
+      category: 'Desenvolvimento',
+      link: '#',
+      credentialId: null,
+      description: 'Fundamentos sobre ciclos de vida de software, metodologias ágeis e ferramentas de desenvolvimento modernas.'
+    },
+    {
+      title: 'GKE: Backups Inteligente na Google Cloud Platform',
+      institution: 'DIO',
+      date: 'Abr de 2024',
+      category: 'Cloud',
+      link: '#',
+      credentialId: '9F6X8V9L',
+      description: 'Curso focado em estratégias e ferramentas para a realização de backups inteligentes de aplicações no Google Kubernetes Engine (GKE).'
+    },
+    {
+      title: 'Microsoft Azure Data Fundamentals (DP-900)',
+      institution: 'Ka Solution',
+      date: 'Abr de 2024',
+      category: 'Cloud',
+      link: 'https://www.kasolution.com.br/certificado',
+      credentialId: '06352-71737',
+      description: 'Preparatório para a certificação DP-900, cobrindo os conceitos fundamentais de dados no Microsoft Azure.'
+    },
+    {
+      title: 'Google Cloud Fundamentals: Core Infrastructure',
+      institution: 'Coursera',
+      date: 'Jan de 2024',
+      category: 'Cloud',
+      link: 'https://coursera.org/verify/62QPF65UCG7N',
+      credentialId: '62QPF65UCG7N',
+      description: 'Treinamento oficial do Google sobre a infraestrutura da GCP, incluindo Compute Engine, Cloud Storage, VPC e IAM.'
+    },
+    {
+      title: 'ChatGPT para Python',
+      institution: 'Udemy',
+      date: 'Ago de 2023',
+      category: 'Dados & IA',
+      link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-6e403c81-1e3e-48bd-bd68-dd93ee21a808.pdf',
+      credentialId: 'UC-6c403c81-1e3e-48bd-bd68-dd93ee21a808',
+      description: 'Desenvolvimento de aplicações e scripts Python integrados com a API do ChatGPT para automação e geração de conteúdo.'
+    },
+    {
+      title: 'IT Service Managent: Gestão de serviços de TI (ITSM/GSTI)',
+      institution: 'Udemy',
+      date: 'Ago de 2023',
+      category: 'Infraestrutura',
+      link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-57bb2a19-6d12-4769-9650-3d3c5b705990.pdf',
+      credentialId: 'UC-57bb2a19-6d12-4769-9650-3d3c5b705990',
+      description: 'Fundamentos do gerenciamento de serviços de TI, baseado nas melhores práticas do framework ITIL.'
+    },
+    {
+      title: 'Microsoft Office Excel - Avançado',
+      institution: 'Udemy',
+      date: 'Ago de 2023',
+      category: 'Software',
+      link: 'https://www.udemy.com/certificate/UC-273c6319-d2f8-40e2-bccc-f2ff84e01c86/',
+      credentialId: 'UC-273c6319-d2f8-40e2-bccc-f2ff84e01c86',
+      description: 'Domínio de funções avançadas, tabelas dinâmicas, macros e análise de dados com Microsoft Excel.'
+    },
+    {
+      title: 'Banco de Dados SQL do Zero ao Avançado',
+      institution: 'Udemy',
+      date: 'Jul de 2023',
+      category: 'Desenvolvimento',
+      link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-67b75454-9a0d-4396-b9cc-ea5daf4e194f.pdf',
+      credentialId: 'UC-67b75454-9a0d-4396-b9cc-ea5daf4e194f',
+      description: 'Formação completa em SQL, desde consultas básicas até tópicos avançados de modelagem e otimização de banco de dados.'
+    },
+    {
+      title: 'Programação Python do Zero ao Avançado',
+      institution: 'Udemy',
+      date: 'Jul de 2023',
+      category: 'Desenvolvimento',
+      link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-0b2a2c15-17e1-4ca6-b35c-61280139c1b2.jpg',
+      credentialId: 'UC-00b2a2c15-17e1-4ca6-b35c-61280139c1b2',
+      description: 'Formação completa em Python, desde a sintaxe básica até estruturas de dados, orientação a objetos e principais bibliotecas.'
+    },
+    {
+      title: 'Banco de dados Oracle SQL - Especialista',
+      institution: 'Udemy',
+      date: 'Jun de 2023',
+      category: 'Desenvolvimento',
+      link: 'https://www.udemy.com/certificate/UC-18124ac0-3ff8-4717-b29d-1866da745d6e/',
+      credentialId: 'UC-18124ac0-3ff8-4717-b29d-1666da745d6e',
+      description: 'Aprofundamento na linguagem SQL específica para Oracle Database, com foco em recursos de especialista.'
+    },
+    {
+      title: 'Google Cloud Associate Engineer (GCP)',
+      institution: 'Udemy',
+      date: 'Jun de 2023',
+      category: 'Cloud',
+      link: 'https://www.udemy.com/certificate/UC-80a79a81-49a3-408f-bf76-8d95876cd234/',
+      credentialId: 'UC-80a79a81-49a3-408f-bf76-8d95876cd234',
+      description: 'Curso preparatório abrangente para a certificação GCP Associate Cloud Engineer, cobrindo todos os domínios do exame.'
+    },
+    {
+      title: 'Introdução à Ciência de Dados 3.0',
+      institution: 'Data Science Academy',
+      date: 'Jun de 2023',
+      category: 'Dados & IA',
+      link: 'https://mycourse.app/ZLyNnxzzSXuqBShE7',
+      credentialId: '64959a5d8b4880becf06818c',
+      description: 'Fundamentos de Data Science, Big Data, e os primeiros passos na análise de dados com Python e R.'
+    },
+    {
+      title: 'AWS Amazon Cloud Computing - Iniciante',
+      institution: 'Udemy',
+      date: 'Mai de 2023',
+      category: 'Cloud',
+      link: 'https://www.udemy.com/certificate/UC-01edbfeb-7c04-4506-bcd0-013fa2c4b8ef/',
+      credentialId: 'UC-01edbfeb-7c04-4506-bcd0-013fa2c4b8ef',
+      description: 'Introdução à plataforma AWS, seus principais serviços (EC2, S3, RDS) e fundamentos de arquitetura na nuvem.'
+    },
+    {
+      title: 'CC50: Introdução à Ciência da Computação - Harvard',
+      institution: 'Fundação Estudar',
+      date: 'Jan de 2023',
+      category: 'Desenvolvimento',
+      link: '',
+      credentialId: null,
+      description: 'Versão brasileira do renomado curso de Harvard (CS50), cobrindo os pilares da ciência da computação, de C a Python.'
+    },
+    {
+      title: 'Algoritmos e Lógica de Programação',
+      institution: 'Udemy',
+      date: 'Set de 2022',
+      category: 'Desenvolvimento',
+      link: 'https://www.udemy.com/certificate/UC-3f49dd51-4a52-4a10-9274-08be6e811528/',
+      credentialId: 'UC-3f49dd51-4a52-4a10-9274-08be6e811528',
+      description: 'Base sólida em lógica de programação e algoritmos, essencial para o desenvolvimento de qualquer software.'
+    },
+    {
+      title: 'Reparo Avançado em Placas e Circuito Eletrônico',
+      institution: 'MasterNet Cursos',
+      date: 'Fev de 2021',
+      category: 'Hardware',
+      link: '',
+      credentialId: null,
+      description: 'Técnicas avançadas de diagnóstico e reparo de componentes eletrônicos em placas-mãe e outros circuitos.'
+    },
+  ]
+};
