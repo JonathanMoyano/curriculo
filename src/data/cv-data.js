@@ -34,6 +34,15 @@ export const cvData = {
     { degree: 'Análise e Desenvolvimento de Sistemas', institution: 'UNIBR', status: 'Concluído' },
   ],
 courses: [
+{
+  title: "Linux Fundamentos",
+  institution: "FIAP - Centro Universitário",
+  date: "Jul de 2025",
+  category: "Sistemas Operacionais",
+  link: "https://on.fiap.com.br/local/nanocourses/validar-certificado",
+  credentialId: "76c24889e60c25ace21a3b5f7b4819a8",
+  description: "Curso abordando os fundamentos do sistema operacional Linux, incluindo comandos básicos, gerenciamento de arquivos e diretórios, processos, usuários e sistemas de arquivos."
+},
         {
       title: 'Redes: dos conceitos iniciais à criação de uma intranet',
       institution: 'Alura',
@@ -54,7 +63,7 @@ courses: [
     },
     {
       title: 'Gestão de Infraestrutura de TI',
-      institution: 'FIAP',
+      institution: 'FIAP - Centro Universitário',
       date: 'Mai de 2025',
       category: 'Infraestrutura',
       link: 'https://on.fiap.com.br/validar-certificado/', 
