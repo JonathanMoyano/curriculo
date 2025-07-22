@@ -15,7 +15,7 @@ export const cvData = {
     { type: 'github', icon: Github, value: 'GitHub', href: 'https://github.com/JonathanPolezel', displayValue: 'github.com/JonathanPolezel' },
   ],
   skills: [
-    { name: 'Infraestrutura de Redes & Servidores', level: 65 },
+    { name: 'Infraestrutura de Redes & Servidores', level: 70 },
     { name: 'Suporte Técnico N1/N2 & Help Desk', level: 90 },
     { name: 'DevOps & Cloud Computing', level: 35 },
     { name: 'Hardware & Reparo Eletrônico', level: 98 },
@@ -34,13 +34,31 @@ export const cvData = {
     { degree: 'Análise e Desenvolvimento de Sistemas', institution: 'UNIBR', status: 'Concluído' },
   ],
 courses: [
+        {
+      title: 'Redes: dos conceitos iniciais à criação de uma intranet',
+      institution: 'Alura',
+      date: 'Jul de 2025',
+      category: 'Redes',
+      link: 'https://cursos.alura.com.br/formalCertificate/c946c1d3-80ac-4854-ae33-3c9f719774d2', 
+      credentialId: 'c946c1d3-80ac-4854-ae33-3c9f719774d2',
+      description: 'Fundamentos de redes (protocolos e camadas), endereçamento IP, configuração de switches e roteadores, monitoramento de tráfego e implementação de intranets.'
+    },
+      {
+      title: 'Redes: Construindo um projeto com Vlans, politicas de acesso e conexão com internet',
+      institution: 'Alura',
+      date: 'Jul de 2025',
+      category: 'Redes',
+      link: 'https://cursos.alura.com.br/formalCertificate/d3966b25-9254-49aa-b978-5c1b3cb89424', 
+      credentialId: '05e817d7c6d9fa2bbd466d6842551511',
+      description: 'Arquitetura de redes locais, implementação de VLANs, configuração de roteadores e switches, políticas de acesso (ACLs) e conexão à internet (NAT).'
+    },
     {
       title: 'Gestão de Infraestrutura de TI',
       institution: 'FIAP',
       date: 'Mai de 2025',
       category: 'Infraestrutura',
       link: 'https://on.fiap.com.br/validar-certificado/', 
-      credentialId: '05e817d7c6d9fa2bbd466d6842551511',
+      credentialId: 'd3966b25-9254-49aa-b978-5c1b3cb89424',
       description: 'Governança de TI, gerenciamento de serviços (ITIL), segurança e planejamento estratégico de infraestrutura.'
     },
     {

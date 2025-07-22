@@ -27,11 +27,9 @@ const PrintPage = () => {
               Imprimir / Salvar como PDF
             </button>
             
-            {/* Cabeçalho */}
             <section className="text-center border-b-2 border-gray-200 pb-4 mb-6">
               <h1 className="text-4xl font-bold text-gray-900">{cvData.profile.name}</h1>
               <h2 className="text-lg text-blue-800 font-semibold">{cvData.profile.title}</h2>
-              {/* --- MUDANÇA AQUI --- */}
               <div className="flex justify-center flex-wrap gap-x-3 gap-y-1 text-sm text-gray-600 mt-2">
                 <a href={cvData.contact.find(c => c.type === 'email').href}>
                   {cvData.contact.find(c => c.type === 'email').value}
@@ -39,19 +37,16 @@ const PrintPage = () => {
                 <span>•</span>
                 <span>{cvData.contact.find(c => c.type === 'phone').value}</span>
                 <span>•</span>
-                {/* Agora exibe o URL amigável em vez do texto "LinkedIn" */}
                 <a href={cvData.contact.find(c => c.type === 'linkedin').href} target="_blank" rel="noopener noreferrer">
                   {cvData.contact.find(c => c.type === 'linkedin').displayValue}
                 </a>
                 <span>•</span>
-                {/* Agora exibe o URL amigável em vez do texto "GitHub" */}
                  <a href={cvData.contact.find(c => c.type === 'github').href} target="_blank" rel="noopener noreferrer">
                   {cvData.contact.find(c => c.type === 'github').displayValue}
                  </a>
               </div>
             </section>
 
-            {/* O resto do seu currículo continua aqui... */}
             <section className="mb-6">
               <h3 className="text-xl font-bold text-blue-900 border-b-2 border-gray-300 pb-1 mb-2">Resumo Profissional</h3>
               <p className="text-gray-700 leading-relaxed text-justify">{cvData.profile.summary}</p>
