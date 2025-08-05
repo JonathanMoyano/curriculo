@@ -9,7 +9,7 @@ export const cvData = {
     summary: 'Profissional de TI com mais de 17 anos de experiência, combinando sólida base técnica com formação superior e Pós-Graduação em DevOps & Cloud na FIAP. Minha trajetória única, incluindo 4 anos de liderança como bombeiro civil, forjou uma capacidade ímpar de resolver problemas complexos e gerenciar crises com precisão e calma.',
   },
   contact: [
-    { type: 'email', icon: Mail, value: 'jonathan.moyano@outlook.com.br', href: 'mailto:jonathan.moyano@outlook.com.br' },
+    { type: 'email', icon: Mail, value: 'Jonathan Souza Moyano', href: 'mailto:contato@jonathanmoyano.com.br' },
     { type: 'phone', icon: Phone, value: '(13) 97412-4438', href: 'tel:+5513974124438' },
     { type: 'linkedin', icon: Linkedin, value: 'LinkedIn', href: 'https://www.linkedin.com/in/jonathansouzamoyano/', displayValue: 'linkedin.com/in/jonathansouzamoyano' },
     { type: 'github', icon: Github, value: 'GitHub', href: 'https://github.com/JonathanPolezel', displayValue: 'github.com/JonathanPolezel' },
