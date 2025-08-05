@@ -12,7 +12,7 @@ export const cvData = {
     { type: 'email', icon: Mail, value: 'contato@jonathanmoyano.com.br', href: 'mailto:contato@jonathanmoyano.com.br' },
     { type: 'phone', icon: Phone, value: '(13) 97412-4438', href: 'tel:+5513974124438' },
     { type: 'linkedin', icon: Linkedin, value: 'LinkedIn', href: 'https://www.linkedin.com/in/jonathansouzamoyano/', displayValue: 'linkedin.com/in/jonathansouzamoyano' },
-    { type: 'github', icon: Github, value: 'GitHub', href: 'https://github.com/JonathanPolezel', displayValue: 'github.com/JonathanPolezel' },
+    { type: 'github', icon: Github, value: 'GitHub', href: 'https://github.com/JonathanMoyano', displayValue: 'github.com/JonathanMoyano' },
   ],
   skills: [
     { name: 'Infraestrutura de Redes & Servidores', level: 70 },
