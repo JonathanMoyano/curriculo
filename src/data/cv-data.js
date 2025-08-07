@@ -30,7 +30,7 @@ export const cvData = {
     { role: 'Bombeiro Civil (Líder)', company: 'Bracell, Grupo Mendes, Santos FC, etc.', period: 'Aprox. 4 anos (2018 - 2022)', tasks: ['Liderança e coordenação de equipes de resposta a emergências.', 'Implementação de protocolos de segurança.', 'Desenvolvimento de habilidades em gestão de crises e tomada de decisão sob pressão.'] },
   ],
   education: [
-    { degree: 'Pós-Graduação em DevOps & Arquitetura Cloud', institution: 'FIAP', status: 'Cursando' },
+    //{ degree: 'Pós-Graduação em DevOps & Arquitetura Cloud', institution: 'FIAP', status: 'Cursando' },
     { degree: 'Análise e Desenvolvimento de Sistemas', institution: 'UNIBR', status: 'Concluído' },
   ],
 courses: [
