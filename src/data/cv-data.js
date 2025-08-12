@@ -6,7 +6,7 @@ export const cvData = {
     name: 'Jonathan Souza Moyano',
     title: 'Analista de Infraestrutura | Especialista em Suporte N2',
     image: '/jonathan.jpeg',
-    summary: 'Profissional de TI com mais de 17 anos de experiência, combinando sólida base técnica com formação superior e Pós-Graduação em DevOps & Cloud na FIAP. Minha trajetória única, incluindo 4 anos de liderança como bombeiro civil, forjou uma capacidade ímpar de resolver problemas complexos e gerenciar crises com precisão e calma.',
+    summary: 'Profissional de TI com mais de 17 anos de experiência, combinando sólida base técnica com formação superior. Minha trajetória única, incluindo 4 anos de liderança como bombeiro civil, forjou uma capacidade ímpar de resolver problemas complexos e gerenciar crises com precisão e calma.',
   },
   contact: [
     { type: 'email', icon: Mail, value: 'contato@jonathanmoyano.com.br', href: 'mailto:contato@jonathanmoyano.com.br' },
