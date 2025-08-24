@@ -36,6 +36,24 @@ export const cvData = {
     { degree: 'Análise e Desenvolvimento de Sistemas', institution: 'UNIBR', status: 'Concluído' },
   ],
 courses: [
+  {
+  title: "Redes: implementando roteamento, DNS e IPv6",
+  institution: "Alura",
+  date: "Ago de 2025",
+  category: "Redes",
+  link: "https://cursos.alura.com.br/certificate/5e759859-8187-453f-9e8a-45293f900588",
+  credentialId: "5e759859-8187-453f-9e8a-45293f900588",
+  description: "Curso abordando os tópicos de redes, incluindo roteamento interno e externo, sistemas de nomes de domínio (DNS), a nova versão do protocolo IP (IPv6) e as diferenças entre IPv6 e IPv4."
+},
+{
+  title: "Redes Wi-Fi: Criando uma Rede Sem Fio de Modo Seguro",
+  institution: "Alura",
+  date: "Ago de 2025",
+  category: "Redes",
+  link: "https://cursos.alura.com.br/certificate/23f03b42-4b62-4578-b08a-ed3a8ae3cdb3",
+  credentialId: "23f03b42-4b62-4578-b08a-ed3a8ae3cdb3",
+  description: "Curso que aborda os conceitos para a criação e configuração de uma rede sem fio (Wi-Fi), com foco em estabelecer uma conexão de modo seguro."
+},
 {
   title: "Linux Fundamentos",
   institution: "FIAP - Centro Universitário",
