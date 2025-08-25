@@ -16,11 +16,13 @@ export const cvData = {
   ],
   skills: [
     { name: 'Infraestrutura de Redes & Servidores', level: 70 },
-    { name: 'Suporte Técnico N1/N2 & Help Desk', level: 90 },
+    { name: 'Suporte Técnico N1/N2 & Help Desk', level: 95 },
     { name: 'DevOps & Cloud Computing', level: 35 },
     { name: 'Hardware & Reparo Eletrônico', level: 98 },
     { name: 'Sistemas ERP (TOTVS, GVDasa)', level: 75 },
-    { name: 'Segurança da Informação', level: 50 },
+    { name: 'Linux', level: 30 },
+    { name: 'Windows', level: 90 },
+    
   ],
   experience: [
     { role: 'Analista de Infraestrutura & Suporte de TI N2', company: 'Colégio Jean Piaget', period: 'Jan/2024 - Presente', tasks: ['Suporte técnico especializado (N2) e apoio a usuários.', 'Manutenção da infraestrutura de rede, servidores e equipamentos de rack.', 'Elaboração de laudos técnicos e documentação de sistemas.','Realizar cadastro e gerenciamento de usuários no Active Directory, Google Admin, ClassApp, Matific e ERP.','Monitorar o sistema Zabbix, direcionando alertas aos responsáveis.','Suporte ao sistema ERP GVDasa.','Troca e passagem de cabeamento de rede.','Manutenção corretiva de qualquer equipamento eletronico que apresentar problemas.','Suporte em Help Desk para toda a comunidade acadêmica.','Organização dos equipamentos de TI.','Solicitação de compras para reposição de equipamentos de TI.','Instalação e manutenção do Hyper-V.',' Configuração do PFSense e configuração do Proxy Transparente com Squid e Squid Guard.'] },
