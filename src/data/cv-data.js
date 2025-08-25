@@ -44,7 +44,7 @@ courses: [
   "link": "https://cursos.alura.com.br/certificate/jonathan-moyano-48e0-438d-83b7-e16016c6defa",
   "credentialId": "jonathan-moyano-48e0-438d-83b7-e16016c6defa",
   "description": "Curso focado no gerenciamento de diretórios, arquivos, permissões de acesso e processos dentro do sistema operacional Linux."
-}
+},
   {
   title: "Redes: implementando roteamento, DNS e IPv6",
   institution: "Alura",
