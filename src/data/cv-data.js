@@ -37,42 +37,42 @@ export const cvData = {
   ],
 courses: [
 {
-  "title": "Linux: Gerenciando diretórios, arquivos, permissões e processos",
-  "institution": "Alura",
-  "date": "Ago de 2025",
-  "category": "Linux",
-  "link": "https://cursos.alura.com.br/certificate/jonathan-moyano-48e0-438d-83b7-e16016c6defa",
-  "credentialId": "jonathan-moyano-48e0-438d-83b7-e16016c6defa",
-  "description": "Curso focado no gerenciamento de diretórios, arquivos, permissões de acesso e processos dentro do sistema operacional Linux."
-},
-  {
-  title: "Redes: implementando roteamento, DNS e IPv6",
-  institution: "Alura",
-  date: "Ago de 2025",
-  category: "Redes",
-  link: "https://cursos.alura.com.br/certificate/5e759859-8187-453f-9e8a-45293f900588",
-  credentialId: "5e759859-8187-453f-9e8a-45293f900588",
-  description: "Curso abordando os tópicos de redes, incluindo roteamento interno e externo, sistemas de nomes de domínio (DNS), a nova versão do protocolo IP (IPv6) e as diferenças entre IPv6 e IPv4."
-},
-{
-  title: "Redes Wi-Fi: Criando uma Rede Sem Fio de Modo Seguro",
-  institution: "Alura",
-  date: "Ago de 2025",
-  category: "Redes",
-  link: "https://cursos.alura.com.br/certificate/23f03b42-4b62-4578-b08a-ed3a8ae3cdb3",
-  credentialId: "23f03b42-4b62-4578-b08a-ed3a8ae3cdb3",
-  description: "Curso que aborda os conceitos para a criação e configuração de uma rede sem fio (Wi-Fi), com foco em estabelecer uma conexão de modo seguro."
-},
-{
-  title: "Linux Fundamentos",
-  institution: "FIAP - Centro Universitário",
-  date: "Jul de 2025",
-  category: "Sistemas Operacionais",
-  link: "https://on.fiap.com.br/local/nanocourses/validar-certificado",
-  credentialId: "76c24889e60c25ace21a3b5f7b4819a8",
-  description: "Curso abordando os fundamentos do sistema operacional Linux, incluindo comandos básicos, gerenciamento de arquivos e diretórios, processos, usuários e sistemas de arquivos."
-},
-        {
+    title: "Linux: Gerenciando diretórios, arquivos, permissões e processos",
+    institution: "Alura",
+    date: "Ago de 2025",
+    category: "Linux",
+    link: "https://cursos.alura.com.br/certificate/jonathan-moyano-48e0-438d-83b7-e16016c6defa",
+    credentialId: "jonathan-moyano-48e0-438d-83b7-e16016c6defa",
+    description: "Curso focado no gerenciamento de diretórios, arquivos, permissões de acesso e processos dentro do sistema operacional Linux."
+    },
+    {                                                                                                                                            
+      title: "Linux Fundamentos",
+      institution: "FIAP - Centro Universitário",
+      date: "Jul de 2025",
+      category: "Sistemas Operacionais",
+      link: "https://on.fiap.com.br/local/nanocourses/validar-certificado",
+      credentialId: "76c24889e60c25ace21a3b5f7b4819a8",
+      description: "Curso abordando os fundamentos do sistema operacional Linux, incluindo comandos básicos, gerenciamento de arquivos e diretórios, processos, usuários e sistemas de arquivos."
+    },
+    {
+      title: "Redes: implementando roteamento, DNS e IPv6",
+      institution: "Alura",
+      date: "Ago de 2025",
+      category: "Redes",
+      link: "https://cursos.alura.com.br/certificate/5e759859-8187-453f-9e8a-45293f900588",
+      credentialId: "5e759859-8187-453f-9e8a-45293f900588",
+      description: "Curso abordando os tópicos de redes, incluindo roteamento interno e externo, sistemas de nomes de domínio (DNS), a nova versão do protocolo IP (IPv6) e as diferenças entre IPv6 e IPv4."
+    },
+    {
+      title: "Redes Wi-Fi: Criando uma Rede Sem Fio de Modo Seguro",
+      institution: "Alura",
+      date: "Ago de 2025",
+      category: "Redes",
+      link: "https://cursos.alura.com.br/certificate/23f03b42-4b62-4578-b08a-ed3a8ae3cdb3",
+      credentialId: "23f03b42-4b62-4578-b08a-ed3a8ae3cdb3",
+      description: "Curso que aborda os conceitos para a criação e configuração de uma rede sem fio (Wi-Fi), com foco em estabelecer uma conexão de modo seguro."
+      },
+      {
       title: 'Redes: dos conceitos iniciais à criação de uma intranet',
       institution: 'Alura',
       date: 'Jul de 2025',
@@ -80,7 +80,7 @@ courses: [
       link: 'https://cursos.alura.com.br/formalCertificate/c946c1d3-80ac-4854-ae33-3c9f719774d2', 
       credentialId: 'c946c1d3-80ac-4854-ae33-3c9f719774d2',
       description: 'Fundamentos de redes (protocolos e camadas), endereçamento IP, configuração de switches e roteadores, monitoramento de tráfego e implementação de intranets.'
-    },
+      },
       {
       title: 'Redes: Construindo um projeto com Vlans, politicas de acesso e conexão com internet',
       institution: 'Alura',
@@ -99,15 +99,7 @@ courses: [
       credentialId: 'd3966b25-9254-49aa-b978-5c1b3cb89424',
       description: 'Governança de TI, gerenciamento de serviços (ITIL), segurança e planejamento estratégico de infraestrutura.'
     },
-    {
-      title: 'Introdução ao Desenvolvimento Moderno de Software',
-      institution: 'DIO',
-      date: 'Jun de 2024',
-      category: 'Desenvolvimento',
-      link: '#',
-      credentialId: null,
-      description: 'Fundamentos sobre ciclos de vida de software, metodologias ágeis e ferramentas de desenvolvimento modernas.'
-    },
+
     {
       title: 'GKE: Backups Inteligente na Google Cloud Platform',
       institution: 'DIO',
@@ -136,14 +128,24 @@ courses: [
       description: 'Treinamento oficial do Google sobre a infraestrutura da GCP, incluindo Compute Engine, Cloud Storage, VPC e IAM.'
     },
     {
-      title: 'ChatGPT para Python',
+      title: 'Google Cloud Associate Engineer (GCP)',
       institution: 'Udemy',
-      date: 'Ago de 2023',
-      category: 'Dados & IA',
-      link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-6e403c81-1e3e-48bd-bd68-dd93ee21a808.pdf',
-      credentialId: 'UC-6c403c81-1e3e-48bd-bd68-dd93ee21a808',
-      description: 'Desenvolvimento de aplicações e scripts Python integrados com a API do ChatGPT para automação e geração de conteúdo.'
+      date: 'Jun de 2023',
+      category: 'Cloud',
+      link: 'https://www.udemy.com/certificate/UC-80a79a81-49a3-408f-bf76-8d95876cd234/',
+      credentialId: 'UC-80a79a81-49a3-408f-bf76-8d95876cd234',
+      description: 'Curso preparatório abrangente para a certificação GCP Associate Cloud Engineer, cobrindo todos os domínios do exame.'
     },
+    {
+      title: 'AWS Amazon Cloud Computing - Iniciante',
+      institution: 'Udemy',
+      date: 'Mai de 2023',
+      category: 'Cloud',
+      link: 'https://www.udemy.com/certificate/UC-01edbfeb-7c04-4506-bcd0-013fa2c4b8ef/',
+      credentialId: 'UC-01edbfeb-7c04-4506-bcd0-013fa2c4b8ef',
+      description: 'Introdução à plataforma AWS, seus principais serviços (EC2, S3, RDS) e fundamentos de arquitetura na nuvem.'
+    },
+
     {
       title: 'IT Service Managent: Gestão de serviços de TI (ITSM/GSTI)',
       institution: 'Udemy',
@@ -171,15 +173,7 @@ courses: [
       credentialId: 'UC-67b75454-9a0d-4396-b9cc-ea5daf4e194f',
       description: 'Formação completa em SQL, desde consultas básicas até tópicos avançados de modelagem e otimização de banco de dados.'
     },
-    {
-      title: 'Programação Python do Zero ao Avançado',
-      institution: 'Udemy',
-      date: 'Jul de 2023',
-      category: 'Desenvolvimento',
-      link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-0b2a2c15-17e1-4ca6-b35c-61280139c1b2.jpg',
-      credentialId: 'UC-00b2a2c15-17e1-4ca6-b35c-61280139c1b2',
-      description: 'Formação completa em Python, desde a sintaxe básica até estruturas de dados, orientação a objetos e principais bibliotecas.'
-    },
+
     {
       title: 'Banco de dados Oracle SQL - Especialista',
       institution: 'Udemy',
@@ -189,15 +183,7 @@ courses: [
       credentialId: 'UC-18124ac0-3ff8-4717-b29d-1666da745d6e',
       description: 'Aprofundamento na linguagem SQL específica para Oracle Database, com foco em recursos de especialista.'
     },
-    {
-      title: 'Google Cloud Associate Engineer (GCP)',
-      institution: 'Udemy',
-      date: 'Jun de 2023',
-      category: 'Cloud',
-      link: 'https://www.udemy.com/certificate/UC-80a79a81-49a3-408f-bf76-8d95876cd234/',
-      credentialId: 'UC-80a79a81-49a3-408f-bf76-8d95876cd234',
-      description: 'Curso preparatório abrangente para a certificação GCP Associate Cloud Engineer, cobrindo todos os domínios do exame.'
-    },
+
     {
       title: 'Introdução à Ciência de Dados 3.0',
       institution: 'Data Science Academy',
@@ -207,15 +193,7 @@ courses: [
       credentialId: '64959a5d8b4880becf06818c',
       description: 'Fundamentos de Data Science, Big Data, e os primeiros passos na análise de dados com Python e R.'
     },
-    {
-      title: 'AWS Amazon Cloud Computing - Iniciante',
-      institution: 'Udemy',
-      date: 'Mai de 2023',
-      category: 'Cloud',
-      link: 'https://www.udemy.com/certificate/UC-01edbfeb-7c04-4506-bcd0-013fa2c4b8ef/',
-      credentialId: 'UC-01edbfeb-7c04-4506-bcd0-013fa2c4b8ef',
-      description: 'Introdução à plataforma AWS, seus principais serviços (EC2, S3, RDS) e fundamentos de arquitetura na nuvem.'
-    },
+
     {
       title: 'CC50: Introdução à Ciência da Computação - Harvard',
       institution: 'Fundação Estudar',
@@ -233,6 +211,33 @@ courses: [
       link: 'https://www.udemy.com/certificate/UC-3f49dd51-4a52-4a10-9274-08be6e811528/',
       credentialId: 'UC-3f49dd51-4a52-4a10-9274-08be6e811528',
       description: 'Base sólida em lógica de programação e algoritmos, essencial para o desenvolvimento de qualquer software.'
+    },
+    {
+      title: 'Programação Python do Zero ao Avançado',
+      institution: 'Udemy',
+      date: 'Jul de 2023',
+      category: 'Desenvolvimento',
+      link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-0b2a2c15-17e1-4ca6-b35c-61280139c1b2.jpg',
+      credentialId: 'UC-00b2a2c15-17e1-4ca6-b35c-61280139c1b2',
+      description: 'Formação completa em Python, desde a sintaxe básica até estruturas de dados, orientação a objetos e principais bibliotecas.'
+    },
+    {
+      title: 'ChatGPT para Python',
+      institution: 'Udemy',
+      date: 'Ago de 2023',
+      category: 'Dados & IA',
+      link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-6e403c81-1e3e-48bd-bd68-dd93ee21a808.pdf',
+      credentialId: 'UC-6c403c81-1e3e-48bd-bd68-dd93ee21a808',
+      description: 'Desenvolvimento de aplicações e scripts Python integrados com a API do ChatGPT para automação e geração de conteúdo.'
+    },
+    {
+      title: 'Introdução ao Desenvolvimento Moderno de Software',
+      institution: 'DIO',
+      date: 'Jun de 2024',
+      category: 'Desenvolvimento',
+      link: '#',
+      credentialId: null,
+      description: 'Fundamentos sobre ciclos de vida de software, metodologias ágeis e ferramentas de desenvolvimento modernas.'
     },
     {
       title: 'Reparo Avançado em Placas e Circuito Eletrônico',
