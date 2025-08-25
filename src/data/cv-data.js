@@ -158,15 +158,6 @@ courses: [
       description: 'Fundamentos do gerenciamento de serviços de TI, baseado nas melhores práticas do framework ITIL.'
     },
     {
-      title: 'Microsoft Office Excel - Avançado',
-      institution: 'Udemy',
-      date: 'Ago de 2023',
-      category: 'Software',
-      link: 'https://www.udemy.com/certificate/UC-273c6319-d2f8-40e2-bccc-f2ff84e01c86/',
-      credentialId: 'UC-273c6319-d2f8-40e2-bccc-f2ff84e01c86',
-      description: 'Domínio de funções avançadas, tabelas dinâmicas, macros e análise de dados com Microsoft Excel.'
-    },
-    {
       title: 'Banco de Dados SQL do Zero ao Avançado',
       institution: 'Udemy',
       date: 'Jul de 2023',
@@ -175,7 +166,6 @@ courses: [
       credentialId: 'UC-67b75454-9a0d-4396-b9cc-ea5daf4e194f',
       description: 'Formação completa em SQL, desde consultas básicas até tópicos avançados de modelagem e otimização de banco de dados.'
     },
-
     {
       title: 'Banco de dados Oracle SQL - Especialista',
       institution: 'Udemy',
@@ -185,17 +175,6 @@ courses: [
       credentialId: 'UC-18124ac0-3ff8-4717-b29d-1666da745d6e',
       description: 'Aprofundamento na linguagem SQL específica para Oracle Database, com foco em recursos de especialista.'
     },
-
-    {
-      title: 'Introdução à Ciência de Dados 3.0',
-      institution: 'Data Science Academy',
-      date: 'Jun de 2023',
-      category: 'Dados & IA',
-      link: 'https://mycourse.app/ZLyNnxzzSXuqBShE7',
-      credentialId: '64959a5d8b4880becf06818c',
-      description: 'Fundamentos de Data Science, Big Data, e os primeiros passos na análise de dados com Python e R.'
-    },
-
     {
       title: 'CC50: Introdução à Ciência da Computação - Harvard',
       institution: 'Fundação Estudar',
@@ -223,15 +202,7 @@ courses: [
       credentialId: 'UC-00b2a2c15-17e1-4ca6-b35c-61280139c1b2',
       description: 'Formação completa em Python, desde a sintaxe básica até estruturas de dados, orientação a objetos e principais bibliotecas.'
     },
-    {
-      title: 'ChatGPT para Python',
-      institution: 'Udemy',
-      date: 'Ago de 2023',
-      category: 'Dados & IA',
-      link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-6e403c81-1e3e-48bd-bd68-dd93ee21a808.pdf',
-      credentialId: 'UC-6c403c81-1e3e-48bd-bd68-dd93ee21a808',
-      description: 'Desenvolvimento de aplicações e scripts Python integrados com a API do ChatGPT para automação e geração de conteúdo.'
-    },
+
     {
       title: 'Introdução ao Desenvolvimento Moderno de Software',
       institution: 'DIO',
@@ -240,6 +211,24 @@ courses: [
       link: '#',
       credentialId: null,
       description: 'Fundamentos sobre ciclos de vida de software, metodologias ágeis e ferramentas de desenvolvimento modernas.'
+    },
+    {
+      title: 'Introdução à Ciência de Dados 3.0',
+      institution: 'Data Science Academy',
+      date: 'Jun de 2023',
+      category: 'Dados & IA',
+      link: 'https://mycourse.app/ZLyNnxzzSXuqBShE7',
+      credentialId: '64959a5d8b4880becf06818c',
+      description: 'Fundamentos de Data Science, Big Data, e os primeiros passos na análise de dados com Python e R.'
+    },
+    {
+      title: 'ChatGPT para Python',
+      institution: 'Udemy',
+      date: 'Ago de 2023',
+      category: 'Dados & IA',
+      link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-6e403c81-1e3e-48bd-bd68-dd93ee21a808.pdf',
+      credentialId: 'UC-6c403c81-1e3e-48bd-bd68-dd93ee21a808',
+      description: 'Desenvolvimento de aplicações e scripts Python integrados com a API do ChatGPT para automação e geração de conteúdo.'
     },
     {
       title: 'Reparo Avançado em Placas e Circuito Eletrônico',
