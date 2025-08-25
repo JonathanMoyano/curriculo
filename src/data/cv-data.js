@@ -36,6 +36,15 @@ export const cvData = {
     { degree: 'Análise e Desenvolvimento de Sistemas', institution: 'UNIBR', status: 'Concluído' },
   ],
 courses: [
+{
+  "title": "Linux: Gerenciando diretórios, arquivos, permissões e processos",
+  "institution": "Alura",
+  "date": "Ago de 2025",
+  "category": "Linux",
+  "link": "https://cursos.alura.com.br/certificate/jonathan-moyano-48e0-438d-83b7-e16016c6defa",
+  "credentialId": "jonathan-moyano-48e0-438d-83b7-e16016c6defa",
+  "description": "Curso focado no gerenciamento de diretórios, arquivos, permissões de acesso e processos dentro do sistema operacional Linux."
+}
   {
   title: "Redes: implementando roteamento, DNS e IPv6",
   institution: "Alura",
