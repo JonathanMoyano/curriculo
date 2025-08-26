@@ -4,7 +4,7 @@ import { cvData } from '@/data/cv-data';
 import { CVCard } from '@/components/cv/CVCard';
 import { SkillBar } from '@/components/cv/SkillBar';
 import { AuroraBackground } from '@/components/background/Aurora';
-import { Download, Briefcase, GraduationCap, Award, ExternalLink, BookCopy, Printer, Mail, Phone, Linkedin, Github, User } from 'lucide-react';
+import { Download, Briefcase, GraduationCap, Award, ExternalLink, BookCopy, Printer, Mail, Phone, Linkedin, Github, User, Heart } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -118,12 +118,12 @@ const SkillsSection = () => (
 
                 {/* Sistemas Operacionais */}
                 <div>
-                    <h3 className="text-lg font-semibold text-blue-300 mb-3">Sistemas Operacionais</h3>
+                    <h3 className="text-lg font-semibold text-cyan-300 mb-3">Sistemas Operacionais</h3>
                     <div className="flex flex-wrap gap-2">
                         {cvData.skills.sistemas.map((skill, index) => (
                             <motion.span
                                 key={index}
-                                className="inline-block bg-blue-500/10 text-blue-300 text-sm font-medium px-4 py-2 rounded-full border border-blue-500/20"
+                                className="inline-block bg-cyan-500/20 text-cyan-200 text-sm font-medium px-4 py-2 rounded-full border border-cyan-500/30"
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
@@ -137,12 +137,12 @@ const SkillsSection = () => (
 
                 {/* Infraestrutura */}
                 <div>
-                    <h3 className="text-lg font-semibold text-emerald-300 mb-3">Infraestrutura & Redes</h3>
+                    <h3 className="text-lg font-semibold text-cyan-300 mb-3">Infraestrutura & Redes</h3>
                     <div className="flex flex-wrap gap-2">
                         {cvData.skills.infraestrutura.map((skill, index) => (
                             <motion.span
                                 key={index}
-                                className="inline-block bg-emerald-500/10 text-emerald-300 text-sm font-medium px-4 py-2 rounded-full border border-emerald-500/20"
+                                className="inline-block bg-cyan-500/20 text-cyan-200 text-sm font-medium px-4 py-2 rounded-full border border-cyan-500/30"
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
@@ -156,12 +156,12 @@ const SkillsSection = () => (
 
                 {/* Cloud */}
                 <div>
-                    <h3 className="text-lg font-semibold text-purple-300 mb-3">Tecnologias em Nuvem</h3>
+                    <h3 className="text-lg font-semibold text-cyan-300 mb-3">Tecnologias em Nuvem</h3>
                     <div className="flex flex-wrap gap-2">
                         {cvData.skills.nuvem.map((skill, index) => (
                             <motion.span
                                 key={index}
-                                className="inline-block bg-purple-500/10 text-purple-300 text-sm font-medium px-4 py-2 rounded-full border border-purple-500/20"
+                                className="inline-block bg-cyan-500/20 text-cyan-200 text-sm font-medium px-4 py-2 rounded-full border border-cyan-500/30"
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
@@ -176,6 +176,33 @@ const SkillsSection = () => (
         </CVCard>
     </motion.section>
 );
+
+// Seção de Soft Skills
+const SoftSkillsSection = () => (
+    <motion.section {...animationProps}>
+        <CVCard>
+            <div className="flex items-center gap-3 mb-6">
+                <Heart className="h-8 w-8 text-rose-400" />
+                <h2 className="text-3xl font-bold text-white">Competências Comportamentais</h2>
+            </div>
+            <div className="flex flex-wrap gap-2">
+                {cvData.softSkills.map((skill, index) => (
+                    <motion.span
+                        key={index}
+                        className="inline-block bg-cyan-500/20 text-cyan-200 text-sm font-medium px-4 py-2 rounded-full border border-cyan-500/30"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 }}
+                    >
+                        {skill}
+                    </motion.span>
+                ))}
+            </div>
+        </CVCard>
+    </motion.section>
+);
+
 const EducationAndPrintSection = () => (
     <motion.section {...animationProps} className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="md:col-span-2">
@@ -276,6 +303,7 @@ const CVPage = () => {
         <ProfileSection />
         <ExperienceSection />
         <SkillsSection />
+        <SoftSkillsSection />
         <EducationAndPrintSection />
         <CoursesSection />
       </div>

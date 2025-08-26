@@ -15,8 +15,8 @@ const PrintStyles = () => (
       body { 
         -webkit-print-color-adjust: exact; 
         font-family: 'Inter', sans-serif; 
-        font-size: 10pt;
-        line-height: 1.2;
+        font-size: 9pt;
+        line-height: 1.1;
         color: #1f2937;
         margin: 0;
         padding: 0;
@@ -28,7 +28,7 @@ const PrintStyles = () => (
       
       @page { 
         size: A4; 
-        margin: 1cm 0.8cm; 
+        margin: 0.5cm 0.6cm; 
       }
       
       .print-container {
@@ -59,8 +59,8 @@ const PrintStyles = () => (
       
       h1, h2, h3 { 
         page-break-after: avoid; 
-        margin-top: 0.5em;
-        margin-bottom: 0.3em;
+        margin-top: 0.2em;
+        margin-bottom: 0.15em;
       }
       
       .section-header { 
@@ -74,41 +74,47 @@ const PrintStyles = () => (
         border: 1px solid #0277bd !important; 
       }
       
+      .soft-skill-tag {
+        background: #e0f2fe !important;
+        border: 1px solid #0277bd !important;
+        color: #01579b !important;
+      }
+      
       /* Remover espaçamentos excessivos */
       .header-section {
-        margin-bottom: 1em !important;
+        margin-bottom: 0.5em !important;
       }
       
       .content-section {
-        margin-bottom: 0.8em !important;
+        margin-bottom: 0.4em !important;
       }
       
       .section-content {
-        padding: 0.5em !important;
+        padding: 0.3em !important;
       }
       
       /* Otimizar espaços entre elementos */
       .experience-item,
       .education-item,
       .course-item {
-        margin-bottom: 0.5em !important;
-        padding-bottom: 0.3em !important;
+        margin-bottom: 0.25em !important;
+        padding-bottom: 0.15em !important;
       }
       
       /* Reduzir espaços nos cursos */
       .courses-grid {
-        gap: 0.3em !important;
+        gap: 0.2em !important;
       }
       
       .course-card {
-        padding: 0.4em !important;
-        margin-bottom: 0.2em !important;
+        padding: 0.25em !important;
+        margin-bottom: 0.1em !important;
       }
       
       /* Footer mais compacto */
       .print-footer {
-        margin-top: 1em !important;
-        padding-top: 0.5em !important;
+        margin-top: 0.5em !important;
+        padding-top: 0.3em !important;
       }
     }
 
@@ -120,6 +126,12 @@ const PrintStyles = () => (
 
 const SkillTag = ({ skill }) => (
   <span className="inline-block bg-blue-50 text-blue-800 text-xs font-medium px-3 py-1 rounded-full border border-blue-200 skill-tag m-1">
+    {skill}
+  </span>
+);
+
+const SoftSkillTag = ({ skill }) => (
+  <span className="inline-block bg-cyan-50 text-cyan-800 text-xs font-medium px-3 py-1 rounded-full border border-cyan-200 soft-skill-tag m-1">
     {skill}
   </span>
 );
@@ -147,23 +159,23 @@ const PrintPage = () => {
             🖨️ Imprimir / Salvar PDF
           </button>
 
-          <div className="p-6 print-content">
+          <div className="p-3 print-content">
             {/* Header Section */}
-            <section className="text-center mb-6 relative avoid-break header-section">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-50 via-indigo-50 to-blue-50 rounded-lg -m-3"></div>
-              <div className="relative z-10 p-4">
-                <div className="flex items-center justify-center mb-4">
+            <section className="text-center mb-3 relative avoid-break header-section">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-50 via-indigo-50 to-blue-50 rounded-lg -m-2"></div>
+              <div className="relative z-10 p-2">
+                <div className="flex items-center justify-center mb-2">
                   <img 
                     src={cvData.profile.image} 
                     alt={cvData.profile.name}
-                    className="w-24 h-24 rounded-full border-4 border-white shadow-lg object-cover mr-6"
+                    className="w-20 h-20 rounded-full border-4 border-white shadow-lg object-cover mr-4"
                   />
                   <div className="text-left">
-                    <h1 className="text-3xl font-bold text-gray-900 mb-1">{cvData.profile.name}</h1>
-                    <h2 className="text-lg text-blue-700 font-semibold">{cvData.profile.title}</h2>
+                    <h1 className="text-2xl font-bold text-gray-900 mb-0.5">{cvData.profile.name}</h1>
+                    <h2 className="text-base text-blue-700 font-semibold">{cvData.profile.title}</h2>
                   </div>
                 </div>
-                <div className="flex justify-center flex-wrap gap-x-3 gap-y-1 text-xs text-gray-600">
+                <div className="flex justify-center flex-wrap gap-x-2 gap-y-0.5 text-xs text-gray-600">
                   <span>📧 {cvData.contact.find(c => c.type === 'email').value}</span>
                   <span className="text-gray-400">•</span>
                   <span>📱 {cvData.contact.find(c => c.type === 'phone').value}</span>
@@ -176,25 +188,25 @@ const PrintPage = () => {
             </section>
 
             {/* Professional Summary */}
-            <section className="mb-4 avoid-break content-section">
-              <h3 className="text-base font-bold text-white bg-gradient-to-r from-blue-700 to-blue-600 px-4 py-2 rounded-t-lg section-header">
+            <section className="mb-2 avoid-break content-section">
+              <h3 className="text-sm font-bold text-white bg-gradient-to-r from-blue-700 to-blue-600 px-3 py-1.5 rounded-t-lg section-header">
                 💼 Resumo Profissional
               </h3>
-              <div className="bg-gray-50 p-4 rounded-b-lg border border-gray-200 section-content">
-                <p className="text-gray-700 leading-relaxed text-justify text-xs">{cvData.profile.summary}</p>
+              <div className="bg-gray-50 p-2 rounded-b-lg border border-gray-200 section-content">
+                <p className="text-gray-700 leading-tight text-justify text-xs">{cvData.profile.summary}</p>
               </div>
             </section>
 
             {/* Skills */}
-            <section className="mb-4 avoid-break content-section">
-              <h3 className="text-base font-bold text-white bg-gradient-to-r from-green-600 to-green-500 px-4 py-2 rounded-t-lg">
+            <section className="mb-2 avoid-break content-section">
+              <h3 className="text-sm font-bold text-white bg-gradient-to-r from-green-600 to-green-500 px-3 py-1.5 rounded-t-lg">
                 ⚡ Competências Técnicas
               </h3>
-              <div className="bg-gray-50 p-4 rounded-b-lg border border-gray-200 space-y-3 section-content">
+              <div className="bg-gray-50 p-2 rounded-b-lg border border-gray-200 space-y-2 section-content">
                 {/* Suporte & Hardware */}
                 <div>
-                  <h4 className="text-xs font-bold text-gray-800 mb-2 uppercase tracking-wide">Suporte & Hardware</h4>
-                  <div className="flex flex-wrap gap-1">
+                  <h4 className="text-xs font-bold text-gray-800 mb-1 uppercase tracking-wide">Suporte & Hardware</h4>
+                  <div className="flex flex-wrap gap-0.5">
                     {cvData.skills.principal.map((skill, index) => (
                       <SkillTag key={index} skill={skill} />
                     ))}
@@ -203,8 +215,8 @@ const PrintPage = () => {
                 
                 {/* Sistemas Operacionais */}
                 <div>
-                  <h4 className="text-xs font-bold text-gray-800 mb-2 uppercase tracking-wide">Sistemas Operacionais</h4>
-                  <div className="flex flex-wrap gap-1">
+                  <h4 className="text-xs font-bold text-gray-800 mb-1 uppercase tracking-wide">Sistemas Operacionais</h4>
+                  <div className="flex flex-wrap gap-0.5">
                     {cvData.skills.sistemas.map((skill, index) => (
                       <SkillTag key={index} skill={skill} />
                     ))}
@@ -213,8 +225,8 @@ const PrintPage = () => {
                 
                 {/* Infraestrutura & Redes */}
                 <div>
-                  <h4 className="text-xs font-bold text-gray-800 mb-2 uppercase tracking-wide">Infraestrutura & Redes</h4>
-                  <div className="flex flex-wrap gap-1">
+                  <h4 className="text-xs font-bold text-gray-800 mb-1 uppercase tracking-wide">Infraestrutura & Redes</h4>
+                  <div className="flex flex-wrap gap-0.5">
                     {cvData.skills.infraestrutura.map((skill, index) => (
                       <SkillTag key={index} skill={skill} />
                     ))}
@@ -223,8 +235,8 @@ const PrintPage = () => {
                 
                 {/* Tecnologias em Nuvem */}
                 <div>
-                  <h4 className="text-xs font-bold text-gray-800 mb-2 uppercase tracking-wide">Tecnologias em Nuvem</h4>
-                  <div className="flex flex-wrap gap-1">
+                  <h4 className="text-xs font-bold text-gray-800 mb-1 uppercase tracking-wide">Tecnologias em Nuvem</h4>
+                  <div className="flex flex-wrap gap-0.5">
                     {cvData.skills.nuvem.map((skill, index) => (
                       <SkillTag key={index} skill={skill} />
                     ))}
@@ -233,19 +245,33 @@ const PrintPage = () => {
               </div>
             </section>
 
+            {/* Soft Skills */}
+            <section className="mb-2 avoid-break content-section">
+              <h3 className="text-sm font-bold text-white bg-gradient-to-r from-cyan-600 to-cyan-500 px-3 py-1.5 rounded-t-lg">
+                🤝 Competências Comportamentais
+              </h3>
+              <div className="bg-gray-50 p-2 rounded-b-lg border border-gray-200 section-content">
+                <div className="flex flex-wrap gap-0.5">
+                  {cvData.softSkills.map((skill, index) => (
+                    <SoftSkillTag key={index} skill={skill} />
+                  ))}
+                </div>
+              </div>
+            </section>
+
             {/* Professional Experience */}
-            <section className="mb-4 content-section">
-              <h3 className="text-base font-bold text-white bg-gradient-to-r from-purple-700 to-purple-600 px-4 py-2 rounded-t-lg section-header">
+            <section className="mb-2 content-section">
+              <h3 className="text-sm font-bold text-white bg-gradient-to-r from-purple-700 to-purple-600 px-3 py-1.5 rounded-t-lg section-header">
                 🚀 Experiência Profissional
               </h3>
-              <div className="bg-gray-50 p-4 rounded-b-lg border border-gray-200 space-y-3 section-content">
+              <div className="bg-gray-50 p-2 rounded-b-lg border border-gray-200 space-y-2 section-content">
                 {cvData.experience.map((job, index) => (
-                  <div key={index} className="border-l-4 border-purple-500 pl-4 py-2 avoid-break experience-item">
+                  <div key={index} className="border-l-4 border-purple-500 pl-3 py-1.5 avoid-break experience-item">
                     <h4 className="text-sm font-semibold text-gray-900">{job.role}</h4>
                     <p className="font-medium text-purple-700 text-xs">
                       {job.company} | <span className="text-gray-600 font-normal">{job.period}</span>
                     </p>
-                    <ul className="list-disc pl-4 mt-2 text-gray-700 text-xs space-y-0.5">
+                    <ul className="list-disc pl-3 mt-1 text-gray-700 text-xs space-y-0">
                       {job.tasks.map((task, taskIndex) => <li key={taskIndex}>{task}</li>)}
                     </ul>
                   </div>
@@ -254,13 +280,13 @@ const PrintPage = () => {
             </section>
 
             {/* Education */}
-            <section className="mb-4 avoid-break content-section">
-              <h3 className="text-base font-bold text-white bg-gradient-to-r from-indigo-700 to-indigo-600 px-4 py-2 rounded-t-lg section-header">
+            <section className="mb-2 avoid-break content-section">
+              <h3 className="text-sm font-bold text-white bg-gradient-to-r from-indigo-700 to-indigo-600 px-3 py-1.5 rounded-t-lg section-header">
                 🎓 Formação Acadêmica
               </h3>
-              <div className="bg-gray-50 p-4 rounded-b-lg border border-gray-200 section-content">
+              <div className="bg-gray-50 p-2 rounded-b-lg border border-gray-200 section-content">
                 {cvData.education.map((edu, index) => (
-                  <div key={index} className="border-l-4 border-indigo-500 pl-4 py-2 education-item">
+                  <div key={index} className="border-l-4 border-indigo-500 pl-3 py-1.5 education-item">
                     <h4 className="text-sm font-semibold text-gray-900">{edu.degree}</h4>
                     <p className="font-medium text-indigo-700 text-xs">
                       {edu.institution} - <span className="text-gray-600 font-normal">{edu.status}</span>

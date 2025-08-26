@@ -15,13 +15,19 @@ export const cvData = {
     { type: 'github', icon: Github, value: 'GitHub', href: 'https://github.com/JonathanMoyano', displayValue: 'github.com/JonathanMoyano' },
   ],
   skills: {
-  principal: ['Suporte Técnico N1/N2', 'Help Desk', 'Hardware & Reparo Eletrônico'],
-  sistemas: ['Windows Server & Desktop', 'Linux Básico', 'Sistemas ERP (TOTVS, GVDasa)'],
-  infraestrutura: ['Active Directory', 'Virtualização (Hyper-V)', 'Redes & Firewall (PFSense)', 'Monitoramento (Zabbix)', 'Google Workspace Admin'],
-  nuvem: ['Cloud Computing (AWS, GCP, Azure)']
-},
+    principal: ['Suporte Técnico N1/N2', 'Help Desk', 'Hardware & Reparo Eletrônico'],
+    sistemas: ['Windows Server & Desktop', 'Linux Básico', 'Sistemas ERP (TOTVS, GVDasa)'],
+    infraestrutura: ['Active Directory', 'Virtualização (Hyper-V)', 'Redes & Firewall (PFSense)', 'Monitoramento (Zabbix)', 'Google Workspace Admin'],
+    nuvem: ['Cloud Computing (AWS, GCP, Azure)']
+  },
+  softSkills: [
+    'Proatividade na identificação e resolução de problemas',
+    'Boa comunicação para interação com usuários e equipes técnicas', 
+    'Capacidade de organização e priorização de demandas',
+    'Postura colaborativa e orientada a melhoria contínua'
+  ],
   experience: [
-  { role: 'Analista de Suporte Técnico N2 & Infraestrutura', company: 'Colégio Jean Piaget', period: 'Jan/2024 - Presente', tasks: ['Suporte técnico N2 e resolução de chamados complexos', 'Manutenção da infraestrutura de rede, servidores e equipamentos de rack', 'Elaboração de laudos técnicos e documentação de sistemas','Cadastro e gerenciamento de usuários no Active Directory, Google Admin, ClassApp, Matific e ERP','Monitoramento do sistema Zabbix e encaminhamento de alertas aos responsáveis','Suporte ao sistema ERP GVDasa','Passagem e organização de cabeamento de rede','Manutenção corretiva de equipamentos eletrônicos','Atendimento Help Desk para toda a comunidade acadêmica','Organização e controle do inventário de equipamentos de TI','Solicitação e acompanhamento de compras de equipamentos','Manutenção do ambiente Hyper-V','Configuração básica do PFSense'] },
+    { role: 'Analista de Suporte Técnico N2 & Infraestrutura', company: 'Colégio Jean Piaget', period: 'Jan/2024 - Presente', tasks: ['Suporte técnico N2 e resolução de chamados complexos', 'Manutenção da infraestrutura de rede, servidores e equipamentos de rack', 'Elaboração de laudos técnicos e documentação de sistemas','Cadastro e gerenciamento de usuários no Active Directory, Google Admin, ClassApp, Matific e ERP','Monitoramento do sistema Zabbix e encaminhamento de alertas aos responsáveis','Suporte ao sistema ERP GVDasa','Passagem e organização de cabeamento de rede','Manutenção corretiva de equipamentos eletrônicos','Atendimento Help Desk para toda a comunidade acadêmica','Organização e controle do inventário de equipamentos de TI','Solicitação e acompanhamento de compras de equipamentos','Manutenção do ambiente Hyper-V','Configuração básica do PFSense'] },
     { role: 'Assistente de Suporte Técnico N1', company: 'Colégio Jean Piaget', period: 'Out/2023 - Jan/2024', tasks: ['Manutenção preventiva e corretiva de computadores, Chromebooks e notebooks', 'Suporte em Help Desk para toda a comunidade acadêmica', 'Análise e modernização do sistema de CFTV', 'Entregas de Chromebooks', 'Controle de saída e entrada de materiais', 'Organização dos equipamentos de TI', 'Solicitação de compras e reposição de equipamentos de TI'] },
     { role: 'Estágio de Suporte Técnico', company: 'Colégio da Polícia Militar - Cruz Azul SP', period: 'Out/2022 - Out/2023', tasks: ['Suporte ao Sistema ERP TOTVS (RM e RM Saúde)', 'Administração de contas e permissões no Active Directory', 'Manutenção preventiva no servidor local e sistemas de monitoramento'] },
     { role: 'Consultor de TI', company: 'Prestação de Serviços Autônoma', period: 'Jan/2010 - Out/2023', tasks: ['Atendimento técnico a residências e pequenas empresas da região', 'Diagnóstico e reparo de hardware (desktops, notebooks, impressoras)', 'Instalação e configuração de sistemas operacionais Windows/Linux', 'Recuperação de dados e remoção de malware', 'Configuração de redes domésticas e roteadores', 'Suporte remoto via TeamViewer e manutenção preventiva', 'Upgrade de componentes e consultoria em aquisições de TI'] },
@@ -29,10 +35,8 @@ export const cvData = {
   ],
   education: [
     { degree: 'Análise e Desenvolvimento de Sistemas', institution: 'UNIBR', status: 'Concluído' },
-    
   ],
   courses: [
-    
     {
       title: "Linux: Gerenciando diretórios, arquivos, permissões e processos",
       institution: "Alura",
