@@ -38,6 +38,15 @@ export const cvData = {
   ],
   courses: [
     {
+      title: "Windows Prompt: Utilizando o CMD",
+      institution: "Alura",
+      date: "Ago de 2025",
+      category: "Terminal",
+      link: "https://cursos.alura.com.br/certificate/858009a3-028d-49f0-9ecf-677495f5a4ea",
+      credentialId: "858009a3-028d-49f0-9ecf-677495f5a4ea",
+      description: "Curso focado no aprendizado de comandos do prompt do Windows (CMD) para executar tarefas e otimizar o fluxo de trabalho no dia a dia."
+    },
+    {
     title: "Terminal: Aprenda comandos para executar tarefas",
     institution: "Alura",
     date: "Ago de 2025",
