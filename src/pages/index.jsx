@@ -96,14 +96,86 @@ const SkillsSection = () => (
                 <Award className="h-8 w-8 text-cyan-400" />
                 <h2 className="text-3xl font-bold text-white">Principais Competências</h2>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6">
-                {cvData.skills.map((skill, index) => <SkillBar key={skill.name} skill={skill} delay={0.1 + index * 0.05} />)}
+            <div className="space-y-6">
+                {/* Suporte & Hardware */}
+                <div>
+                    <h3 className="text-lg font-semibold text-cyan-300 mb-3">Suporte & Hardware</h3>
+                    <div className="flex flex-wrap gap-2">
+                        {cvData.skills.principal.map((skill, index) => (
+                            <motion.span
+                                key={index}
+                                className="inline-block bg-cyan-500/20 text-cyan-200 text-sm font-medium px-4 py-2 rounded-full border border-cyan-500/30"
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.1 + index * 0.05 }}
+                            >
+                                {skill}
+                            </motion.span>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Sistemas Operacionais */}
+                <div>
+                    <h3 className="text-lg font-semibold text-blue-300 mb-3">Sistemas Operacionais</h3>
+                    <div className="flex flex-wrap gap-2">
+                        {cvData.skills.sistemas.map((skill, index) => (
+                            <motion.span
+                                key={index}
+                                className="inline-block bg-blue-500/10 text-blue-300 text-sm font-medium px-4 py-2 rounded-full border border-blue-500/20"
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.2 + index * 0.05 }}
+                            >
+                                {skill}
+                            </motion.span>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Infraestrutura */}
+                <div>
+                    <h3 className="text-lg font-semibold text-emerald-300 mb-3">Infraestrutura & Redes</h3>
+                    <div className="flex flex-wrap gap-2">
+                        {cvData.skills.infraestrutura.map((skill, index) => (
+                            <motion.span
+                                key={index}
+                                className="inline-block bg-emerald-500/10 text-emerald-300 text-sm font-medium px-4 py-2 rounded-full border border-emerald-500/20"
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.3 + index * 0.05 }}
+                            >
+                                {skill}
+                            </motion.span>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Cloud */}
+                <div>
+                    <h3 className="text-lg font-semibold text-purple-300 mb-3">Tecnologias em Nuvem</h3>
+                    <div className="flex flex-wrap gap-2">
+                        {cvData.skills.nuvem.map((skill, index) => (
+                            <motion.span
+                                key={index}
+                                className="inline-block bg-purple-500/10 text-purple-300 text-sm font-medium px-4 py-2 rounded-full border border-purple-500/20"
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.4 + index * 0.05 }}
+                            >
+                                {skill}
+                            </motion.span>
+                        ))}
+                    </div>
+                </div>
             </div>
         </CVCard>
     </motion.section>
 );
-
-// Seção 4: Formação e Impressão (Card combinado)
 const EducationAndPrintSection = () => (
     <motion.section {...animationProps} className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="md:col-span-2">
@@ -134,7 +206,6 @@ const EducationAndPrintSection = () => (
     </motion.section>
 );
 
-// Card de Curso individual (agora com modal)
 const CourseCard = ({ course }) => (
     <Dialog>
         <DialogTrigger asChild>
@@ -159,7 +230,7 @@ const CourseCard = ({ course }) => (
             </DialogHeader>
             <div className="py-4 text-slate-300 text-sm">
                 <p>{course.description}</p>
-                {/* CÓDIGO DA CREDENCIAL ADICIONADO DE VOLTA AQUI */}
+                {}
                 {course.credentialId && (
                     <div className="mt-4 text-xs bg-slate-800 rounded p-3">
                         <p className="text-slate-400 font-semibold tracking-wider uppercase">ID da Credencial</p>
@@ -179,7 +250,6 @@ const CourseCard = ({ course }) => (
 );
 
 
-// Seção 5: Cursos (Grid interno de 4 colunas)
 const CoursesSection = () => (
     <motion.section {...animationProps}>
         <CVCard>
@@ -197,7 +267,7 @@ const CoursesSection = () => (
 );
 
 
-// --- COMPONENTE PRINCIPAL DA PÁGINA ---
+
 const CVPage = () => {
   return (
     <>

@@ -4,9 +4,9 @@ import { Mail, Phone, Linkedin, Github } from 'lucide-react';
 export const cvData = {
   profile: {
     name: 'Jonathan Souza Moyano',
-    title: 'Analista de Infraestrutura | Especialista em Suporte N2',
+    title: 'Analista de Suporte N2 | Infraestrutura',
     image: '/jonathan.jpeg',
-    summary: 'Profissional de TI com mais de 10 anos de experiência, combinando sólida base técnica com formação superior. Minha trajetória única, incluindo 4 anos de liderança como bombeiro civil, forjou uma capacidade ímpar de resolver problemas complexos e gerenciar crises com precisão e calma.',
+    summary: 'Profissional de TI com mais de 10 anos de experiência em suporte técnico, manutenção de hardware e configuração de sistemas. Atuação sólida em diagnóstico de problemas, reparo eletrônico e atendimento a usuários.',
   },
   contact: [
     { type: 'email', icon: Mail, value: 'contato@jonathanmoyano.com.br', href: 'mailto:contato@jonathanmoyano.com.br' },
@@ -14,38 +14,33 @@ export const cvData = {
     { type: 'linkedin', icon: Linkedin, value: 'LinkedIn', href: 'https://www.linkedin.com/in/jonathansouzamoyano/', displayValue: 'linkedin.com/in/jonathansouzamoyano' },
     { type: 'github', icon: Github, value: 'GitHub', href: 'https://github.com/JonathanMoyano', displayValue: 'github.com/JonathanMoyano' },
   ],
-  skills: [
-    { name: 'Infraestrutura de Redes & Servidores', level: 70 },
-    { name: 'Suporte Técnico N1/N2 & Help Desk', level: 95 },
-    { name: 'DevOps & Cloud Computing', level: 35 },
-    { name: 'Hardware & Reparo Eletrônico', level: 98 },
-    { name: 'Sistemas ERP (TOTVS, GVDasa)', level: 75 },
-    { name: 'Linux', level: 30 },
-    { name: 'Windows', level: 90 },
-    
-  ],
+  skills: {
+  principal: ['Suporte Técnico N1/N2', 'Help Desk', 'Hardware & Reparo Eletrônico'],
+  sistemas: ['Windows Server & Desktop', 'Linux Básico', 'Sistemas ERP (TOTVS, GVDasa)'],
+  infraestrutura: ['Active Directory', 'Virtualização (Hyper-V)', 'Redes & Firewall (PFSense)', 'Monitoramento (Zabbix)', 'Google Workspace Admin'],
+  nuvem: ['Cloud Computing (AWS, GCP, Azure)']
+},
   experience: [
-    { role: 'Analista de Infraestrutura & Suporte de TI N2', company: 'Colégio Jean Piaget', period: 'Jan/2024 - Presente', tasks: ['Suporte técnico especializado (N2) e apoio a usuários.', 'Manutenção da infraestrutura de rede, servidores e equipamentos de rack.', 'Elaboração de laudos técnicos e documentação de sistemas.','Realizar cadastro e gerenciamento de usuários no Active Directory, Google Admin, ClassApp, Matific e ERP.','Monitorar o sistema Zabbix, direcionando alertas aos responsáveis.','Suporte ao sistema ERP GVDasa.','Troca e passagem de cabeamento de rede.','Manutenção corretiva de qualquer equipamento eletronico que apresentar problemas.','Suporte em Help Desk para toda a comunidade acadêmica.','Organização dos equipamentos de TI.','Solicitação de compras para reposição de equipamentos de TI.','Instalação e manutenção do Hyper-V.',' Configuração do PFSense e configuração do Proxy Transparente com Squid e Squid Guard.'] },
-    { role: 'Assistente de Suporte de TI', company: 'Colégio Jean Piaget', period: 'Out/2023 - Jan/2024', tasks: ['Manutenção preventiva e corretiva de computadores, Chromebooks e notebooks.', 'Suporte em Help Desk para toda a comunidade acadêmica.', 'Análise e modernização do sistema de CFTV.', 'Entregas de Chromebooks', 'Controle de saida e entrada de materiais', 'Organização dos equipamentos de TI', 'Solicitação de compras e reposição de equipamentos de TI'] },
-    { role: 'Estágio de Suporte de TI', company: 'Colégio da Polícia Militar - Cruz Azul SP', period: 'Out/2022 - Out/2023', tasks: ['Suporte ao Sistema ERP TOTVS (RM e RM Saúde).', 'Gerenciamento de contas e permissões no Active Directory.', 'Manutenção preventiva no servidor local e sistemas de monitoramento.'] },
-    { role: 'Técnico de Informática', company: 'Autonomo', period: 'Jan/2010 - Out/2023', tasks: ['Diagnóstico e reparo avançado em placas eletrônicas.', 'Instalação e configuração de sistemas operacionais e software.', 'Recuperação de dados e remoção de vírus.','Instalaçao e configurações de impressoras.', 'Configuração e manutenção em Redes e Roteadores.','Suporte via TeamViewer aos clientes.','Upgrade em desktop e Notebooks.'] },
-    { role: 'Bombeiro Civil (Líder)', company: 'Bracell, Grupo Mendes, Santos FC, etc.', period: 'Aprox. 4 anos (2018 - 2022)', tasks: ['Liderança e coordenação de equipes de resposta a emergências.', 'Implementação de protocolos de segurança.', 'Desenvolvimento de habilidades em gestão de crises e tomada de decisão sob pressão.'] },
+  { role: 'Analista de Suporte Técnico N2 & Infraestrutura', company: 'Colégio Jean Piaget', period: 'Jan/2024 - Presente', tasks: ['Suporte técnico N2 e resolução de chamados complexos', 'Manutenção da infraestrutura de rede, servidores e equipamentos de rack', 'Elaboração de laudos técnicos e documentação de sistemas','Cadastro e gerenciamento de usuários no Active Directory, Google Admin, ClassApp, Matific e ERP','Monitoramento do sistema Zabbix e encaminhamento de alertas aos responsáveis','Suporte ao sistema ERP GVDasa','Passagem e organização de cabeamento de rede','Manutenção corretiva de equipamentos eletrônicos','Atendimento Help Desk para toda a comunidade acadêmica','Organização e controle do inventário de equipamentos de TI','Solicitação e acompanhamento de compras de equipamentos','Manutenção do ambiente Hyper-V','Configuração básica do PFSense'] },
+    { role: 'Assistente de Suporte Técnico N1', company: 'Colégio Jean Piaget', period: 'Out/2023 - Jan/2024', tasks: ['Manutenção preventiva e corretiva de computadores, Chromebooks e notebooks', 'Suporte em Help Desk para toda a comunidade acadêmica', 'Análise e modernização do sistema de CFTV', 'Entregas de Chromebooks', 'Controle de saída e entrada de materiais', 'Organização dos equipamentos de TI', 'Solicitação de compras e reposição de equipamentos de TI'] },
+    { role: 'Estágio de Suporte Técnico', company: 'Colégio da Polícia Militar - Cruz Azul SP', period: 'Out/2022 - Out/2023', tasks: ['Suporte ao Sistema ERP TOTVS (RM e RM Saúde)', 'Administração de contas e permissões no Active Directory', 'Manutenção preventiva no servidor local e sistemas de monitoramento'] },
+    { role: 'Consultor de TI', company: 'Prestação de Serviços Autônoma', period: 'Jan/2010 - Out/2023', tasks: ['Atendimento técnico a residências e pequenas empresas da região', 'Diagnóstico e reparo de hardware (desktops, notebooks, impressoras)', 'Instalação e configuração de sistemas operacionais Windows/Linux', 'Recuperação de dados e remoção de malware', 'Configuração de redes domésticas e roteadores', 'Suporte remoto via TeamViewer e manutenção preventiva', 'Upgrade de componentes e consultoria em aquisições de TI'] },
+    { role: 'Bombeiro Civil (Líder)', company: 'Bracell, Grupo Mendes, Santos FC, etc.', period: 'Aprox. 4 anos (2018 - 2022)', tasks: ['Coordenação de equipes de resposta a emergências', 'Implementação de protocolos de segurança', 'Operação de crises e tomada de decisão sob pressão'] },
   ],
   education: [
-    //{ degree: 'Pós-Graduação em Arquitetura e Gestão de Infraestrutura em TI', institution: 'Anhanguera', status: 'Concluido' },
-    //{ degree: 'Pós-Graduação em Cloud Computing', institution: 'Anhanguera', status: 'Concluido' },
-    //{ degree: 'Pós-Graduação em DevOps & Arquitetura Cloud', institution: 'FIAP', status: 'Cursando' },
     { degree: 'Análise e Desenvolvimento de Sistemas', institution: 'UNIBR', status: 'Concluído' },
+    
   ],
-courses: [
-{
-    title: "Linux: Gerenciando diretórios, arquivos, permissões e processos",
-    institution: "Alura",
-    date: "Ago de 2025",
-    category: "Linux",
-    link: "https://cursos.alura.com.br/certificate/jonathan-moyano-48e0-438d-83b7-e16016c6defa",
-    credentialId: "jonathan-moyano-48e0-438d-83b7-e16016c6defa",
-    description: "Curso focado no gerenciamento de diretórios, arquivos, permissões de acesso e processos dentro do sistema operacional Linux."
+  courses: [
+    
+    {
+      title: "Linux: Gerenciando diretórios, arquivos, permissões e processos",
+      institution: "Alura",
+      date: "Ago de 2025",
+      category: "Linux",
+      link: "https://cursos.alura.com.br/certificate/3adc7947-96e3-43b9-87e7-4fb7fcccbe1c",
+      credentialId: "3adc7947-96e3-43b9-87e7-4fb7fcccbe1c",
+      description: "Curso focado no gerenciamento de diretórios, arquivos, permissões de acesso e processos dentro do sistema operacional Linux."
     },
     {                                                                                                                                            
       title: "Linux Fundamentos",
@@ -73,8 +68,8 @@ courses: [
       link: "https://cursos.alura.com.br/certificate/23f03b42-4b62-4578-b08a-ed3a8ae3cdb3",
       credentialId: "23f03b42-4b62-4578-b08a-ed3a8ae3cdb3",
       description: "Curso que aborda os conceitos para a criação e configuração de uma rede sem fio (Wi-Fi), com foco em estabelecer uma conexão de modo seguro."
-      },
-      {
+    },
+    {
       title: 'Redes: dos conceitos iniciais à criação de uma intranet',
       institution: 'Alura',
       date: 'Jul de 2025',
@@ -82,9 +77,9 @@ courses: [
       link: 'https://cursos.alura.com.br/formalCertificate/c946c1d3-80ac-4854-ae33-3c9f719774d2', 
       credentialId: 'c946c1d3-80ac-4854-ae33-3c9f719774d2',
       description: 'Fundamentos de redes (protocolos e camadas), endereçamento IP, configuração de switches e roteadores, monitoramento de tráfego e implementação de intranets.'
-      },
-      {
-      title: 'Redes: Construindo um projeto com Vlans, politicas de acesso e conexão com internet',
+    },
+    {
+      title: 'Redes: Construindo um projeto com Vlans, políticas de acesso e conexão com internet',
       institution: 'Alura',
       date: 'Jul de 2025',
       category: 'Redes',
@@ -99,9 +94,8 @@ courses: [
       category: 'Infraestrutura',
       link: 'https://on.fiap.com.br/validar-certificado/', 
       credentialId: 'd3966b25-9254-49aa-b978-5c1b3cb89424',
-      description: 'Governança de TI, gerenciamento de serviços (ITIL), segurança e planejamento estratégico de infraestrutura.'
+      description: 'Governança de TI, gerenciamento de serviços (ITIL), segurança e planejamento de infraestrutura.'
     },
-
     {
       title: 'GKE: Backups Inteligente na Google Cloud Platform',
       institution: 'DIO',
@@ -147,9 +141,8 @@ courses: [
       credentialId: 'UC-01edbfeb-7c04-4506-bcd0-013fa2c4b8ef',
       description: 'Introdução à plataforma AWS, seus principais serviços (EC2, S3, RDS) e fundamentos de arquitetura na nuvem.'
     },
-
     {
-      title: 'IT Service Managent: Gestão de serviços de TI (ITSM/GSTI)',
+      title: 'IT Service Management: Serviços de TI (ITSM/GSTI)',
       institution: 'Udemy',
       date: 'Ago de 2023',
       category: 'Infraestrutura',
@@ -167,13 +160,13 @@ courses: [
       description: 'Formação completa em SQL, desde consultas básicas até tópicos avançados de modelagem e otimização de banco de dados.'
     },
     {
-      title: 'Banco de dados Oracle SQL - Especialista',
+      title: 'Banco de dados Oracle SQL',
       institution: 'Udemy',
       date: 'Jun de 2023',
       category: 'Desenvolvimento',
       link: 'https://www.udemy.com/certificate/UC-18124ac0-3ff8-4717-b29d-1866da745d6e/',
-      credentialId: 'UC-18124ac0-3ff8-4717-b29d-1666da745d6e',
-      description: 'Aprofundamento na linguagem SQL específica para Oracle Database, com foco em recursos de especialista.'
+      credentialId: 'UC-18124ac0-3ff8-4717-b29d-1866da745d6e',
+      description: 'Aprofundamento na linguagem SQL específica para Oracle Database, com foco em recursos avançados.'
     },
     {
       title: 'CC50: Introdução à Ciência da Computação - Harvard',
@@ -202,7 +195,6 @@ courses: [
       credentialId: 'UC-00b2a2c15-17e1-4ca6-b35c-61280139c1b2',
       description: 'Formação completa em Python, desde a sintaxe básica até estruturas de dados, orientação a objetos e principais bibliotecas.'
     },
-
     {
       title: 'Introdução ao Desenvolvimento Moderno de Software',
       institution: 'DIO',
