@@ -38,6 +38,15 @@ export const cvData = {
   ],
   courses: [
     {
+    title: "Terminal: Aprenda comandos para executar tarefas",
+    institution: "Alura",
+    date: "Ago de 2025",
+    category: "Terminal",
+    link: "https://cursos.alura.com.br/certificate/5ea94275-866f-4045-8f33-d5aeebc0059e",
+    credentialId: "5ea94275-866f-4045-8f33-d5aeebc0059e",
+    description: "Curso focado no aprendizado de comandos do terminal para executar tarefas e otimizar o fluxo de trabalho no dia a dia."
+    },
+    {
       title: "Linux: Gerenciando diretórios, arquivos, permissões e processos",
       institution: "Alura",
       date: "Ago de 2025",
