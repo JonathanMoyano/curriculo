@@ -140,8 +140,14 @@ const PrintPage = () => {
   const handlePrint = () => window.print();
 
   const coursesByCategory = cvData.courses.reduce((acc, course) => {
-    if (!acc[course.category]) acc[course.category] = [];
-    acc[course.category].push(course);
+    // Unificar Linux e Windows em "Sistemas Operacionais"
+    let category = course.category;
+    if (category === 'Linux' || category === 'Windows') {
+      category = 'Sistemas Operacionais';
+    }
+    
+    if (!acc[category]) acc[category] = [];
+    acc[category].push(course);
     return acc;
   }, {});
 
