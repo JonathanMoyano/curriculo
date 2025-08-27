@@ -313,7 +313,7 @@ const PrintPage = () => {
                     <h4 className="text-sm font-semibold text-orange-800 mb-2 border-b-2 border-orange-200 pb-1 flex items-center">
                       <span className="mr-2">
                         {category === 'Redes' && '🌐'}
-                        {category === 'Linux' && '🐧'}
+                        {(category === 'Linux' || category === 'Windows') && '💻'}
                         {category === 'Cloud' && '☁️'}
                         {category === 'Desenvolvimento' && '💻'}
                         {category === 'Infraestrutura' && '🏗️'}
@@ -321,7 +321,7 @@ const PrintPage = () => {
                         {category === 'Dados & IA' && '🤖'}
                       </span>
                       {category === 'Redes' && 'Redes & Infraestrutura de Rede'}
-                      {category === 'Linux' && 'Linux & Sistemas Operacionais'}
+                      {(category === 'Linux' || category === 'Windows') && 'Sistemas Operacionais'}
                       {category === 'Cloud' && 'Cloud Computing & Virtualização'}
                       {category === 'Desenvolvimento' && 'Desenvolvimento & Programação'}
                       {category === 'Infraestrutura' && 'Infraestrutura de TI'}
