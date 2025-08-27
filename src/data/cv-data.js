@@ -38,7 +38,7 @@ export const cvData = {
   ],
   courses: [
     {
-      title: "Windows Prompt: Utilizando o CMD",
+      title: "Windows: Prompt: Utilizando o CMD",
       institution: "Alura",
       date: "Ago de 2025",
       category: "Windows",
@@ -47,7 +47,7 @@ export const cvData = {
       description: "Curso focado no aprendizado de comandos do prompt do Windows (CMD) para executar tarefas e otimizar o fluxo de trabalho no dia a dia."
     },
     {
-    title: "Terminal: Aprenda comandos para executar tarefas",
+    title: "Linux: Terminal: Aprenda comandos para executar tarefas",
     institution: "Alura",
     date: "Ago de 2025",
     category: "Linux",
@@ -65,7 +65,7 @@ export const cvData = {
       description: "Curso focado no gerenciamento de diretórios, arquivos, permissões de acesso e processos dentro do sistema operacional Linux."
     },
     {                                                                                                                                            
-      title: "Linux Fundamentos",
+      title: "Linux: Fundamentos",
       institution: "FIAP - Centro Universitário",
       date: "Jul de 2025",
       category: "Linux",
