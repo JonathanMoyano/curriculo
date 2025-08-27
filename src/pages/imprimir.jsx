@@ -319,16 +319,16 @@ const PrintPage = () => {
                         {category === 'Infraestrutura' && '🏗️'}
                         {category === 'Hardware' && '🔧'}
                         {category === 'Dados & IA' && '🤖'}
+                        {!['Redes', 'Sistemas Operacionais', 'Cloud', 'Desenvolvimento', 'Infraestrutura', 'Hardware', 'Dados & IA'].includes(category) && '📚'}
                       </span>
-                      {category === 'Redes' && 'Redes & Infraestrutura de Rede'}
-                      {category === 'Sistemas Operacionais' && 'Sistemas Operacionais'}
-                      {category === 'Cloud' && 'Cloud Computing & Virtualização'}
-                      {category === 'Desenvolvimento' && 'Desenvolvimento & Programação'}
-                      {category === 'Infraestrutura' && 'Infraestrutura de TI'}
-                      {category === 'Hardware' && 'Hardware & Eletrônica'}
-                      {category === 'Dados & IA' && 'Dados & Inteligência Artificial'}
-                      {/* Fallback para categorias não mapeadas */}
-                      {!['Redes', 'Sistemas Operacionais', 'Cloud', 'Desenvolvimento', 'Infraestrutura', 'Hardware', 'Dados & IA'].includes(category) && category}
+                      {category === 'Redes' ? 'Redes & Infraestrutura de Rede' :
+                       category === 'Sistemas Operacionais' ? 'Sistemas Operacionais' :
+                       category === 'Cloud' ? 'Cloud Computing & Virtualização' :
+                       category === 'Desenvolvimento' ? 'Desenvolvimento & Programação' :
+                       category === 'Infraestrutura' ? 'Infraestrutura de TI' :
+                       category === 'Hardware' ? 'Hardware & Eletrônica' :
+                       category === 'Dados & IA' ? 'Dados & Inteligência Artificial' :
+                       category}
                       <span className="ml-2 text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded-full">
                         {courses.length} cursos
                       </span>
