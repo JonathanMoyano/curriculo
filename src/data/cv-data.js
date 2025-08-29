@@ -38,6 +38,15 @@ export const cvData = {
   ],
   courses: [
     {
+    title: "Windows Server",
+    institution: "Alura",
+    date: "Ago de 2025",
+    category: "Windows",
+    link: "https://cursos.alura.com.br/certificate/a0fd3ea2-ba77-486e-8c02-55e67d4ac43b",
+    credentialId: "a0fd3ea2-ba77-486e-8c02-55e67d4ac43b",
+     description: "Curso sobre a instalação e administração do Windows Server, abordando tópicos como servidores, domínio, DNS, sub-redes, gerenciamento de usuários, privilégios e permissões."
+    },
+    {
       title: "Windows: Prompt: Utilizando o CMD",
       institution: "Alura",
       date: "Ago de 2025",
