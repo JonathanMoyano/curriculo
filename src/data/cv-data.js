@@ -17,7 +17,7 @@ export const cvData = {
   skills: {
     principal: ['Suporte Técnico N1/N2', 'Help Desk', 'Hardware & Reparo Eletrônico'],
     sistemas: ['Windows Server & Desktop', 'Linux Básico', 'Sistemas ERP (TOTVS, GVDasa)'],
-    infraestrutura: ['Active Directory', 'Virtualização (Hyper-V)', 'Redes & Firewall (PFSense)', 'Monitoramento (Zabbix)', 'Google Workspace Admin'],
+    infraestrutura: ['Active Directory', 'Virtualização (Hyper-V)','Oracle VM','Redes & Firewall (PFSense)', 'Monitoramento (Zabbix)', 'Google Workspace Admin'],
     nuvem: ['Cloud Computing (AWS, GCP, Azure)']
   },
   softSkills: [
