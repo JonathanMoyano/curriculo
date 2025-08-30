@@ -397,7 +397,7 @@ const PrintPage = () => {
                       {job.company} | <span className="text-gray-600 font-normal">{job.period}</span>
                     </p>
                     <ul className="experience-tasks list-disc pl-4 mt-1 text-gray-700 space-y-0">
-                      {job.tasks.slice(0, 4).map((task, taskIndex) => (
+                      {job.tasks.map((task, taskIndex) => (
                         <li key={taskIndex}>{task}</li>
                       ))}
                     </ul>
