@@ -26,7 +26,7 @@ export const cvData = {
     'Capacidade de organização e priorização de demandas',
     'Postura colaborativa e orientada a melhoria contínua',
     'Atenção aos detalhes em diagnósticos técnicos',
-    'Adaptabilidade a novas tecnologias e processos'.
+    'Adaptabilidade a novas tecnologias e processos',
   ],
   experience: [
     { 
