@@ -118,7 +118,7 @@ const SkillsSection = () => (
 
                 {/* Sistemas Operacionais */}
                 <div>
-                    <h3 className="text-lg font-semibold text-cyan-300 mb-3">Sistemas Operacionais</h3>
+                    <h3 className="text-lg font-semibold text-cyan-300 mb-3">Sistemas Operacionais e ERP</h3>
                     <div className="flex flex-wrap gap-2">
                         {cvData.skills.sistemas.map((skill, index) => (
                             <motion.span
