@@ -38,7 +38,7 @@ export const cvData = {
         'Gerenciamento de usuários no Active Directory e Google Admin',
         'Monitoramento do sistema Zabbix e gestão de alertas',
         'Suporte ao sistema ERP GVDasa e manutenção do ambiente Hyper-V',
-        'Manutenção corretiva de equipamentos eletrônicos e reparo de placas'.
+        'Manutenção corretiva de equipamentos eletrônicos e reparo de placas'
       ] 
     },
     { 
@@ -201,7 +201,7 @@ export const cvData = {
       category: 'Cloud Computing',
       link: 'https://www.kasolution.com.br/certificado',
       credentialId: '06352-71737',
-      description: 'Preparatório para certificação DP-900: conceitos fundamentais de dados no Microsoft Azure.'
+      description: 'Curso preparatório DP-900: conceitos fundamentais de dados no Microsoft Azure.'
     },
     {
       title: 'GKE: Backups Inteligentes na Google Cloud Platform',
@@ -228,7 +228,7 @@ export const cvData = {
       category: 'Cloud Computing',
       link: 'https://www.udemy.com/certificate/UC-80a79a81-49a3-408f-bf76-8d95876cd234/',
       credentialId: 'UC-80a79a81-49a3-408f-bf76-8d95876cd234',
-      description: 'Preparatório completo para certificação GCP Associate Cloud Engineer - todos os domínios do exame.'
+      description: 'Curso preparatório completo para o exame GCP Associate Cloud Engineer - todos os domínios.'
     },
     {
       title: 'AWS Amazon Cloud Computing - Iniciante',
