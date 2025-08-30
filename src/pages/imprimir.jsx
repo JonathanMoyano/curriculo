@@ -349,7 +349,7 @@ const PrintPage = () => {
                   {/* Coluna 2 */}
                   <div className="space-y-2">
                     <div>
-                      <h4 className="text-xs font-bold text-gray-800 mb-1 uppercase tracking-wide">Sistemas Operacionais</h4>
+                      <h4 className="text-xs font-bold text-gray-800 mb-1 uppercase tracking-wide">Sistemas Operacionais e ERP</h4>
                       <div className="flex flex-wrap gap-1">
                         {cvData.skills.sistemas.map((skill, index) => (
                           <SkillTag key={index} skill={skill} />
