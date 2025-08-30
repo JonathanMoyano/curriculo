@@ -24,7 +24,9 @@ export const cvData = {
     'Proatividade na identificação e resolução de problemas',
     'Boa comunicação para interação com usuários e equipes técnicas', 
     'Capacidade de organização e priorização de demandas',
-    'Postura colaborativa e orientada a melhoria contínua'
+    'Postura colaborativa e orientada a melhoria contínua',
+    'Atenção aos detalhes em diagnósticos técnicos',
+    'Adaptabilidade a novas tecnologias e processos'.
   ],
   experience: [
     { 
