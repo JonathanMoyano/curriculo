@@ -30,7 +30,7 @@ export const cvData = {
   ],
   experience: [
     { 
-      role: 'Analista de Suporte Técnico N2 & Infraestrutura', 
+      role: 'Analista de Suporte Técnico N2/N3 & Infraestrutura', 
       company: 'Colégio Jean Piaget', 
       period: 'Jan/2024 - Presente', 
       tasks: [
