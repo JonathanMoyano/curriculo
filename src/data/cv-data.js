@@ -55,7 +55,7 @@ export const cvData = {
       ] 
     },
     { 
-      role: 'Estágio de Suporte Técnico', 
+      role: 'Estágio de Suporte Técnico N1', 
       company: 'Colégio da Polícia Militar - Cruz Azul SP', 
       period: 'Out/2022 - Out/2023', 
       tasks: [
