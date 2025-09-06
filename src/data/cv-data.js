@@ -34,7 +34,7 @@ export const cvData = {
       company: 'Colégio Jean Piaget', 
       period: 'Jan/2024 - Presente', 
       tasks: [
-        'Suporte técnico N2 e resolução de chamados complexos via ITSM (JIRA)', 
+        'Suporte técnico N2/N3 e resolução de chamados complexos via ITSM (JIRA)', 
         'Manutenção da infraestrutura de rede, servidores e equipamentos de rack', 
         'Elaboração de laudos técnicos e documentação de sistemas',
         'Gerenciamento de usuários no Active Directory e Google Admin',
@@ -44,7 +44,7 @@ export const cvData = {
       ] 
     },
     { 
-      role: 'Assistente de Suporte Técnico N1', 
+      role: 'Assistente de Suporte Técnico N1/N2', 
       company: 'Colégio Jean Piaget', 
       period: 'Out/2023 - Jan/2024', 
       tasks: [
