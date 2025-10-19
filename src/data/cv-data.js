@@ -43,14 +43,18 @@ export const cvData = {
     ]
   },
   softSkills: [
-    'Perfil analítico e metodológico para diagnóstico de falhas',
-    'Raciocínio lógico aplicado à resolução de problemas técnicos',
-    'Proatividade na identificação e resolução de problemas',
-    'Boa comunicação para interação com usuários e equipes técnicas',
-    'Capacidade de organização e priorização de demandas',
-    'Postura colaborativa e orientada a melhoria contínua',
-    'Atenção aos detalhes em diagnósticos técnicos',
-    'Adaptabilidade a novas tecnologias e processos',
+    'Perfil analítico para diagnóstico de falhas',
+    'Raciocínio lógico e resolução de problemas',
+    'Proatividade e iniciativa técnica',
+    'Comunicação eficaz com usuários e equipes',
+    'Organização e priorização de demandas',
+    'Colaboração e melhoria contínua',
+    'Atenção aos detalhes técnicos',
+    'Adaptabilidade a novas tecnologias',
+  ],
+  languages: [
+    { language: 'Português', level: 'Nativo' },
+    { language: 'Inglês', level: 'Intermediário (Leitura Técnica)' },
   ],
   experience: [
     {  
