@@ -54,7 +54,7 @@ export const cvData = {
   ],
   languages: [
     { language: 'Português', level: 'Nativo' },
-    { language: 'Inglês', level: 'Intermediário (Leitura Técnica)' },
+    { language: 'Inglês', level: 'A2 - Em desenvolvimento' },
   ],
   experience: [
     {  
