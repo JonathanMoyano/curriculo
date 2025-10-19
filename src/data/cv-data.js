@@ -9,7 +9,7 @@ export const cvData = {
     summary: 'Profissional de TI com mais de 10 anos de experiência em suporte técnico, manutenção de hardware e configuração de sistemas. Atuação sólida em diagnóstico de problemas, reparo eletrônico e atendimento a usuários.',
   },
   contact: [
-    { type: 'email', icon: Mail, value: 'contato@jonathanmoyano.com.br', href: 'mailto:contato@jonathanmoyano.com.br' },
+    { type: 'email', icon: Mail, value: 'contato@jonathanmoyano.com.br', href: 'mailto:jonathan.moyano@outlook.com.br' },
     { type: 'phone', icon: Phone, value: '(13) 97412-4438', href: 'tel:+5513974124438' },
     { type: 'linkedin', icon: Linkedin, value: 'LinkedIn', href: 'https://www.linkedin.com/in/jonathansouzamoyano/', displayValue: 'linkedin.com/in/jonathansouzamoyano' },
     { type: 'github', icon: Github, value: 'GitHub', href: 'https://github.com/JonathanMoyano', displayValue: 'github.com/JonathanMoyano' },
@@ -40,7 +40,10 @@ export const cvData = {
         'Gerenciamento de usuários no Active Directory e Google Admin',
         'Monitoramento do sistema Zabbix e gestão de alertas',
         'Suporte ao sistema ERP GVDasa e manutenção do ambiente Hyper-V',
-        'Manutenção corretiva de equipamentos eletrônicos e reparo de placas'
+        'Manutenção corretiva de equipamentos eletrônicos e reparo de placas',
+        'Implementação de proxy corporativo (Squid/SquidGuard copilados no Linux Ubuntu Server) com integração AD',
+        'Instalação e configuração do Pfsense',
+        'Suporte em telefonia analógica'
       ] 
     },
     { 
