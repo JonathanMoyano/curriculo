@@ -4,7 +4,7 @@ import { cvData } from '@/data/cv-data';
 import { CVCard } from '@/components/cv/CVCard';
 import { SkillBar } from '@/components/cv/SkillBar';
 import { AuroraBackground } from '@/components/background/Aurora';
-import { Download, Briefcase, GraduationCap, Award, ExternalLink, BookCopy, Printer, Mail, Phone, Linkedin, Github, User, Heart } from 'lucide-react';
+import { Download, Briefcase, GraduationCap, Award, ExternalLink, BookCopy, Printer, Mail, Phone, Linkedin, Github, User, Heart, Globe } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -203,6 +203,26 @@ const SoftSkillsSection = () => (
     </motion.section>
 );
 
+// Seção de Idiomas
+const LanguagesSection = () => (
+    <motion.section {...animationProps}>
+        <CVCard>
+            <div className="flex items-center gap-3 mb-4">
+                <Globe className="h-6 w-6 text-cyan-400" />
+                <h2 className="text-xl font-bold text-white">Idiomas</h2>
+            </div>
+            <div className="space-y-2">
+                {cvData.languages.map((lang, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                        <span className="font-semibold text-white">{lang.language}:</span>
+                        <span className="text-cyan-400">{lang.level}</span>
+                    </div>
+                ))}
+            </div>
+        </CVCard>
+    </motion.section>
+);
+
 const EducationAndPrintSection = () => (
     <motion.section {...animationProps} className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="md:col-span-2">
@@ -257,7 +277,6 @@ const CourseCard = ({ course }) => (
             </DialogHeader>
             <div className="py-4 text-slate-300 text-sm">
                 <p>{course.description}</p>
-                {}
                 {course.credentialId && (
                     <div className="mt-4 text-xs bg-slate-800 rounded p-3">
                         <p className="text-slate-400 font-semibold tracking-wider uppercase">ID da Credencial</p>
@@ -304,6 +323,7 @@ const CVPage = () => {
         <ExperienceSection />
         <SkillsSection />
         <SoftSkillsSection />
+        <LanguagesSection />
         <EducationAndPrintSection />
         <CoursesSection />
       </div>
