@@ -4,9 +4,9 @@ import { Mail, Phone, Linkedin, Github } from 'lucide-react';
 export const cvData = {
   profile: {
     name: 'Jonathan Souza Moyano',
-    title: 'Analista de Suporte N2 | Infraestrutura',
+    title: 'Analista de Infraestrutura Pleno | Redes, Sistemas e Suporte N3',
     image: '/jonathan.jpeg',
-    summary: 'Profissional de TI com mais de 10 anos de experiência em suporte técnico, manutenção de hardware e configuração de sistemas. Atuação sólida em diagnóstico de problemas, reparo eletrônico e atendimento a usuários.',
+    summary: 'Profissional de TI com mais de 10 anos de experiência em infraestrutura, suporte técnico avançado (N3) e manutenção de ambientes corporativos. Expertise em execução de cabeamento estruturado, operação de racks e servidores, diagnóstico eletrônico avançado, virtualização, sistemas de monitoramento (CFTV/Zabbix) e resolução de problemas complexos.',
   },
   contact: [
     { type: 'email', icon: Mail, value: 'jonathan.moyano@outlook.com.br', href: 'mailto:jonathan.moyano@outlook.com.br' },
@@ -15,12 +15,36 @@ export const cvData = {
     { type: 'github', icon: Github, value: 'GitHub', href: 'https://github.com/JonathanMoyano', displayValue: 'github.com/JonathanMoyano' },
   ],
   skills: {
-    principal: ['Suporte Técnico N1/N2', 'Help Desk', 'Hardware & Reparo Eletrônico'],
-    sistemas: ['Windows Server & Desktop', 'Linux', 'Sistemas ERP (TOTVS, GVDasa)'],
-    infraestrutura: ['Active Directory', 'Virtualização (Hyper-V, Oracle VM)', 'Redes & Firewall (PFSense)', 'Monitoramento (Zabbix)', 'Google Workspace Admin'],
-    nuvem: ['AWS (EC2, S3, RDS)', 'Google Cloud Platform', 'Microsoft Azure']
+    principal: [
+      'Infraestrutura de Redes e Servidores',
+      'Suporte Técnico Avançado (N3)', 
+      'Hardware & Eletrônica Avançada', 
+      'Diagnóstico e Reparo de Circuitos',
+      'Help Desk & ITSM (JIRA)'
+    ],
+    sistemas: [
+      'Windows Server & Desktop', 
+      'Linux Ubuntu Server', 
+      'Sistemas ERP (TOTVS, GVDasa)',
+      'Virtualização (Hyper-V, Oracle VM)'
+    ],
+    infraestrutura: [
+      'Cabeamento Estruturado e Rack',
+      'Active Directory & Google Workspace',
+      'Redes (VLANs, Roteamento) & Firewall (PFSense)', 
+      'Monitoramento (Zabbix, CFTV Intelbras)',
+      'Proxy Corporativo (Squid/SquidGuard)',
+      'Telefonia Analógica'
+    ],
+    nuvem: [
+      'AWS (EC2, S3, RDS)', 
+      'Google Cloud Platform (GCP)', 
+      'Microsoft Azure'
+    ]
   },
   softSkills: [
+    'Perfil analítico e metodológico para diagnóstico de falhas',
+    'Raciocínio lógico aplicado à resolução de problemas técnicos',
     'Proatividade na identificação e resolução de problemas',
     'Boa comunicação para interação com usuários e equipes técnicas',
     'Capacidade de organização e priorização de demandas',
@@ -30,22 +54,23 @@ export const cvData = {
   ],
   experience: [
     { 
-      role: 'Analista de Suporte Técnico N2/N3 & Infraestrutura', 
-      company: 'Colégio Jean Piaget', 
-      period: 'Jan/2024 - Presente', 
-      tasks: [
-        'Suporte técnico N2/N3 e resolução de chamados complexos via ITSM (JIRA)', 
-        'Manutenção da infraestrutura de rede, servidores e equipamentos de rack', 
-        'Elaboração de laudos técnicos e documentação de sistemas',
-        'Gerenciamento de usuários no Active Directory e Google Admin',
-        'Monitoramento do sistema Zabbix e gestão de alertas',
-        'Suporte ao sistema ERP GVDasa e manutenção do ambiente Hyper-V',
-        'Manutenção corretiva de equipamentos eletrônicos e reparo de placas',
-        'Implementação de proxy corporativo (Squid/SquidGuard copilados no Linux Ubuntu Server) com integração AD',
-        'Instalação e configuração do Pfsense',
-        'Suporte em telefonia analógica'
-      ] 
-    },
+{ 
+    role: 'Analista de Infraestrutura e Suporte Técnico Pleno', 
+    company: 'Colégio Jean Piaget', 
+    period: 'Jan/2024 - Presente', 
+    tasks: [
+      'Operação e manutenção da infraestrutura de TI: redes, servidores, virtualização e segurança',
+      'Suporte técnico N3 e resolução de incidentes complexos via ITSM (JIRA)', 
+      'Execução de cabeamento estruturado, organização de racks e manutenção de servidores físicos',
+      'Operação e monitoramento de sistemas de vigilância (Zabbix, CFTV Intelbras)',
+      'Configuração e manutenção de firewall PFSense e proxy corporativo (Squid/SquidGuard no Linux Ubuntu Server) com integração AD',
+      'Gerenciamento de contas de usuários no Active Directory e Google Workspace Admin',
+      'Suporte ao sistema ERP GVDasa e manutenção do ambiente Hyper-V',
+      'Manutenção corretiva avançada de equipamentos eletrônicos e reparo de placas-mãe',
+      'Elaboração de laudos técnicos e documentação de procedimentos',
+      'Manutenção de telefonia analógica e suporte a infraestrutura de rede'
+    ] 
+  },
     { 
       role: 'Assistente de Suporte Técnico N1/N2', 
       company: 'Colégio Jean Piaget', 
@@ -72,7 +97,7 @@ export const cvData = {
       company: 'Prestação de Serviços Autônoma', 
       period: 'Jan/2010 - Out/2023', 
       tasks: [
-        'Atendimento técnico a residências e pequenas empresas', 
+        'Atendimento técnico especializado a residências e pequenas empresas', 
         'Diagnóstico e reparo de hardware (desktops, notebooks, impressoras)', 
         'Instalação e configuração de sistemas Windows/Linux', 
         'Recuperação de dados, remoção de malware e suporte remoto'
