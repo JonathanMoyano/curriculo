@@ -53,8 +53,7 @@ export const cvData = {
     'Adaptabilidade a novas tecnologias e processos',
   ],
   experience: [
-    { 
-{ 
+    {  
     role: 'Analista de Infraestrutura e Suporte Técnico Pleno', 
     company: 'Colégio Jean Piaget', 
     period: 'Jan/2024 - Presente', 
