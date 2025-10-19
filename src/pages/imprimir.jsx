@@ -15,8 +15,8 @@ const PrintStyles = () => (
       body { 
         -webkit-print-color-adjust: exact; 
         font-family: 'Inter', sans-serif; 
-        font-size: 10pt;
-        line-height: 1.2;
+        font-size: 9.5pt;
+        line-height: 1.15;
         color: #1f2937;
         margin: 0;
         padding: 0;
@@ -49,7 +49,7 @@ const PrintStyles = () => (
       .page-break { 
         page-break-before: always; 
         margin-top: 0 !important;
-        padding-top: 0.5em !important;
+        padding-top: 0.3em !important;
       }
       
       .avoid-break { 
@@ -59,151 +59,165 @@ const PrintStyles = () => (
       
       h1, h2, h3 { 
         page-break-after: avoid; 
-        margin-top: 0.3em;
-        margin-bottom: 0.2em;
+        margin-top: 0.25em;
+        margin-bottom: 0.15em;
       }
       
       .section-header { 
         background: linear-gradient(135deg, #1e40af, #3b82f6) !important; 
         color: white !important;
         margin-bottom: 0 !important;
-        font-size: 11pt !important;
+        font-size: 10.5pt !important;
         font-weight: 700 !important;
+        padding: 0.35em 0.6em !important;
       }
       
       .skill-tag { 
         background: #e0f2fe !important; 
         border: 1px solid #0277bd !important; 
         color: #01579b !important;
-        font-size: 8pt !important;
-        padding: 0.15em 0.5em !important;
-        margin: 0.1em !important;
+        font-size: 7.5pt !important;
+        padding: 0.12em 0.45em !important;
+        margin: 0.08em !important;
       }
       
       .soft-skill-tag {
         background: #f0f9ff !important;
         border: 1px solid #0ea5e9 !important;
         color: #075985 !important;
-        font-size: 8pt !important;
-        padding: 0.15em 0.5em !important;
-        margin: 0.1em !important;
+        font-size: 7.5pt !important;
+        padding: 0.12em 0.45em !important;
+        margin: 0.08em !important;
       }
       
       /* Header mais compacto */
       .header-section {
-        margin-bottom: 0.4em !important;
+        margin-bottom: 0.35em !important;
       }
       
       .profile-photo {
-        width: 60px !important;
-        height: 60px !important;
+        width: 55px !important;
+        height: 55px !important;
       }
       
       .profile-name {
-        font-size: 18pt !important;
-        margin-bottom: 0.1em !important;
+        font-size: 17pt !important;
+        margin-bottom: 0.08em !important;
       }
       
       .profile-title {
-        font-size: 12pt !important;
-        margin-bottom: 0.2em !important;
+        font-size: 11pt !important;
+        margin-bottom: 0.15em !important;
       }
       
       .contact-info {
-        font-size: 8pt !important;
-        gap: 0.5em !important;
+        font-size: 7.5pt !important;
+        gap: 0.4em !important;
       }
       
       /* Seções mais compactas */
       .content-section {
-        margin-bottom: 0.3em !important;
+        margin-bottom: 0.25em !important;
       }
       
       .section-content {
-        padding: 0.4em !important;
-        font-size: 9pt !important;
+        padding: 0.35em !important;
+        font-size: 8.5pt !important;
       }
       
       /* Experiência mais compacta */
       .experience-item {
-        margin-bottom: 0.3em !important;
-        padding-bottom: 0.2em !important;
+        margin-bottom: 0.25em !important;
+        padding-bottom: 0.15em !important;
       }
       
       .experience-title {
-        font-size: 10pt !important;
-        margin-bottom: 0.1em !important;
+        font-size: 9.5pt !important;
+        margin-bottom: 0.08em !important;
       }
       
       .experience-company {
-        font-size: 9pt !important;
-        margin-bottom: 0.2em !important;
+        font-size: 8.5pt !important;
+        margin-bottom: 0.15em !important;
       }
       
       .experience-tasks {
-        font-size: 8pt !important;
-        line-height: 1.1 !important;
-        margin-left: 0.8em !important;
+        font-size: 7.5pt !important;
+        line-height: 1.08 !important;
+        margin-left: 0.7em !important;
       }
       
       .experience-tasks li {
-        margin-bottom: 0.05em !important;
+        margin-bottom: 0.03em !important;
       }
       
-      /* Cursos otimizados */
+      /* Idiomas */
+      .languages-section {
+        display: flex !important;
+        gap: 0.8em !important;
+        font-size: 8.5pt !important;
+      }
+      
+      .language-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.3em !important;
+      }
+      
+      /* Cursos otimizados - 3 COLUNAS */
       .courses-grid {
         display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.3em !important;
-        margin-bottom: 0.4em !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 0.25em !important;
+        margin-bottom: 0.3em !important;
       }
       
       .course-card {
-        padding: 0.3em !important;
+        padding: 0.25em !important;
         margin-bottom: 0 !important;
         border: 1px solid #e5e7eb !important;
-        border-radius: 4px !important;
+        border-radius: 3px !important;
       }
       
       .course-title {
-        font-size: 8pt !important;
+        font-size: 7pt !important;
         font-weight: 600 !important;
-        margin-bottom: 0.1em !important;
-        line-height: 1.1 !important;
+        margin-bottom: 0.08em !important;
+        line-height: 1.05 !important;
       }
       
       .course-institution {
-        font-size: 7pt !important;
-        margin-bottom: 0.1em !important;
+        font-size: 6.5pt !important;
+        margin-bottom: 0.08em !important;
       }
       
       .course-date {
-        font-size: 7pt !important;
+        font-size: 6.5pt !important;
       }
       
       .course-description {
-        font-size: 7pt !important;
-        line-height: 1.1 !important;
-        margin-top: 0.1em !important;
+        font-size: 6.5pt !important;
+        line-height: 1.05 !important;
+        margin-top: 0.08em !important;
       }
       
       /* Categories headers */
       .category-header {
-        font-size: 10pt !important;
-        margin-bottom: 0.3em !important;
-        margin-top: 0.4em !important;
-        padding-bottom: 0.1em !important;
+        font-size: 9.5pt !important;
+        margin-bottom: 0.25em !important;
+        margin-top: 0.35em !important;
+        padding-bottom: 0.08em !important;
       }
       
       .category-count {
-        font-size: 7pt !important;
+        font-size: 6.5pt !important;
       }
       
       /* Footer */
       .print-footer {
-        margin-top: 0.5em !important;
-        padding-top: 0.3em !important;
-        font-size: 8pt !important;
+        margin-top: 0.4em !important;
+        padding-top: 0.25em !important;
+        font-size: 7.5pt !important;
       }
     }
 
@@ -282,21 +296,21 @@ const PrintPage = () => {
 
           <div className="p-4 print-content">
             {/* Header Section - Mais Compacto */}
-            <section className="text-center mb-4 relative avoid-break header-section">
+            <section className="text-center mb-3 relative avoid-break header-section">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-50 via-indigo-50 to-blue-50 rounded-lg -m-2"></div>
-              <div className="relative z-10 p-3">
-                <div className="flex items-center justify-center mb-2">
+              <div className="relative z-10 p-2.5">
+                <div className="flex items-center justify-center mb-1.5">
                   <img 
                     src={cvData.profile.image} 
                     alt={cvData.profile.name}
-                    className="profile-photo w-16 h-16 rounded-full border-4 border-white shadow-lg object-cover mr-4"
+                    className="profile-photo w-14 h-14 rounded-full border-4 border-white shadow-lg object-cover mr-3"
                   />
                   <div className="text-left">
-                    <h1 className="profile-name text-2xl font-bold text-gray-900 mb-1">{cvData.profile.name}</h1>
-                    <h2 className="profile-title text-lg text-blue-700 font-semibold">{cvData.profile.title}</h2>
+                    <h1 className="profile-name text-2xl font-bold text-gray-900 mb-0.5">{cvData.profile.name}</h1>
+                    <h2 className="profile-title text-base text-blue-700 font-semibold">{cvData.profile.title}</h2>
                   </div>
                 </div>
-                <div className="contact-info flex justify-center flex-wrap gap-x-3 gap-y-1 text-xs text-gray-600">
+                <div className="contact-info flex justify-center flex-wrap gap-x-2.5 gap-y-0.5 text-xs text-gray-600">
                   <span>📧 {cvData.contact.find(c => c.type === 'email')?.value}</span>
                   <span className="text-gray-400">•</span>
                   <span>📱 {cvData.contact.find(c => c.type === 'phone')?.value}</span>
@@ -309,27 +323,27 @@ const PrintPage = () => {
             </section>
 
             {/* Professional Summary */}
-            <section className="mb-3 avoid-break content-section">
-              <h3 className="text-sm font-bold text-white bg-gradient-to-r from-blue-700 to-blue-600 px-3 py-2 rounded-t-lg section-header">
+            <section className="mb-2.5 avoid-break content-section">
+              <h3 className="text-sm font-bold text-white bg-gradient-to-r from-blue-700 to-blue-600 px-2.5 py-1.5 rounded-t-lg section-header">
                 💼 Resumo Profissional
               </h3>
-              <div className="bg-gray-50 p-3 rounded-b-lg border border-gray-200 section-content">
+              <div className="bg-gray-50 p-2.5 rounded-b-lg border border-gray-200 section-content">
                 <p className="text-gray-700 leading-relaxed text-justify">{cvData.profile.summary}</p>
               </div>
             </section>
 
             {/* Skills - Layout Otimizado */}
-            <section className="mb-3 avoid-break content-section">
-              <h3 className="text-sm font-bold text-white bg-gradient-to-r from-green-600 to-green-500 px-3 py-2 rounded-t-lg section-header">
+            <section className="mb-2.5 avoid-break content-section">
+              <h3 className="text-sm font-bold text-white bg-gradient-to-r from-green-600 to-green-500 px-2.5 py-1.5 rounded-t-lg section-header">
                 ⚡ Competências Técnicas
               </h3>
-              <div className="bg-gray-50 p-3 rounded-b-lg border border-gray-200 space-y-3 section-content">
-                <div className="grid grid-cols-2 gap-4">
+              <div className="bg-gray-50 p-2.5 rounded-b-lg border border-gray-200 space-y-2.5 section-content">
+                <div className="grid grid-cols-2 gap-3">
                   {/* Coluna 1 */}
-                  <div className="space-y-2">
+                  <div className="space-y-1.5">
                     <div>
-                      <h4 className="text-xs font-bold text-gray-800 mb-1 uppercase tracking-wide">Suporte & Hardware</h4>
-                      <div className="flex flex-wrap gap-1">
+                      <h4 className="text-xs font-bold text-gray-800 mb-0.5 uppercase tracking-wide">Suporte & Hardware</h4>
+                      <div className="flex flex-wrap gap-0.5">
                         {cvData.skills.principal.map((skill, index) => (
                           <SkillTag key={index} skill={skill} />
                         ))}
@@ -337,8 +351,8 @@ const PrintPage = () => {
                     </div>
                     
                     <div>
-                      <h4 className="text-xs font-bold text-gray-800 mb-1 uppercase tracking-wide">Infraestrutura & Redes</h4>
-                      <div className="flex flex-wrap gap-1">
+                      <h4 className="text-xs font-bold text-gray-800 mb-0.5 uppercase tracking-wide">Infraestrutura & Redes</h4>
+                      <div className="flex flex-wrap gap-0.5">
                         {cvData.skills.infraestrutura.map((skill, index) => (
                           <SkillTag key={index} skill={skill} />
                         ))}
@@ -347,10 +361,10 @@ const PrintPage = () => {
                   </div>
                   
                   {/* Coluna 2 */}
-                  <div className="space-y-2">
+                  <div className="space-y-1.5">
                     <div>
-                      <h4 className="text-xs font-bold text-gray-800 mb-1 uppercase tracking-wide">Sistemas Operacionais e ERP</h4>
-                      <div className="flex flex-wrap gap-1">
+                      <h4 className="text-xs font-bold text-gray-800 mb-0.5 uppercase tracking-wide">Sistemas Operacionais e ERP</h4>
+                      <div className="flex flex-wrap gap-0.5">
                         {cvData.skills.sistemas.map((skill, index) => (
                           <SkillTag key={index} skill={skill} />
                         ))}
@@ -358,8 +372,8 @@ const PrintPage = () => {
                     </div>
                     
                     <div>
-                      <h4 className="text-xs font-bold text-gray-800 mb-1 uppercase tracking-wide">Tecnologias em Nuvem</h4>
-                      <div className="flex flex-wrap gap-1">
+                      <h4 className="text-xs font-bold text-gray-800 mb-0.5 uppercase tracking-wide">Tecnologias em Nuvem</h4>
+                      <div className="flex flex-wrap gap-0.5">
                         {cvData.skills.nuvem.map((skill, index) => (
                           <SkillTag key={index} skill={skill} />
                         ))}
@@ -371,12 +385,12 @@ const PrintPage = () => {
             </section>
 
             {/* Soft Skills */}
-            <section className="mb-3 avoid-break content-section">
-              <h3 className="text-sm font-bold text-white bg-gradient-to-r from-cyan-600 to-cyan-500 px-3 py-2 rounded-t-lg section-header">
+            <section className="mb-2.5 avoid-break content-section">
+              <h3 className="text-sm font-bold text-white bg-gradient-to-r from-cyan-600 to-cyan-500 px-2.5 py-1.5 rounded-t-lg section-header">
                 🤝 Competências Comportamentais
               </h3>
-              <div className="bg-gray-50 p-3 rounded-b-lg border border-gray-200 section-content">
-                <div className="flex flex-wrap gap-1">
+              <div className="bg-gray-50 p-2.5 rounded-b-lg border border-gray-200 section-content">
+                <div className="flex flex-wrap gap-0.5">
                   {cvData.softSkills.map((skill, index) => (
                     <SoftSkillTag key={index} skill={skill} />
                   ))}
@@ -384,19 +398,36 @@ const PrintPage = () => {
               </div>
             </section>
 
+            {/* Languages Section */}
+            <section className="mb-2.5 avoid-break content-section">
+              <h3 className="text-sm font-bold text-white bg-gradient-to-r from-purple-600 to-purple-500 px-2.5 py-1.5 rounded-t-lg section-header">
+                🌍 Idiomas
+              </h3>
+              <div className="bg-gray-50 p-2.5 rounded-b-lg border border-gray-200 section-content">
+                <div className="languages-section">
+                  {cvData.languages.map((lang, index) => (
+                    <div key={index} className="language-item">
+                      <span className="font-semibold text-gray-900">{lang.language}:</span>
+                      <span className="text-gray-700">{lang.level}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
             {/* Professional Experience */}
-            <section className="mb-3 content-section">
-              <h3 className="text-sm font-bold text-white bg-gradient-to-r from-purple-700 to-purple-600 px-3 py-2 rounded-t-lg section-header">
+            <section className="mb-2.5 content-section">
+              <h3 className="text-sm font-bold text-white bg-gradient-to-r from-indigo-700 to-indigo-600 px-2.5 py-1.5 rounded-t-lg section-header">
                 🚀 Experiência Profissional
               </h3>
-              <div className="bg-gray-50 p-3 rounded-b-lg border border-gray-200 space-y-3 section-content">
+              <div className="bg-gray-50 p-2.5 rounded-b-lg border border-gray-200 space-y-2.5 section-content">
                 {cvData.experience.map((job, index) => (
-                  <div key={index} className="border-l-4 border-purple-500 pl-3 py-2 avoid-break experience-item">
+                  <div key={index} className="border-l-4 border-indigo-500 pl-2.5 py-1.5 avoid-break experience-item">
                     <h4 className="experience-title font-semibold text-gray-900">{job.role}</h4>
-                    <p className="experience-company font-medium text-purple-700">
+                    <p className="experience-company font-medium text-indigo-700">
                       {job.company} | <span className="text-gray-600 font-normal">{job.period}</span>
                     </p>
-                    <ul className="experience-tasks list-disc pl-4 mt-1 text-gray-700 space-y-0">
+                    <ul className="experience-tasks list-disc pl-3.5 mt-0.5 text-gray-700 space-y-0">
                       {job.tasks.map((task, taskIndex) => (
                         <li key={taskIndex}>{task}</li>
                       ))}
@@ -407,15 +438,15 @@ const PrintPage = () => {
             </section>
 
             {/* Education */}
-            <section className="mb-3 avoid-break content-section">
-              <h3 className="text-sm font-bold text-white bg-gradient-to-r from-indigo-700 to-indigo-600 px-3 py-2 rounded-t-lg section-header">
+            <section className="mb-2.5 avoid-break content-section">
+              <h3 className="text-sm font-bold text-white bg-gradient-to-r from-blue-700 to-blue-600 px-2.5 py-1.5 rounded-t-lg section-header">
                 🎓 Formação Acadêmica
               </h3>
-              <div className="bg-gray-50 p-3 rounded-b-lg border border-gray-200 section-content">
+              <div className="bg-gray-50 p-2.5 rounded-b-lg border border-gray-200 section-content">
                 {cvData.education.map((edu, index) => (
-                  <div key={index} className="border-l-4 border-indigo-500 pl-3 py-1">
+                  <div key={index} className="border-l-4 border-blue-500 pl-2.5 py-0.5">
                     <h4 className="text-sm font-semibold text-gray-900">{edu.degree}</h4>
-                    <p className="font-medium text-indigo-700 text-xs">
+                    <p className="font-medium text-blue-700 text-xs">
                       {edu.institution} - <span className="text-gray-600 font-normal">{edu.status}</span>
                     </p>
                   </div>
@@ -426,18 +457,18 @@ const PrintPage = () => {
             {/* Page Break for Courses */}
             <div className="page-break"></div>
             
-            {/* Detailed Courses Section - Otimizada */}
+            {/* Detailed Courses Section - 3 COLUNAS */}
             <section>
-              <h3 className="text-lg font-bold text-white bg-gradient-to-r from-orange-700 to-orange-600 px-4 py-3 rounded-lg section-header mb-3">
+              <h3 className="text-base font-bold text-white bg-gradient-to-r from-orange-700 to-orange-600 px-3 py-2.5 rounded-lg section-header mb-2.5">
                 📚 Formação Complementar ({cvData.courses.length} cursos)
               </h3>
               
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {sortedCategories.map(([category, courses]) => (
                   <div key={category} className="avoid-break">
-                    <h4 className="category-header font-semibold text-orange-800 border-b-2 border-orange-200 pb-1 flex items-center justify-between">
+                    <h4 className="category-header font-semibold text-orange-800 border-b-2 border-orange-200 pb-0.5 flex items-center justify-between">
                       <span className="flex items-center">
-                        <span className="mr-2">
+                        <span className="mr-1.5">
                           {category === 'Redes' && '🌐'}
                           {category === 'Sistemas Operacionais' && '💻'}
                           {category === 'Cloud Computing' && '☁️'}
@@ -449,12 +480,12 @@ const PrintPage = () => {
                         </span>
                         {category === 'Cloud Computing' ? 'Cloud Computing & Virtualização' : category}
                       </span>
-                      <span className="category-count bg-orange-100 text-orange-800 px-2 py-1 rounded-full">
+                      <span className="category-count bg-orange-100 text-orange-800 px-1.5 py-0.5 rounded-full">
                         {courses.length}
                       </span>
                     </h4>
                     
-                    <div className="courses-grid mt-2">
+                    <div className="courses-grid mt-1.5">
                       {courses
                         .sort((a, b) => {
                           const dateA = new Date(a.date.replace(/de /g, ''));
@@ -463,11 +494,11 @@ const PrintPage = () => {
                         })
                         .map((course, index) => (
                         <div key={index} className="course-card bg-white border rounded avoid-break">
-                          <div className="flex justify-between items-start mb-1">
-                            <h5 className="course-title text-gray-900 flex-1 pr-1">
+                          <div className="flex justify-between items-start mb-0.5">
+                            <h5 className="course-title text-gray-900 flex-1 pr-0.5">
                               {course.title}
                             </h5>
-                            <span className="course-date text-gray-600 whitespace-nowrap bg-gray-100 px-1 py-0.5 rounded text-xs">
+                            <span className="course-date text-gray-600 whitespace-nowrap bg-gray-100 px-0.5 py-0.5 rounded text-xs">
                               {course.date}
                             </span>
                           </div>
@@ -478,8 +509,8 @@ const PrintPage = () => {
                           
                           {course.description && course.description.length > 0 && (
                             <p className="course-description text-gray-600">
-                              {course.description.length > 100 
-                                ? course.description.substring(0, 100) + '...' 
+                              {course.description.length > 85 
+                                ? course.description.substring(0, 85) + '...' 
                                 : course.description}
                             </p>
                           )}
@@ -492,7 +523,7 @@ const PrintPage = () => {
             </section>
 
             {/* Footer */}
-            <footer className="print-footer mt-4 pt-3 border-t border-gray-200 text-center text-gray-500">
+            <footer className="print-footer mt-3 pt-2.5 border-t border-gray-200 text-center text-gray-500">
               <div className="flex justify-between items-center">
                 <p>📅 Atualizado em {new Date().toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                 <p>📊 Total: <strong>{cvData.courses.length} cursos concluídos</strong></p>
