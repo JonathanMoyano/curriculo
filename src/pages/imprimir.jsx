@@ -167,17 +167,20 @@ const PrintStyles = () => (
       font-size: 0.9rem;
       color: #000;
       line-height: 1.5;
+      text-align: justify;
     }
 
     .section-content ul {
       list-style: disc;
       margin-left: 1.25rem;
+      text-align: justify;
     }
 
     .section-content ul li {
       margin-bottom: 0.4rem;
       font-size: 0.9rem;
       line-height: 1.5;
+      text-align: justify;
     }
 
     /* Skills Grid */
@@ -286,11 +289,12 @@ const PrintStyles = () => (
       }
     }
     
-    /* Print Styles */
+    /* Print Styles - OTIMIZADO COM MENOS ESPAÇAMENTO */
     @media print {
       body { 
         background: white;
-        font-size: 10pt;
+        font-size: 9pt;
+        line-height: 1.2;
       }
       
       .controls-bar { 
@@ -299,12 +303,13 @@ const PrintStyles = () => (
       
       @page { 
         size: A4; 
-        margin: 1.5cm;
+        margin: 1.2cm 1.5cm;
       }
       
       .cv-wrapper {
         padding: 0;
         background: white;
+        min-height: auto;
       }
       
       .cv-container {
@@ -313,94 +318,124 @@ const PrintStyles = () => (
       }
       
       .header {
-        margin-bottom: 0.75rem;
-        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.4rem;
       }
       
       .name {
-        font-size: 16pt;
-        margin-bottom: 0.3rem;
+        font-size: 15pt;
+        margin-bottom: 0.2rem;
       }
 
       .contact-line {
-        font-size: 8.5pt;
+        font-size: 8pt;
+        margin-bottom: 0.15rem;
       }
 
       .linkedin-link {
-        font-size: 8.5pt;
+        font-size: 8pt;
       }
       
       .title {
-        font-size: 9.5pt;
-        margin-top: 0.5rem;
+        font-size: 9pt;
+        margin-top: 0.3rem;
       }
       
       .section {
-        margin-bottom: 1rem;
+        margin-bottom: 0.6rem;
         page-break-inside: avoid;
       }
       
       .section-title {
-        font-size: 10pt;
-        padding: 0.3rem 0.4rem;
-        margin-bottom: 0.5rem;
+        font-size: 9.5pt;
+        padding: 0.25rem 0.4rem;
+        margin-bottom: 0.35rem;
       }
       
       .section-content {
-        font-size: 9pt;
-        line-height: 1.3;
+        font-size: 8.5pt;
+        line-height: 1.25;
+        text-align: justify;
+      }
+
+      .section-content ul {
+        margin-left: 1rem;
+        margin-top: 0.2rem;
+        text-align: justify;
       }
 
       .section-content ul li {
-        margin-bottom: 0.25rem;
-        font-size: 9pt;
-        line-height: 1.3;
+        margin-bottom: 0.2rem;
+        font-size: 8.5pt;
+        line-height: 1.25;
+        text-align: justify;
+      }
+
+      .skills-list {
+        margin-left: 1rem;
+        margin-top: 0.2rem;
       }
 
       .skills-list li {
-        margin-bottom: 0.25rem;
-        font-size: 9pt;
+        margin-bottom: 0.2rem;
+        font-size: 8.5pt;
+        line-height: 1.2;
       }
 
       .education-item {
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.5rem;
       }
 
       .education-title {
-        font-size: 9.5pt;
+        font-size: 9pt;
+        margin-bottom: 0.1rem;
       }
 
       .education-meta {
-        font-size: 8.5pt;
+        font-size: 8pt;
+        margin-bottom: 0.05rem;
       }
       
       .experience-item {
-        margin-bottom: 1rem;
+        margin-bottom: 0.65rem;
       }
       
       .experience-title {
-        font-size: 9.5pt;
+        font-size: 9pt;
         margin-bottom: 0.1rem;
       }
       
       .experience-period {
-        font-size: 8.5pt;
-        margin-bottom: 0.3rem;
+        font-size: 8pt;
+        margin-bottom: 0.25rem;
       }
 
       .experience-description {
-        font-size: 9pt;
-        line-height: 1.3;
+        font-size: 8.5pt;
+        line-height: 1.25;
+        text-align: justify;
       }
       
+      .certifications-list {
+        margin-left: 1rem;
+        margin-top: 0.2rem;
+      }
+
       .certifications-list li {
-        margin-bottom: 0.25rem;
-        font-size: 9pt;
+        margin-bottom: 0.2rem;
+        font-size: 8.5pt;
+        line-height: 1.2;
+      }
+
+      .languages-list {
+        margin-left: 1rem;
+        margin-top: 0.2rem;
       }
 
       .languages-list li {
-        margin-bottom: 0.25rem;
-        font-size: 9pt;
+        margin-bottom: 0.2rem;
+        font-size: 8.5pt;
+        line-height: 1.2;
       }
     }
   `}</style>
@@ -524,8 +559,8 @@ const ImprimirPage = () => {
               <h2 className="section-title">{t.summary}</h2>
               <div className="section-content">
                 <ul>
-                  {getText(cvData.profile.summary).split(';').filter(item => item.trim()).map((item, index) => (
-                    <li key={index}>{item.trim()}</li>
+                  {getText(cvData.profile.summary).split('.').filter(item => item.trim()).map((item, index) => (
+                    <li key={index}>{item.trim()}.</li>
                   ))}
                 </ul>
               </div>
@@ -614,7 +649,7 @@ const ImprimirPage = () => {
                 </li>
               ))}
 
-              {/* Trabalho em equipe (adicionar manualmente se necessário) */}
+              {/* Trabalho em equipe */}
               <li>
                 {lang === 'pt' ? 'Trabalho em equipe' : lang === 'en' ? 'Teamwork' : 'Trabajo en equipo'}.
               </li>
