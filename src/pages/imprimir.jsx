@@ -161,6 +161,7 @@ const PrintStyles = () => (
       margin-bottom: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      text-align: center;
     }
     
     .section-content {
@@ -362,6 +363,7 @@ const PrintStyles = () => (
         background: #d3d3d3 !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
+        text-align: center;
       }
       
       .section-content {
