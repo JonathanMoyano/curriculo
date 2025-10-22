@@ -5,9 +5,9 @@ export const cvData = {
   profile: {
     name: 'Jonathan Souza Moyano',
     title: {
-      pt: 'Analista de Infraestrutura de TI | Especialista em Redes, Servidores e Suporte Técnico N3',
-      en: 'IT Infrastructure Analyst | Specialist in Networks, Servers and N3 Technical Support',
-      es: 'Analista de Infraestructura de TI | Especialista en Redes, Servidores y Soporte Técnico N3'
+      pt: 'Analista de Infraestrutura de TI Pleno | Especialista em Redes, Servidores e Suporte Técnico N3',
+      en: 'Mid-Level IT Infrastructure Analyst | Specialist in Networks, Servers, and Tier 3 (T3) Technical Support',
+      es: 'Analista de Infraestructura de TI Pleno | Especialista en Redes, Servidores y Soporte Técnico Nivel 3 (N3)'
     },
     image: '/jonathan.jpeg',
     address: 'Av. Nove de Julho, 610 - Vila Cascatinha, São Vicente, SP',
