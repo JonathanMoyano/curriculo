@@ -1,334 +1,314 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { cvData } from '@/data/cv-data';
-import { CVCard } from '@/components/cv/CVCard';
-import { SkillBar } from '@/components/cv/SkillBar';
-import { AuroraBackground } from '@/components/background/Aurora';
-import { Download, Briefcase, GraduationCap, Award, ExternalLink, BookCopy, Printer, Mail, Phone, Linkedin, Github, User, Heart, Globe } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
+// src/pages/index.jsx
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogFooter } from "@/components/ui/dialog";
-import { Button } from '@/components/ui/button';
+import { cvData } from '@/data/cv-data';
+import { Mail, Phone, Linkedin, Github, Briefcase, Target, MapPin } from 'lucide-react';
 
-// --- COMPONENTES DE SEÇÃO (REFINADOS) ---
+export default function Home() {
+  const [lang, setLang] = useState('pt');
 
-const animationProps = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { type: 'spring', stiffness: 100, damping: 20, duration: 0.6 },
-};
+  // Traduções dos textos da interface
+  const translations = {
+    pt: {
+      title: 'Currículo Profissional',
+      subtitle: 'Visualize meu currículo completo em múltiplos idiomas',
+      viewCV: 'Ver Currículo Completo para Impressão',
+      selectLanguage: 'Selecione o idioma',
+      summary: 'Sobre Mim',
+      objective: 'Objetivo Profissional',
+      skills: 'Principais Competências',
+      technical: 'Técnicas',
+      behavioral: 'Comportamentais',
+      stats: {
+        experience: 'Anos de experiência',
+        courses: 'Cursos concluídos',
+        languages: 'Idiomas'
+      }
+    },
+    en: {
+      title: 'Professional Resume',
+      subtitle: 'View my complete resume in multiple languages',
+      viewCV: 'View Full Resume for Printing',
+      selectLanguage: 'Select language',
+      summary: 'About Me',
+      objective: 'Professional Objective',
+      skills: 'Key Skills',
+      technical: 'Technical',
+      behavioral: 'Soft Skills',
+      stats: {
+        experience: 'Years of experience',
+        courses: 'Completed courses',
+        languages: 'Languages'
+      }
+    },
+    es: {
+      title: 'Currículum Profesional',
+      subtitle: 'Visualiza mi currículum completo en múltiples idiomas',
+      viewCV: 'Ver Currículum Completo para Impresión',
+      selectLanguage: 'Selecciona el idioma',
+      summary: 'Sobre Mí',
+      objective: 'Objetivo Profesional',
+      skills: 'Competencias Principales',
+      technical: 'Técnicas',
+      behavioral: 'Comportamentales',
+      stats: {
+        experience: 'Años de experiencia',
+        courses: 'Cursos completados',
+        languages: 'Idiomas'
+      }
+    }
+  };
 
-// Seção 1: Perfil e Contato (Grid interno)
-const ProfileSection = () => (
-  <motion.section {...animationProps} className="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <div className="md:col-span-2">
-      <CVCard className="h-full">
-        <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
-          <img 
-            src={cvData.profile.image} 
-            alt={cvData.profile.name}
-            className="w-24 h-24 rounded-full object-cover border-4 border-cyan-500/30 shrink-0"
-          />
-          <div>
-            <h1 className="text-3xl lg:text-4xl font-bold text-white tracking-tight">{cvData.profile.name}</h1>
-            <h2 className="text-md lg:text-lg font-medium text-cyan-400 mt-1">{cvData.profile.title}</h2>
-            <p className="text-slate-400 text-sm mt-3 max-w-2xl">{cvData.profile.summary}</p>
+  const t = translations[lang];
+
+  // Extrair dados com segurança
+  const profileTitle = typeof cvData.profile.title === 'object' 
+    ? cvData.profile.title[lang] 
+    : cvData.profile.title;
+
+  const profileSummary = typeof cvData.profile.summary === 'object' 
+    ? cvData.profile.summary[lang] 
+    : cvData.profile.summary;
+
+  const profileObjective = cvData.profile.objective 
+    ? (typeof cvData.profile.objective === 'object' 
+        ? cvData.profile.objective[lang] 
+        : cvData.profile.objective)
+    : null;
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <div className="container mx-auto px-4 py-12">
+        <div className="max-w-5xl mx-auto">
+          
+          {/* Header Card com Language Selector Integrado */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl border border-white/20 p-8 mb-8">
+            
+            {/* Language Selector - Posição Superior Direita */}
+            <div className="flex justify-end mb-6">
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/20">
+                <p className="text-xs font-semibold text-white/80 mb-2 text-center">
+                  🌐 {t.selectLanguage}
+                </p>
+                <div className="flex gap-2">
+                  <button 
+                    onClick={() => setLang('pt')} 
+                    className={`px-4 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 ${
+                      lang === 'pt' 
+                        ? 'bg-blue-600 text-white shadow-lg scale-105 ring-2 ring-blue-400' 
+                        : 'bg-white/20 text-white hover:bg-white/30 hover:scale-105'
+                    }`}
+                  >
+                    🇧🇷 PT
+                  </button>
+                  <button 
+                    onClick={() => setLang('en')} 
+                    className={`px-4 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 ${
+                      lang === 'en' 
+                        ? 'bg-blue-600 text-white shadow-lg scale-105 ring-2 ring-blue-400' 
+                        : 'bg-white/20 text-white hover:bg-white/30 hover:scale-105'
+                    }`}
+                  >
+                    🇺🇸 EN
+                  </button>
+                  <button 
+                    onClick={() => setLang('es')} 
+                    className={`px-4 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 ${
+                      lang === 'es' 
+                        ? 'bg-blue-600 text-white shadow-lg scale-105 ring-2 ring-blue-400' 
+                        : 'bg-white/20 text-white hover:bg-white/30 hover:scale-105'
+                    }`}
+                  >
+                    🇪🇸 ES
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Profile Info */}
+            <div className="flex flex-col md:flex-row items-center gap-6 mb-6">
+              <img 
+                src={cvData.profile.image} 
+                alt={cvData.profile.name}
+                className="w-32 h-32 rounded-full border-4 border-white shadow-xl object-cover"
+              />
+              <div className="text-center md:text-left flex-1">
+                <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
+                  {cvData.profile.name}
+                </h1>
+                <h2 className="text-xl md:text-2xl text-blue-300 font-semibold mb-4">
+                  {profileTitle}
+                </h2>
+                <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                  {cvData.contact.map((contact, index) => (
+                    <a 
+                      key={index}
+                      href={contact.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-white/80 hover:text-white transition-all duration-300 hover:scale-105"
+                    >
+                      {contact.type === 'email' && <Mail size={18} />}
+                      {contact.type === 'phone' && <Phone size={18} />}
+                      {contact.type === 'linkedin' && <Linkedin size={18} />}
+                      {contact.type === 'github' && <Github size={18} />}
+                      <span className="text-sm font-medium">
+                        {contact.displayValue || contact.value}
+                        {contact.label && ` (${contact.label})`}
+                      </span>
+                    </a>
+                  ))}
+                </div>
+                
+                {/* Endereço */}
+                {cvData.profile.address && (
+                  <div className="flex items-center gap-2 text-white/80 mt-3 justify-center md:justify-start">
+                    <MapPin size={18} />
+                    <span className="text-sm font-medium">{cvData.profile.address}</span>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Sobre Mim */}
+            <div className="bg-white/5 rounded-xl p-6 border border-white/10 mb-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-blue-500/20 rounded-lg">
+                  <Briefcase className="text-blue-300" size={24} />
+                </div>
+                <h3 className="text-2xl font-bold text-white">{t.summary}</h3>
+              </div>
+              <p className="text-white/90 leading-relaxed text-justify">
+                {profileSummary}
+              </p>
+            </div>
+
+            {/* Objetivo Profissional */}
+            {profileObjective && (
+              <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-xl p-6 border border-purple-400/30">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-purple-500/20 rounded-lg">
+                    <Target className="text-purple-300" size={24} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">{t.objective}</h3>
+                </div>
+                <p className="text-white/90 leading-relaxed text-justify">
+                  {profileObjective}
+                </p>
+              </div>
+            )}
+          </div>
+
+          {/* Botão Principal - Ver Currículo para Impressão */}
+          <Link 
+            href="/imprimir"
+            className="block group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-2xl p-8 shadow-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-3xl mb-8"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="text-2xl font-bold mb-3 flex items-center gap-3">
+                </h3>
+                <p className="text-blue-100 text-base">
+                  {lang === 'pt' && 'Clique para visualizar e imprimir o currículo completo com todos os detalhes, experiências e certificações'}
+                  {lang === 'en' && 'Click to view and print the complete resume with all details, experiences and certifications'}
+                  {lang === 'es' && 'Haz clic para visualizar e imprimir el currículum completo con todos los detalles, experiencias y certificaciones'}
+                </p>
+              </div>
+              <svg 
+                className="w-8 h-8 transform group-hover:translate-x-2 transition-transform" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </Link>
+
+          {/* Skills Preview */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl border border-white/20 p-8 mb-8">
+            <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+              <span>⚡</span>
+              {t.skills}
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              
+              {/* Competências Técnicas */}
+              <div>
+                <h4 className="text-lg font-semibold text-blue-300 mb-4 flex items-center gap-2">
+                  <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                  {t.technical}
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {cvData.skills.principal.slice(0, 5).map((skill, index) => {
+                    const skillText = typeof skill === 'object' ? skill[lang] : skill;
+                    return (
+                      <span 
+                        key={index}
+                        className="bg-blue-600/30 text-blue-100 px-4 py-2 rounded-full text-sm font-medium border border-blue-400/30 hover:bg-blue-600/40 transition-all duration-300 hover:scale-105"
+                      >
+                        {skillText}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+              
+              {/* Competências Comportamentais */}
+              <div>
+                <h4 className="text-lg font-semibold text-cyan-300 mb-4 flex items-center gap-2">
+                  <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                  {t.behavioral}
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {cvData.softSkills.slice(0, 5).map((skill, index) => {
+                    const skillText = typeof skill === 'object' ? skill[lang] : skill;
+                    return (
+                      <span 
+                        key={index}
+                        className="bg-cyan-600/30 text-cyan-100 px-4 py-2 rounded-full text-sm font-medium border border-cyan-400/30 hover:bg-cyan-600/40 transition-all duration-300 hover:scale-105"
+                      >
+                        {skillText}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-4 mb-8">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
+              <div className="text-4xl font-bold text-blue-400 mb-2">10+</div>
+              <div className="text-white/80 text-sm font-medium">
+                {t.stats.experience}
+              </div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
+              <div className="text-4xl font-bold text-green-400 mb-2">{cvData.courses.length}</div>
+              <div className="text-white/80 text-sm font-medium">
+                {t.stats.courses}
+              </div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
+              <div className="text-4xl font-bold text-purple-400 mb-2">2</div>
+              <div className="text-white/80 text-sm font-medium">
+                {t.stats.languages}
+              </div>
+            </div>
+          </div>
+
+          {/* Footer */}
+          <div className="text-center text-white/60 text-sm">
+            <p>
+              © 2025 {cvData.profile.name} 
+              {' • '}
+              {lang === 'pt' ? 'Todos os direitos reservados' : lang === 'en' ? 'All rights reserved' : 'Todos los derechos reservados'}
+            </p>
           </div>
         </div>
-      </CVCard>
-    </div>
-    <div className="md:col-span-1">
-       <CVCard className="h-full flex flex-col">
-        <h3 className="text-lg font-bold text-white mb-4">Contato</h3>
-        <div className="space-y-3 flex-1">
-          {cvData.contact.map((item) => {
-            const Icon = item.icon;
-            return (
-              <a key={item.type} href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-slate-300 hover:text-cyan-300 transition-colors">
-                <Icon className="h-5 w-5" />
-                <span className="text-sm">{item.value}</span>
-              </a>
-            );
-          })}
-        </div>
-      </CVCard>
-    </div>
-  </motion.section>
-);
-
-// Seção 2: Experiência Profissional (Largura total, com acordeão)
-const ExperienceSection = () => (
-    <motion.section {...animationProps}>
-        <CVCard>
-            <div className="flex items-center gap-3 mb-4">
-              <Briefcase className="h-6 w-6 text-cyan-400" />
-              <h2 className="text-xl font-bold text-white">Experiência Profissional</h2>
-            </div>
-            <Accordion type="single" collapsible className="w-full">
-              {cvData.experience.map((job, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border-b border-slate-800 last:border-b-0">
-                  <AccordionTrigger className="hover:no-underline text-left py-4">
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-white">{job.role}</h3>
-                      <p className="text-sm text-cyan-400">{job.company}</p>
-                    </div>
-                    <p className="text-xs text-slate-500 pr-2 whitespace-nowrap">{job.period}</p>
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <ul className="list-disc pl-5 pt-2 space-y-1 text-sm text-slate-400">
-                        {job.tasks.map((task, i) => <li key={i}>{task}</li>)}
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-        </CVCard>
-    </motion.section>
-);
-
-// Seção 3: Competências (Grid interno de 2 colunas)
-const SkillsSection = () => (
-    <motion.section {...animationProps}>
-        <CVCard>
-            <div className="flex items-center gap-3 mb-6">
-                <Award className="h-8 w-8 text-cyan-400" />
-                <h2 className="text-3xl font-bold text-white">Principais Competências</h2>
-            </div>
-            <div className="space-y-6">
-                {/* Suporte & Hardware */}
-                <div>
-                    <h3 className="text-lg font-semibold text-cyan-300 mb-3">Suporte & Hardware</h3>
-                    <div className="flex flex-wrap gap-2">
-                        {cvData.skills.principal.map((skill, index) => (
-                            <motion.span
-                                key={index}
-                                className="inline-block bg-cyan-500/20 text-cyan-200 text-sm font-medium px-4 py-2 rounded-full border border-cyan-500/30"
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.1 + index * 0.05 }}
-                            >
-                                {skill}
-                            </motion.span>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Sistemas Operacionais */}
-                <div>
-                    <h3 className="text-lg font-semibold text-cyan-300 mb-3">Sistemas Operacionais e ERP</h3>
-                    <div className="flex flex-wrap gap-2">
-                        {cvData.skills.sistemas.map((skill, index) => (
-                            <motion.span
-                                key={index}
-                                className="inline-block bg-cyan-500/20 text-cyan-200 text-sm font-medium px-4 py-2 rounded-full border border-cyan-500/30"
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.2 + index * 0.05 }}
-                            >
-                                {skill}
-                            </motion.span>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Infraestrutura */}
-                <div>
-                    <h3 className="text-lg font-semibold text-cyan-300 mb-3">Infraestrutura & Redes</h3>
-                    <div className="flex flex-wrap gap-2">
-                        {cvData.skills.infraestrutura.map((skill, index) => (
-                            <motion.span
-                                key={index}
-                                className="inline-block bg-cyan-500/20 text-cyan-200 text-sm font-medium px-4 py-2 rounded-full border border-cyan-500/30"
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.3 + index * 0.05 }}
-                            >
-                                {skill}
-                            </motion.span>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Cloud */}
-                <div>
-                    <h3 className="text-lg font-semibold text-cyan-300 mb-3">Tecnologias em Nuvem</h3>
-                    <div className="flex flex-wrap gap-2">
-                        {cvData.skills.nuvem.map((skill, index) => (
-                            <motion.span
-                                key={index}
-                                className="inline-block bg-cyan-500/20 text-cyan-200 text-sm font-medium px-4 py-2 rounded-full border border-cyan-500/30"
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.4 + index * 0.05 }}
-                            >
-                                {skill}
-                            </motion.span>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </CVCard>
-    </motion.section>
-);
-
-// Seção de Soft Skills
-const SoftSkillsSection = () => (
-    <motion.section {...animationProps}>
-        <CVCard>
-            <div className="flex items-center gap-3 mb-6">
-                <Heart className="h-8 w-8 text-rose-400" />
-                <h2 className="text-3xl font-bold text-white">Competências Comportamentais</h2>
-            </div>
-            <div className="flex flex-wrap gap-2">
-                {cvData.softSkills.map((skill, index) => (
-                    <motion.span
-                        key={index}
-                        className="inline-block bg-cyan-500/20 text-cyan-200 text-sm font-medium px-4 py-2 rounded-full border border-cyan-500/30"
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 }}
-                    >
-                        {skill}
-                    </motion.span>
-                ))}
-            </div>
-        </CVCard>
-    </motion.section>
-);
-
-// Seção de Idiomas
-const LanguagesSection = () => (
-    <motion.section {...animationProps}>
-        <CVCard>
-            <div className="flex items-center gap-3 mb-4">
-                <Globe className="h-6 w-6 text-cyan-400" />
-                <h2 className="text-xl font-bold text-white">Idiomas</h2>
-            </div>
-            <div className="space-y-2">
-                {cvData.languages.map((lang, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                        <span className="font-semibold text-white">{lang.language}:</span>
-                        <span className="text-cyan-400">{lang.level}</span>
-                    </div>
-                ))}
-            </div>
-        </CVCard>
-    </motion.section>
-);
-
-const EducationAndPrintSection = () => (
-    <motion.section {...animationProps} className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="md:col-span-2">
-            <CVCard>
-                <div className="flex items-center gap-3 mb-4">
-                    <GraduationCap className="h-6 w-6 text-cyan-400" />
-                    <h3 className="text-lg font-bold text-white">Formação Acadêmica</h3>
-                </div>
-                <div className="space-y-4">
-                {cvData.education.map((edu, index) => (
-                    <div key={index}>
-                        <h4 className="font-semibold text-white">{edu.degree}</h4>
-                        <p className="text-sm text-cyan-400">{edu.institution} - <span className="text-slate-400 font-medium">{edu.status}</span></p>
-                    </div>
-                ))}
-                </div>
-            </CVCard>
-        </div>
-        <div className="md:col-span-1">
-            <CVCard className="flex flex-col items-center justify-center bg-gradient-to-br from-cyan-500/80 to-blue-500/80 text-white transition-transform hover:scale-[1.03] hover:shadow-2xl hover:shadow-cyan-500/20 h-full">
-                <Link href="/imprimir" target="_blank" className="text-center w-full h-full flex flex-col items-center justify-center p-4">
-                    <Printer className="h-8 w-8 mb-2" />
-                    <h3 className="text-md font-bold">Imprimir CV</h3>
-                    <p className="text-xs opacity-80">Gerar versão PDF</p>
-                </Link>
-            </CVCard>
-        </div>
-    </motion.section>
-);
-
-const CourseCard = ({ course }) => (
-    <Dialog>
-        <DialogTrigger asChild>
-            <motion.div 
-                className="block group cursor-pointer h-full"
-                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-            >
-                <div className="h-full rounded-xl bg-slate-800/50 p-4 border border-transparent group-hover:border-cyan-500/50 group-hover:bg-slate-800 transition-all flex flex-col justify-between">
-                    <div>
-                        <Badge variant="outline" className="border-cyan-500/20 text-xs mb-3">{course.category}</Badge>
-                        <h4 className="font-semibold text-white text-sm">{course.title}</h4>
-                    </div>
-                    <p className="text-xs text-cyan-400 mt-2">{course.institution}</p>
-                </div>
-            </motion.div>
-        </DialogTrigger>
-        <DialogContent className="sm:max-w-md bg-slate-900 border-cyan-500/20 text-white">
-            <DialogHeader className="text-left">
-                <DialogTitle className="text-cyan-400 text-xl">{course.title}</DialogTitle>
-                <DialogDescription className="text-slate-400">{course.institution}</DialogDescription>
-            </DialogHeader>
-            <div className="py-4 text-slate-300 text-sm">
-                <p>{course.description}</p>
-                {course.credentialId && (
-                    <div className="mt-4 text-xs bg-slate-800 rounded p-3">
-                        <p className="text-slate-400 font-semibold tracking-wider uppercase">ID da Credencial</p>
-                        <p className="font-mono text-slate-200 mt-1">{course.credentialId}</p>
-                    </div>
-                )}
-            </div>
-            <DialogFooter>
-                <a href={course.link} target="_blank" rel="noopener noreferrer" className={course.link === '#' ? 'pointer-events-none w-full' : 'w-full'}>
-                    <Button type="button" disabled={course.link === '#'} className="w-full bg-cyan-500 hover:bg-cyan-600 text-white disabled:opacity-50">
-                        <ExternalLink className="mr-2 h-4 w-4"/> Validar Certificado
-                    </Button>
-                </a>
-            </DialogFooter>
-        </DialogContent>
-    </Dialog>
-);
-
-
-const CoursesSection = () => (
-    <motion.section {...animationProps}>
-        <CVCard>
-            <div className="flex items-center gap-3 mb-6">
-                <BookCopy className="h-8 w-8 text-cyan-400" />
-                <h2 className="text-3xl font-bold text-white">Formação Complementar</h2>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                {cvData.courses.map((course, index) => (
-                    <CourseCard key={index} course={course} />
-                ))}
-            </div>
-        </CVCard>
-    </motion.section>
-);
-
-
-
-const CVPage = () => {
-  return (
-    <>
-      <AuroraBackground />
-      <div className="relative z-10 mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8 space-y-8">
-        <ProfileSection />
-        <ExperienceSection />
-        <SkillsSection />
-        <SoftSkillsSection />
-        <LanguagesSection />
-        <EducationAndPrintSection />
-        <CoursesSection />
       </div>
-    </>
+    </div>
   );
-};
-
-export default CVPage;
+}

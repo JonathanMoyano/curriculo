@@ -1,363 +1,456 @@
 // src/data/cv-data.js
-import { Mail, Phone, Linkedin, Github } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, MapPin } from 'lucide-react';
 
 export const cvData = {
   profile: {
     name: 'Jonathan Souza Moyano',
-    title: 'Analista de Infraestrutura Pleno | Redes, Sistemas e Suporte N3',
+    title: {
+      pt: 'Analista de Infraestrutura Pleno | Redes, Sistemas e Suporte N3',
+      en: 'Mid-Level Infrastructure Analyst | Networks, Systems and N3 Support',
+      es: 'Analista de Infraestructura Pleno | Redes, Sistemas y Soporte N3'
+    },
     image: '/jonathan.jpeg',
-    summary: 'Profissional de TI com mais de 10 anos de experiência em infraestrutura, suporte técnico avançado (N3) e manutenção de ambientes corporativos. Expertise em execução de cabeamento estruturado, operação de racks e servidores, diagnóstico eletrônico avançado, virtualização, sistemas de monitoramento (CFTV/Zabbix) e resolução de problemas complexos.',
+    address: 'Av. Nove de Julho, 610 - Vila Cascatinha, São Vicente, SP',
+    
+    objective: {
+      pt: 'Analista de Infraestrutura Pleno ou Analista de Suporte Pleno.',
+      en: 'Work as Mid-Level Infrastructure Analyst or Mid-Level Support Analyst',
+      es: 'Analista de Infraestructura Pleno o Analista de Soporte Pleno.'
+    },
+    
+    summary: {
+      pt: 'Profissional de TI com mais de 10 anos de experiência em infraestrutura, suporte técnico e manutenção de ambientes corporativos. Sólida experiência em administração de servidores Windows e Linux, gerenciamento de redes (VLANs, roteamento, firewall), virtualização (Hyper-V), Active Directory e sistemas ERP. Conhecimento em segurança de redes com implementação de firewalls PFSense e proxy corporativo. Experiência prática em cabeamento estruturado, diagnóstico avançado de hardware e reparo de equipamentos eletrônicos em nível de componentes. Busco constantemente atualização técnica através de cursos e certificações nas áreas de redes, cloud computing e infraestrutura.',
+      en: 'IT professional with over 10 years of experience in infrastructure, technical support, and corporate environment maintenance. Strong experience in Windows and Linux server administration, network management (VLANs, routing, firewall), virtualization (Hyper-V), Active Directory, and ERP systems. Knowledge in network security with PFSense firewall and corporate proxy implementation. Hands-on experience in structured cabling, advanced hardware diagnostics, and electronic equipment repair at component level. Continuously seeking technical updates through courses and certifications in networking, cloud computing, and infrastructure.',
+      es: 'Profesional de TI con más de 10 años de experiencia en infraestructura, soporte técnico y mantenimiento de ambientes corporativos. Sólida experiencia en administración de servidores Windows y Linux, gestión de redes (VLANs, enrutamiento, firewall), virtualización (Hyper-V), Active Directory y sistemas ERP. Conocimiento en seguridad de redes con implementación de firewalls PFSense y proxy corporativo. Experiencia práctica en cableado estructurado, diagnóstico avanzado de hardware y reparación de equipos electrónicos a nivel de componentes. Busco constantemente actualización técnica a través de cursos y certificaciones en redes, cloud computing e infraestructura.'
+    }
   },
   contact: [
     { type: 'email', icon: Mail, value: 'jonathan.moyano@outlook.com.br', href: 'mailto:jonathan.moyano@outlook.com.br' },
     { type: 'phone', icon: Phone, value: '(13) 97412-4438', href: 'tel:+5513974124438' },
+    { type: 'phone', icon: Phone, value: '(13) 97412-8143', href: 'tel:+5513974128143', label: 'Esposa' },
     { type: 'linkedin', icon: Linkedin, value: 'LinkedIn', href: 'https://www.linkedin.com/in/jonathansouzamoyano/', displayValue: 'linkedin.com/in/jonathansouzamoyano' },
     { type: 'github', icon: Github, value: 'GitHub', href: 'https://github.com/JonathanMoyano', displayValue: 'github.com/JonathanMoyano' },
   ],
   skills: {
     principal: [
-      'Infraestrutura de Redes e Servidores',
-      'Suporte Técnico Avançado (N3)', 
-      'Hardware & Eletrônica Avançada', 
-      'Diagnóstico e Reparo de Circuitos',
-      'Help Desk & ITSM (JIRA)'
+      {
+        pt: 'Infraestrutura de Redes e Servidores',
+        en: 'Network and Server Infrastructure',
+        es: 'Infraestructura de Redes y Servidores'
+      },
+      {
+        pt: 'Suporte Técnico Avançado (N3)',
+        en: 'Advanced Technical Support (N3)',
+        es: 'Soporte Técnico Avanzado (N3)'
+      },
+      {
+        pt: 'Hardware & Eletrônica Avançada',
+        en: 'Hardware & Advanced Electronics',
+        es: 'Hardware y Electrónica Avanzada'
+      },
+      {
+        pt: 'Diagnóstico e Reparo de Circuitos',
+        en: 'Circuit Diagnostics and Repair',
+        es: 'Diagnóstico y Reparación de Circuitos'
+      },
+      {
+        pt: 'Help Desk & ITSM (JIRA)',
+        en: 'Help Desk & ITSM (JIRA)',
+        es: 'Help Desk e ITSM (JIRA)'
+      }
     ],
     sistemas: [
-      'Windows Server & Desktop', 
-      'Linux Ubuntu Server', 
-      'Sistemas ERP (TOTVS, GVDasa)',
-      'Virtualização (Hyper-V, Oracle VM)'
+      {
+        pt: 'Windows Server',
+        en: 'Windows Server',
+        es: 'Windows Server'
+      },
+      {
+        pt: 'Windows Desktop',
+        en: 'Windows Desktop',
+        es: 'Windows Desktop'
+      },
+      {
+        pt: 'Linux Server',
+        en: 'Linux Server',
+        es: 'Linux Server'
+      },
+      {
+        pt: 'Linux Desktop',
+        en: 'Linux Desktop',
+        es: 'Linux Desktop'
+      },
+      {
+        pt: 'Sistemas ERP (TOTVS, GVDasa)',
+        en: 'ERP Systems (TOTVS, GVDasa)',
+        es: 'Sistemas ERP (TOTVS, GVDasa)'
+      },
+      {
+        pt: 'Virtualização (Hyper-V, Oracle VM)',
+        en: 'Virtualization (Hyper-V, Oracle VM)',
+        es: 'Virtualización (Hyper-V, Oracle VM)'
+      }
     ],
     infraestrutura: [
-      'Cabeamento Estruturado e Rack',
-      'Active Directory & Google Workspace',
-      'Redes (VLANs, Roteamento) & Firewall (PFSense)', 
-      'Monitoramento (Zabbix, CFTV Intelbras)',
-      'Proxy Corporativo (Squid/SquidGuard)',
-      'Telefonia Analógica'
+      {
+        pt: 'Cabeamento Estruturado e Rack',
+        en: 'Structured Cabling and Rack',
+        es: 'Cableado Estructurado y Rack'
+      },
+      {
+        pt: 'Active Directory & Google Workspace',
+        en: 'Active Directory & Google Workspace',
+        es: 'Active Directory y Google Workspace'
+      },
+      {
+        pt: 'Redes (VLANs, Roteamento) & Firewall (PFSense)',
+        en: 'Networks (VLANs, Routing) & Firewall (PFSense)',
+        es: 'Redes (VLANs, Enrutamiento) y Firewall (PFSense)'
+      },
+      {
+        pt: 'Monitoramento (Zabbix, CFTV Intelbras)',
+        en: 'Monitoring (Zabbix, Intelbras CCTV)',
+        es: 'Monitoreo (Zabbix, CCTV Intelbras)'
+      },
+      {
+        pt: 'Proxy Corporativo (Squid/SquidGuard)',
+        en: 'Corporate Proxy (Squid/SquidGuard)',
+        es: 'Proxy Corporativo (Squid/SquidGuard)'
+      },
+      {
+        pt: 'Telefonia Analógica',
+        en: 'Analog Telephony',
+        es: 'Telefonía Analógica'
+      }
     ],
     nuvem: [
-      'AWS (EC2, S3, RDS)', 
-      'Google Cloud Platform (GCP)', 
-      'Microsoft Azure'
+      {
+        pt: 'AWS (EC2, S3, RDS)',
+        en: 'AWS (EC2, S3, RDS)',
+        es: 'AWS (EC2, S3, RDS)'
+      },
+      {
+        pt: 'Google Cloud Platform (GCP)',
+        en: 'Google Cloud Platform (GCP)',
+        es: 'Google Cloud Platform (GCP)'
+      },
+      {
+        pt: 'Microsoft Azure',
+        en: 'Microsoft Azure',
+        es: 'Microsoft Azure'
+      }
     ]
   },
   softSkills: [
-    'Perfil analítico para diagnóstico de falhas',
-    'Raciocínio lógico e resolução de problemas',
-    'Proatividade e iniciativa técnica',
-    'Comunicação eficaz com usuários e equipes',
-    'Organização e priorização de demandas',
-    'Colaboração e melhoria contínua',
-    'Atenção aos detalhes técnicos',
-    'Adaptabilidade a novas tecnologias',
+    {
+      pt: 'Perfil analítico para diagnóstico de falhas',
+      en: 'Analytical profile for troubleshooting',
+      es: 'Perfil analítico para diagnóstico de fallas'
+    },
+    {
+      pt: 'Raciocínio lógico e resolução de problemas',
+      en: 'Logical reasoning and problem-solving',
+      es: 'Razonamiento lógico y resolución de problemas'
+    },
+    {
+      pt: 'Proatividade e iniciativa técnica',
+      en: 'Proactivity and technical initiative',
+      es: 'Proactividad e iniciativa técnica'
+    },
+    {
+      pt: 'Comunicação eficaz com usuários e equipes',
+      en: 'Effective communication with users and teams',
+      es: 'Comunicación eficaz con usuarios y equipos'
+    },
+    {
+      pt: 'Organização e priorização de demandas',
+      en: 'Organization and prioritization of demands',
+      es: 'Organización y priorización de demandas'
+    },
+    {
+      pt: 'Colaboração e melhoria contínua',
+      en: 'Collaboration and continuous improvement',
+      es: 'Colaboración y mejora continua'
+    },
+    {
+      pt: 'Atenção aos detalhes técnicos',
+      en: 'Attention to technical details',
+      es: 'Atención a los detalles técnicos'
+    },
+    {
+      pt: 'Adaptabilidade a novas tecnologias',
+      en: 'Adaptability to new technologies',
+      es: 'Adaptabilidad a nuevas tecnologías'
+    }
   ],
   languages: [
-    { language: 'Português', level: 'Nativo' },
-    { language: 'Inglês', level: 'A2 - Em desenvolvimento' },
+    { 
+      language: {
+        pt: 'Português',
+        en: 'Portuguese',
+        es: 'Portugués'
+      },
+      level: {
+        pt: 'Nativo',
+        en: 'Native',
+        es: 'Nativo'
+      }
+    },
+    { 
+      language: {
+        pt: 'Inglês',
+        en: 'English',
+        es: 'Inglés'
+      },
+      level: {
+        pt: 'A2 - Em andamento',
+        en: 'A2 - In progress',
+        es: 'A2 - En curso'
+      }
+    }
   ],
   experience: [
     {  
-    role: 'Analista de Infraestrutura e Suporte Técnico Pleno', 
-    company: 'Colégio Jean Piaget', 
-    period: 'Jan/2024 - Presente', 
-    tasks: [
-      'Operação e manutenção da infraestrutura de TI: redes, servidores, virtualização e segurança',
-      'Suporte técnico N3 e resolução de incidentes complexos via ITSM (JIRA)', 
-      'Execução de cabeamento estruturado, organização de racks e manutenção de servidores físicos',
-      'Operação e monitoramento de sistemas de vigilância (Zabbix, CFTV Intelbras)',
-      'Configuração e manutenção de firewall PFSense e proxy corporativo (Squid/SquidGuard no Linux Ubuntu Server) com integração AD',
-      'Gerenciamento de contas de usuários no Active Directory e Google Workspace Admin',
-      'Suporte ao sistema ERP GVDasa e manutenção do ambiente Hyper-V',
-      'Manutenção corretiva avançada de equipamentos eletrônicos e reparo de placas-mãe',
-      'Elaboração de laudos técnicos e documentação de procedimentos',
-      'Manutenção de telefonia analógica e suporte a infraestrutura de rede'
-    ] 
-  },
-    { 
-      role: 'Assistente de Suporte Técnico N1/N2', 
+      role: {
+        pt: 'Analista de Infraestrutura e Suporte Técnico Pleno',
+        en: 'Mid-Level Infrastructure and Technical Support Analyst',
+        es: 'Analista de Infraestructura y Soporte Técnico Pleno'
+      },
       company: 'Colégio Jean Piaget', 
-      period: 'Out/2023 - Jan/2024', 
+      period: {
+        pt: 'Jan/2024 - Presente',
+        en: 'Jan/2024 - Present',
+        es: 'Ene/2024 - Presente'
+      },
       tasks: [
-        'Manutenção preventiva e corretiva de equipamentos', 
-        'Suporte Help Desk para comunidade acadêmica', 
-        'Análise e modernização do sistema de CFTV', 
-        'Controle de inventário e solicitação de compras de TI'
+        {
+          pt: 'Operação e manutenção da infraestrutura de TI: redes, servidores, virtualização e segurança',
+          en: 'IT infrastructure operation and maintenance: networks, servers, virtualization and security',
+          es: 'Operación y mantenimiento de infraestructura de TI: redes, servidores, virtualización y seguridad'
+        },
+        {
+          pt: 'Suporte técnico N3 e resolução de incidentes complexos via ITSM (JIRA)',
+          en: 'N3 technical support and complex incident resolution via ITSM (JIRA)',
+          es: 'Soporte técnico N3 y resolución de incidentes complejos vía ITSM (JIRA)'
+        },
+        {
+          pt: 'Execução de cabeamento estruturado, organização de racks e manutenção de servidores físicos',
+          en: 'Structured cabling execution, rack organization and physical server maintenance',
+          es: 'Ejecución de cableado estructurado, organización de racks y mantenimiento de servidores físicos'
+        },
+        {
+          pt: 'Operação e monitoramento de sistemas de vigilância (Zabbix, CFTV Intelbras)',
+          en: 'Surveillance systems operation and monitoring (Zabbix, Intelbras CCTV)',
+          es: 'Operación y monitoreo de sistemas de vigilancia (Zabbix, CCTV Intelbras)'
+        },
+        {
+          pt: 'Configuração e manutenção de firewall PFSense e proxy corporativo (Squid/SquidGuard no Linux Ubuntu Server) com integração AD',
+          en: 'PFSense firewall and corporate proxy (Squid/SquidGuard on Linux Ubuntu Server) configuration and maintenance with AD integration',
+          es: 'Configuración y mantenimiento de firewall PFSense y proxy corporativo (Squid/SquidGuard en Linux Ubuntu Server) con integración AD'
+        },
+        {
+          pt: 'Gerenciamento de contas de usuários no Active Directory e Google Workspace Admin',
+          en: 'User account management in Active Directory and Google Workspace Admin',
+          es: 'Gestión de cuentas de usuarios en Active Directory y Google Workspace Admin'
+        },
+        {
+          pt: 'Suporte ao sistema ERP GVDasa e manutenção do ambiente Hyper-V',
+          en: 'GVDasa ERP system support and Hyper-V environment maintenance',
+          es: 'Soporte al sistema ERP GVDasa y mantenimiento del ambiente Hyper-V'
+        },
+        {
+          pt: 'Manutenção corretiva avançada de equipamentos eletrônicos e reparo de placas-mãe',
+          en: 'Advanced corrective maintenance of electronic equipment and motherboard repair',
+          es: 'Mantenimiento correctivo avanzado de equipos electrónicos y reparación de placas madre'
+        },
+        {
+          pt: 'Elaboração de laudos técnicos e documentação de procedimentos',
+          en: 'Technical report preparation and procedure documentation',
+          es: 'Elaboración de informes técnicos y documentación de procedimientos'
+        },
+        {
+          pt: 'Manutenção de telefonia analógica e suporte a infraestrutura de rede',
+          en: 'Analog telephony maintenance and network infrastructure support',
+          es: 'Mantenimiento de telefonía analógica y soporte a infraestructura de red'
+        }
+      ]
+    },
+    { 
+      role: {
+        pt: 'Assistente de Suporte Técnico N1/N2',
+        en: 'N1/N2 Technical Support Assistant',
+        es: 'Asistente de Soporte Técnico N1/N2'
+      },
+      company: 'Colégio Jean Piaget', 
+      period: {
+        pt: 'Out/2023 - Jan/2024',
+        en: 'Oct/2023 - Jan/2024',
+        es: 'Oct/2023 - Ene/2024'
+      },
+      tasks: [
+        {
+          pt: 'Manutenção preventiva e corretiva de equipamentos de informática (desktops, notebooks, impressoras)',
+          en: 'Preventive and corrective maintenance of computer equipment (desktops, notebooks, printers)',
+          es: 'Mantenimiento preventivo y correctivo de equipos de informática (desktops, notebooks, impresoras)'
+        },
+        {
+          pt: 'Atendimento de Help Desk para comunidade acadêmica através de sistema de tickets',
+          en: 'Help Desk support for academic community through ticket system',
+          es: 'Soporte Help Desk para comunidad académica a través de sistema de tickets'
+        },
+        {
+          pt: 'Análise técnica e modernização do sistema de CFTV institucional',
+          en: 'Technical analysis and modernization of institutional CCTV system',
+          es: 'Análisis técnico y modernización del sistema de CCTV institucional'
+        },
+        {
+          pt: 'Controle de inventário de ativos de TI e solicitação de compras',
+          en: 'IT asset inventory control and purchase requests',
+          es: 'Control de inventario de activos de TI y solicitud de compras'
+        }
       ] 
     },
     { 
-      role: 'Estágio de Suporte Técnico N1', 
+      role: {
+        pt: 'Estágio de Suporte Técnico N1',
+        en: 'N1 Technical Support Intern',
+        es: 'Pasantía de Soporte Técnico N1'
+      },
       company: 'Colégio da Polícia Militar - Cruz Azul SP', 
-      period: 'Out/2022 - Out/2023', 
+      period: {
+        pt: 'Out/2022 - Out/2023',
+        en: 'Oct/2022 - Oct/2023',
+        es: 'Oct/2022 - Oct/2023'
+      },
       tasks: [
-        'Suporte ao Sistema ERP TOTVS (RM e RM Saúde)', 
-        'Administração de contas no Active Directory', 
-        'Manutenção de servidores locais e sistemas de monitoramento'
+        {
+          pt: 'Suporte ao Sistema ERP TOTVS (módulos RM e RM Saúde) para usuários finais',
+          en: 'Support for TOTVS ERP System (RM and RM Health modules) for end users',
+          es: 'Soporte al Sistema ERP TOTVS (módulos RM y RM Salud) para usuarios finales'
+        },
+        {
+          pt: 'Administração de contas de usuários no Active Directory',
+          en: 'User account administration in Active Directory',
+          es: 'Administración de cuentas de usuarios en Active Directory'
+        },
+        {
+          pt: 'Manutenção de servidores Windows Server locais e sistemas de monitoramento Zabbix',
+          en: 'Maintenance of local Windows Server and Zabbix monitoring systems',
+          es: 'Mantenimiento de servidores Windows Server locales y sistemas de monitoreo Zabbix'
+        }
       ] 
     },
     { 
-      role: 'Consultor de TI', 
-      company: 'Prestação de Serviços Autônoma', 
-      period: 'Jan/2010 - Out/2023', 
+      role: {
+        pt: 'Consultor de TI Autônomo',
+        en: 'Freelance IT Consultant',
+        es: 'Consultor de TI Autónomo'
+      },
+      company: {
+        pt: 'Prestação de Serviços Autônoma',
+        en: 'Freelance Services',
+        es: 'Prestación de Servicios Autónoma'
+      },
+      period: {
+        pt: 'Jan/2010 - Out/2023',
+        en: 'Jan/2010 - Oct/2023',
+        es: 'Ene/2010 - Oct/2023'
+      },
       tasks: [
-        'Atendimento técnico especializado a residências e pequenas empresas', 
-        'Diagnóstico e reparo de hardware (desktops, notebooks, impressoras)', 
-        'Instalação e configuração de sistemas Windows/Linux', 
-        'Recuperação de dados, remoção de malware e suporte remoto'
+        {
+          pt: 'Atendimento técnico especializado a residências e pequenas empresas',
+          en: 'Specialized technical support for homes and small businesses',
+          es: 'Soporte técnico especializado para hogares y pequeñas empresas'
+        },
+        {
+          pt: 'Diagnóstico e reparo de hardware (desktops, notebooks, impressoras)',
+          en: 'Hardware diagnostics and repair (desktops, notebooks, printers)',
+          es: 'Diagnóstico y reparación de hardware (desktops, notebooks, impresoras)'
+        },
+        {
+          pt: 'Instalação e configuração de sistemas operacionais Windows e Linux',
+          en: 'Installation and configuration of Windows and Linux operating systems',
+          es: 'Instalación y configuración de sistemas operativos Windows y Linux'
+        },
+        {
+          pt: 'Recuperação de dados, remoção de malware e suporte remoto',
+          en: 'Data recovery, malware removal and remote support',
+          es: 'Recuperación de datos, eliminación de malware y soporte remoto'
+        }
       ] 
     },
     { 
-      role: 'Bombeiro Civil (Líder)', 
+      role: {
+        pt: 'Bombeiro Civil (Líder de Equipe)',
+        en: 'Civil Firefighter (Team Leader)',
+        es: 'Bombero Civil (Líder de Equipo)'
+      },
       company: 'Bracell, Grupo Mendes, Santos FC', 
-      period: '2018 - 2022', 
+      period: {
+        pt: '2018 - 2022',
+        en: '2018 - 2022',
+        es: '2018 - 2022'
+      },
       tasks: [
-        'Coordenação de equipes de resposta a emergências', 
-        'Implementação de protocolos de segurança', 
-        'Operação de crises e tomada de decisão sob pressão'
+        {
+          pt: 'Coordenação de equipes de bombeiros civis em resposta a emergências',
+          en: 'Coordination of civil firefighter teams in emergency response',
+          es: 'Coordinación de equipos de bomberos civiles en respuesta a emergencias'
+        },
+        {
+          pt: 'Implementação de protocolos de segurança e treinamentos de brigada de incêndio',
+          en: 'Implementation of safety protocols and fire brigade training',
+          es: 'Implementación de protocolos de seguridad y entrenamientos de brigada de incendio'
+        },
+        {
+          pt: 'Gestão de crises e tomada de decisões em situações de alto risco',
+          en: 'Crisis management and decision-making in high-risk situations',
+          es: 'Gestión de crisis y toma de decisiones en situaciones de alto riesgo'
+        }
       ] 
-    },
+    }
   ],
   education: [
-    { degree: 'Análise e Desenvolvimento de Sistemas', institution: 'UNIBR', status: 'Concluído' },
+    { 
+      degree: {
+        pt: 'Análise e Desenvolvimento de Sistemas',
+        en: 'Systems Analysis and Development',
+        es: 'Análisis y Desarrollo de Sistemas'
+      },
+      institution: 'UNIBR', 
+      status: {
+        pt: 'Concluído',
+        en: 'Completed',
+        es: 'Concluido'
+      }
+    }
   ],
+  // CURSOS EM ORDEM CRONOLÓGICA (DO MAIS RECENTE PARA O MAIS ANTIGO)
   courses: [
-    // === SISTEMAS OPERACIONAIS ===
-    {
-      title: "Windows Server",
-      institution: "Alura",
-      date: "Ago de 2025",
-      category: "Sistemas Operacionais",
-      link: "https://cursos.alura.com.br/certificate/a0fd3ea2-ba77-486e-8c02-55e67d4ac43b",
-      credentialId: "a0fd3ea2-ba77-486e-8c02-55e67d4ac43b",
-      description: "Instalação e administração do Windows Server, domínio, DNS, sub-redes, gerenciamento de usuários e permissões."
-    },
-    {
-      title: "Windows: Prompt - Utilizando o CMD",
-      institution: "Alura",
-      date: "Ago de 2025",
-      category: "Sistemas Operacionais",
-      link: "https://cursos.alura.com.br/certificate/858009a3-028d-49f0-9ecf-677495f5a4ea",
-      credentialId: "858009a3-028d-49f0-9ecf-677495f5a4ea",
-      description: "Comandos avançados do prompt do Windows (CMD) para otimização do fluxo de trabalho."
-    },
-    {
-      title: "Linux: Terminal - Comandos para Executar Tarefas",
-      institution: "Alura",
-      date: "Ago de 2025",
-      category: "Sistemas Operacionais",
-      link: "https://cursos.alura.com.br/certificate/5ea94275-866f-4045-8f33-d5aeebc0059e",
-      credentialId: "5ea94275-866f-4045-8f33-d5aeebc0059e",
-      description: "Comandos essenciais do terminal Linux para executar tarefas e otimizar o fluxo de trabalho."
-    },
-    {
-      title: "Linux: Gerenciando Diretórios, Arquivos e Processos",
-      institution: "Alura",
-      date: "Ago de 2025",
-      category: "Sistemas Operacionais",
-      link: "https://cursos.alura.com.br/certificate/3adc7947-96e3-43b9-87e7-4fb7fcccbe1c",
-      credentialId: "3adc7947-96e3-43b9-87e7-4fb7fcccbe1c",
-      description: "Gerenciamento avançado de diretórios, arquivos, permissões de acesso e processos no Linux."
-    },
-    {                                                                                                                                            
-      title: "Linux: Fundamentos",
-      institution: "FIAP",
-      date: "Jul de 2025",
-      category: "Sistemas Operacionais",
-      link: "https://on.fiap.com.br/local/nanocourses/validar-certificado",
-      credentialId: "76c24889e60c25ace21a3b5f7b4819a8",
-      description: "Fundamentos do Linux: comandos básicos, gerenciamento de arquivos, processos, usuários e sistemas de arquivos."
-    },
-
-    // === REDES ===
-    {
-      title: "Redes: Implementando Roteamento, DNS e IPv6",
-      institution: "Alura",
-      date: "Ago de 2025",
-      category: "Redes",
-      link: "https://cursos.alura.com.br/certificate/5e759859-8187-453f-9e8a-45293f900588",
-      credentialId: "5e759859-8187-453f-9e8a-45293f900588",
-      description: "Roteamento interno/externo, DNS, IPv6 e diferenças entre IPv6 e IPv4."
-    },
-    {
-      title: "Redes Wi-Fi: Criando uma Rede Sem Fio Segura",
-      institution: "Alura",
-      date: "Ago de 2025",
-      category: "Redes",
-      link: "https://cursos.alura.com.br/certificate/23f03b42-4b62-4578-b08a-ed3a8ae3cdb3",
-      credentialId: "23f03b42-4b62-4578-b08a-ed3a8ae3cdb3",
-      description: "Configuração e implementação de redes Wi-Fi seguras com foco em segurança."
-    },
-    {
-      title: 'Redes: Dos Conceitos Iniciais à Criação de Intranet',
-      institution: 'Alura',
-      date: 'Jul de 2025',
-      category: 'Redes',
-      link: 'https://cursos.alura.com.br/certificate/c946c1d3-80ac-4854-ae33-3c9f719774d2', 
-      credentialId: 'c946c1d3-80ac-4854-ae33-3c9f719774d2',
-      description: 'Fundamentos de redes, protocolos, endereçamento IP, switches, roteadores e implementação de intranets.'
-    },
-    {
-      title: 'Redes: Construindo Projeto com VLANs e Políticas de Acesso',
-      institution: 'Alura',
-      date: 'Jul de 2025',
-      category: 'Redes',
-      link: 'https://cursos.alura.com.br/certificate/d3966b25-9254-49aa-b978-5c1b3cb89424', 
-      credentialId: 'd3966b25-9254-49aa-b978-5c1b3cb89424',
-      description: 'Arquitetura de redes locais, VLANs, configuração de equipamentos, ACLs e conexão à internet (NAT).'
-    },
-
-    // === INFRAESTRUTURA ===
-    {
-      title: 'Gestão de Infraestrutura de TI',
-      institution: 'FIAP',
-      date: 'Mai de 2025',
-      category: 'Infraestrutura',
-      link: 'https://on.fiap.com.br/local/nanocourses/validar-certificado', 
-      credentialId: 'd3966b25-9254-49aa-b978-5c1b3cb89424',
-      description: 'Governança de TI, gerenciamento de serviços (ITIL), segurança e planejamento de infraestrutura.'
-    },
-    {
-      title: 'IT Service Management: Serviços de TI (ITSM)',
-      institution: 'Udemy',
-      date: 'Ago de 2023',
-      category: 'Infraestrutura',
-      link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-57bb2a19-6d12-4769-9650-3d3c5b705990.pdf',
-      credentialId: 'UC-57bb2a19-6d12-4769-9650-3d3c5b705990',
-      description: 'Gerenciamento de serviços de TI baseado nas melhores práticas do framework ITIL.'
-    },
-
-    // === CLOUD COMPUTING ===
-    {
-      title: 'Microsoft Azure Data Fundamentals (DP-900)',
-      institution: 'Ka Solution',
-      date: 'Abr de 2024',
-      category: 'Cloud Computing',
-      link: 'https://www.kasolution.com.br/certificado',
-      credentialId: '06352-71737',
-      description: 'Curso preparatório DP-900: conceitos fundamentais de dados no Microsoft Azure.'
-    },
-    {
-      title: 'GKE: Backups Inteligentes na Google Cloud Platform',
-      institution: 'DIO',
-      date: 'Abr de 2024',
-      category: 'Cloud Computing',
-      link: 'https://www.dio.me/certificate/9F6X8V9L',
-      credentialId: '9F6X8V9L',
-      description: 'Estratégias e ferramentas para backups inteligentes de aplicações no Google Kubernetes Engine.'
-    },
-    {
-      title: 'Google Cloud Fundamentals: Core Infrastructure',
-      institution: 'Coursera',
-      date: 'Jan de 2024',
-      category: 'Cloud Computing',
-      link: 'https://coursera.org/verify/62QPF65UCG7N',
-      credentialId: '62QPF65UCG7N',
-      description: 'Infraestrutura da GCP: Compute Engine, Cloud Storage, VPC, IAM e outros serviços essenciais.'
-    },
-    {
-      title: 'Google Cloud Associate Engineer (GCP)',
-      institution: 'Udemy',
-      date: 'Jun de 2023',
-      category: 'Cloud Computing',
-      link: 'https://www.udemy.com/certificate/UC-80a79a81-49a3-408f-bf76-8d95876cd234/',
-      credentialId: 'UC-80a79a81-49a3-408f-bf76-8d95876cd234',
-      description: 'Curso preparatório completo para o exame GCP Associate Cloud Engineer - todos os domínios.'
-    },
-    {
-      title: 'AWS Amazon Cloud Computing - Iniciante',
-      institution: 'Udemy',
-      date: 'Mai de 2023',
-      category: 'Cloud Computing',
-      link: 'https://www.udemy.com/certificate/UC-01edbfeb-7c04-4506-bcd0-013fa2c4b8ef/',
-      credentialId: 'UC-01edbfeb-7c04-4506-bcd0-013fa2c4b8ef',
-      description: 'Introdução à AWS: EC2, S3, RDS e fundamentos de arquitetura na nuvem.'
-    },
-
-    // === DESENVOLVIMENTO ===
-    {
-      title: 'Introdução ao Desenvolvimento Moderno de Software',
-      institution: 'DIO',
-      date: 'Jun de 2024',
-      category: 'Desenvolvimento',
-      link: 'https://www.dio.me/certificate/INTRO-DEV-2024',
-      credentialId: 'INTRO-DEV-2024',
-      description: 'Ciclos de vida de software, metodologias ágeis e ferramentas de desenvolvimento modernas.'
-    },
-    {
-      title: 'Banco de Dados SQL do Zero ao Avançado',
-      institution: 'Udemy',
-      date: 'Jul de 2023',
-      category: 'Desenvolvimento',
-      link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-67b75454-9a0d-4396-b9cc-ea5daf4e194f.pdf',
-      credentialId: 'UC-67b75454-9a0d-4396-b9cc-ea5daf4e194f',
-      description: 'SQL completo: desde consultas básicas até modelagem e otimização avançada de banco de dados.'
-    },
-    {
-      title: 'Programação Python do Zero ao Avançado',
-      institution: 'Udemy',
-      date: 'Jul de 2023',
-      category: 'Desenvolvimento',
-      link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-0b2a2c15-17e1-4ca6-b35c-61280139c1b2.jpg',
-      credentialId: 'UC-0b2a2c15-17e1-4ca6-b35c-61280139c1b2',
-      description: 'Python completo: sintaxe básica, estruturas de dados, POO e principais bibliotecas.'
-    },
-    {
-      title: 'Banco de Dados Oracle SQL',
-      institution: 'Udemy',
-      date: 'Jun de 2023',
-      category: 'Desenvolvimento',
-      link: 'https://www.udemy.com/certificate/UC-18124ac0-3ff8-4717-b29d-1866da745d6e/',
-      credentialId: 'UC-18124ac0-3ff8-4717-b29d-1866da745d6e',
-      description: 'SQL para Oracle Database com foco em recursos avançados e específicos da plataforma.'
-    },
-    {
-      title: 'CC50: Introdução à Ciência da Computação - Harvard',
-      institution: 'Fundação Estudar',
-      date: 'Jan de 2023',
-      category: 'Desenvolvimento',
-      link: 'https://certificados.estudar.org.br/verify/cc50',
-      credentialId: 'CC50-2023-HARVARD',
-      description: 'Versão brasileira do CS50 de Harvard: pilares da ciência da computação, de C a Python.'
-    },
-    {
-      title: 'Algoritmos e Lógica de Programação',
-      institution: 'Udemy',
-      date: 'Set de 2022',
-      category: 'Desenvolvimento',
-      link: 'https://www.udemy.com/certificate/UC-3f49dd51-4a52-4a10-9274-08be6e811528/',
-      credentialId: 'UC-3f49dd51-4a52-4a10-9274-08be6e811528',
-      description: 'Fundamentos sólidos em lógica de programação e algoritmos essenciais.'
-    },
-
-    // === DADOS & IA ===
-    {
-      title: 'ChatGPT para Python',
-      institution: 'Udemy',
-      date: 'Ago de 2023',
-      category: 'Dados & IA',
-      link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-6e403c81-1e3e-48bd-bd68-dd93ee21a808.pdf',
-      credentialId: 'UC-6e403c81-1e3e-48bd-bd68-dd93ee21a808',
-      description: 'Desenvolvimento de aplicações Python integradas com API do ChatGPT para automação.'
-    },
-    {
-      title: 'Introdução à Ciência de Dados 3.0',
-      institution: 'Data Science Academy',
-      date: 'Jun de 2023',
-      category: 'Dados & IA',
-      link: 'https://mycourse.app/ZLyNnxzzSXuqBShE7',
-      credentialId: '64959a5d8b4880becf06818c',
-      description: 'Fundamentos de Data Science, Big Data e análise de dados com Python e R.'
-    },
-
-    // === HARDWARE ===
-    {
-      title: 'Reparo Avançado em Placas e Circuitos Eletrônicos',
-      institution: 'MasterNet Cursos',
-      date: 'Fev de 2021',
-      category: 'Hardware',
-      link: 'https://masternet.com.br/certificados',
-      credentialId: 'MN-2021-REPAIR-ADV',
-      description: 'Técnicas avançadas de diagnóstico e reparo de componentes eletrônicos em placas-mãe.'
-    },
+    { title: 'Windows Server', institution: 'Alura', date: 'Ago/2025' },
+    { title: 'Windows: Prompt - Utilizando o CMD', institution: 'Alura', date: 'Ago/2025' },
+    { title: 'Linux: Terminal - Comandos para Executar Tarefas', institution: 'Alura', date: 'Ago/2025' },
+    { title: 'Linux: Gerenciando Diretórios, Arquivos e Processos', institution: 'Alura', date: 'Ago/2025' },
+    { title: 'Redes: Implementando Roteamento, DNS e IPv6', institution: 'Alura', date: 'Ago/2025' },
+    { title: 'Redes Wi-Fi: Criando uma Rede Sem Fio Segura', institution: 'Alura', date: 'Ago/2025' },
+    { title: 'Linux: Fundamentos', institution: 'FIAP', date: 'Jul/2025' },
+    { title: 'Redes: Dos Conceitos Iniciais à Criação de Intranet', institution: 'Alura', date: 'Jul/2025' },
+    { title: 'Redes: Construindo Projeto com VLANs e Políticas de Acesso', institution: 'Alura', date: 'Jul/2025' },
+    { title: 'Introdução ao Desenvolvimento Moderno de Software', institution: 'DIO', date: 'Jun/2024' },
+    { title: 'Gestão de Infraestrutura de TI', institution: 'FIAP', date: 'Mai/2025' },
+    { title: 'Microsoft Azure Data Fundamentals (DP-900)', institution: 'Ka Solution', date: 'Abr/2024' },
+    { title: 'GKE: Backups Inteligentes na Google Cloud Platform', institution: 'DIO', date: 'Abr/2024' },
+    { title: 'Google Cloud Fundamentals: Core Infrastructure', institution: 'Coursera', date: 'Jan/2024' },
+    { title: 'IT Service Management: Serviços de TI (ITSM)', institution: 'Udemy', date: 'Ago/2023' },
+    { title: 'ChatGPT para Python', institution: 'Udemy', date: 'Ago/2023' },
+    { title: 'Banco de Dados SQL do Zero ao Avançado', institution: 'Udemy', date: 'Jul/2023' },
+    { title: 'Programação Python do Zero ao Avançado', institution: 'Udemy', date: 'Jul/2023' },
+    { title: 'Banco de Dados Oracle SQL', institution: 'Udemy', date: 'Jun/2023' },
+    { title: 'Google Cloud Associate Engineer (GCP)', institution: 'Udemy', date: 'Jun/2023' },
+    { title: 'Introdução à Ciência de Dados 3.0', institution: 'Data Science Academy', date: 'Jun/2023' },
+    { title: 'AWS Amazon Cloud Computing - Iniciante', institution: 'Udemy', date: 'Mai/2023' },
+    { title: 'CC50: Introdução à Ciência da Computação - Harvard', institution: 'Fundação Estudar', date: 'Jan/2023' },
+    { title: 'Algoritmos e Lógica de Programação', institution: 'Udemy', date: 'Set/2022' },
+    { title: 'Reparo Avançado em Placas e Circuitos Eletrônicos', institution: 'MasterNet Cursos', date: 'Fev/2021' }
   ]
 };
