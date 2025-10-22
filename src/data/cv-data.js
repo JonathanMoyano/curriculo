@@ -13,9 +13,9 @@ export const cvData = {
     address: 'Av. Nove de Julho, 610 - Vila Cascatinha, São Vicente, SP',
     
     objective: {
-      pt: 'Analista de Infraestrutura ou Analista de Suporte Técnico com foco em ambientes corporativos.',
-      en: 'Infrastructure Analyst or Technical Support Analyst focused on corporate environments.',
-      es: 'Analista de Infraestructura o Analista de Soporte Técnico con foco en ambientes corporativos.'
+      pt: 'Analista de Infraestrutura Pleno ou Analista de Suporte Técnico N3 com foco em ambientes corporativos.',
+      en: 'Mid-Level Infrastructure Analyst or Tier 3 (T3) Technical Support Analyst, focused on corporate environments.',
+      es: 'Analista de Infraestructura Pleno o Analista de Soporte Técnico Nivel 3 (N3), con enfoque en entornos corporativos.'
     },
     
     summary: {
