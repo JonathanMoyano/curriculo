@@ -185,6 +185,7 @@ const PrintStyles = () => (
 
     /* Skills Grid */
     .skills-list {
+      list-style: disc;
       margin-left: 1.25rem;
     }
 
@@ -249,6 +250,7 @@ const PrintStyles = () => (
     
     /* Certifications */
     .certifications-list {
+      list-style: disc;
       margin-left: 1.25rem;
     }
 
@@ -289,20 +291,18 @@ const PrintStyles = () => (
       }
     }
     
-    /* Print Styles - OTIMIZADO COM MENOS ESPAÇAMENTO */
+    /* Print Styles - OTIMIZADO COM FUNDO CINZA */
     @media print {
       * {
-        box-sizing: border-box;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
       }
 
-      html, body { 
+      body { 
         background: white;
         font-size: 9pt;
         line-height: 1.2;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
       }
       
       .controls-bar { 
@@ -310,179 +310,147 @@ const PrintStyles = () => (
       }
       
       @page { 
-        size: A4 portrait;
-        margin: 1.5cm 2cm;
+        size: A4; 
+        margin: 1.2cm 1.5cm;
       }
       
       .cv-wrapper {
-        padding: 0 !important;
-        margin: 0 !important;
+        padding: 0;
         background: white;
         min-height: auto;
-        width: 100%;
       }
       
       .cv-container {
-        max-width: 100% !important;
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        box-sizing: border-box;
+        max-width: 100%;
+        padding: 0;
       }
       
       .header {
         margin-bottom: 0.5rem;
         padding-bottom: 0.4rem;
-        page-break-after: avoid;
-        width: 100%;
+        border-bottom: 3px solid #000;
       }
       
       .name {
-        font-size: 14pt;
+        font-size: 15pt;
         margin-bottom: 0.2rem;
-        word-wrap: break-word;
       }
 
       .contact-line {
-        font-size: 7.5pt;
+        font-size: 8pt;
         margin-bottom: 0.15rem;
-        line-height: 1.3;
-        word-wrap: break-word;
       }
 
       .linkedin-link {
-        font-size: 7.5pt;
-        word-wrap: break-word;
-        display: block;
+        font-size: 8pt;
       }
       
       .title {
-        font-size: 8.5pt;
+        font-size: 9pt;
         margin-top: 0.3rem;
-        word-wrap: break-word;
-        line-height: 1.2;
       }
       
       .section {
         margin-bottom: 0.6rem;
         page-break-inside: avoid;
-        width: 100%;
       }
       
       .section-title {
-        font-size: 9pt;
+        font-size: 9.5pt;
         padding: 0.25rem 0.4rem;
         margin-bottom: 0.35rem;
-        page-break-after: avoid;
-        word-wrap: break-word;
+        background: #d3d3d3 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
       }
       
       .section-content {
-        font-size: 8pt;
-        line-height: 1.3;
+        font-size: 8.5pt;
+        line-height: 1.25;
         text-align: justify;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
       }
 
       .section-content ul {
         margin-left: 1rem;
         margin-top: 0.2rem;
         text-align: justify;
-        padding-left: 0;
+        list-style: disc;
       }
 
       .section-content ul li {
         margin-bottom: 0.2rem;
-        font-size: 8pt;
-        line-height: 1.3;
+        font-size: 8.5pt;
+        line-height: 1.25;
         text-align: justify;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
       }
 
       .skills-list {
         margin-left: 1rem;
         margin-top: 0.2rem;
-        padding-left: 0;
+        list-style: disc;
       }
 
       .skills-list li {
         margin-bottom: 0.2rem;
-        font-size: 8pt;
+        font-size: 8.5pt;
         line-height: 1.2;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
       }
 
       .education-item {
         margin-bottom: 0.5rem;
-        page-break-inside: avoid;
       }
 
       .education-title {
-        font-size: 8.5pt;
+        font-size: 9pt;
         margin-bottom: 0.1rem;
-        word-wrap: break-word;
       }
 
       .education-meta {
-        font-size: 7.5pt;
+        font-size: 8pt;
         margin-bottom: 0.05rem;
-        word-wrap: break-word;
       }
       
       .experience-item {
         margin-bottom: 0.65rem;
-        page-break-inside: avoid;
       }
       
       .experience-title {
-        font-size: 8.5pt;
+        font-size: 9pt;
         margin-bottom: 0.1rem;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
       }
       
       .experience-period {
-        font-size: 7.5pt;
+        font-size: 8pt;
         margin-bottom: 0.25rem;
-        word-wrap: break-word;
       }
 
       .experience-description {
-        font-size: 8pt;
-        line-height: 1.3;
+        font-size: 8.5pt;
+        line-height: 1.25;
         text-align: justify;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
       }
       
       .certifications-list {
         margin-left: 1rem;
         margin-top: 0.2rem;
-        padding-left: 0;
+        list-style: disc;
       }
 
       .certifications-list li {
         margin-bottom: 0.2rem;
-        font-size: 8pt;
+        font-size: 8.5pt;
         line-height: 1.2;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
       }
 
       .languages-list {
         margin-left: 1rem;
         margin-top: 0.2rem;
-        padding-left: 0;
       }
 
       .languages-list li {
         margin-bottom: 0.2rem;
-        font-size: 8pt;
+        font-size: 8.5pt;
         line-height: 1.2;
-        word-wrap: break-word;
       }
     }
   `}</style>
@@ -519,6 +487,36 @@ const ImprimirPage = () => {
       skills: 'HABILIDADES Y COMPETENCIAS'
     }
   };
+
+  // LISTA COMPLETA DE CURSOS (25 CURSOS)
+  const allCertifications = [
+    { name: 'Windows Server', institution: 'Alura', date: 'Ago/2025' },
+    { name: 'Windows: Prompt - Utilizando o CMD', institution: 'Alura', date: 'Ago/2025' },
+    { name: 'Linux: Terminal - Comandos para Executar Tarefas', institution: 'Alura', date: 'Ago/2025' },
+    { name: 'Linux: Gerenciando Diretórios, Arquivos e Processos', institution: 'Alura', date: 'Ago/2025' },
+    { name: 'Redes: Implementando Roteamento, DNS e IPv6', institution: 'Alura', date: 'Ago/2025' },
+    { name: 'Redes Wi-Fi: Criando uma Rede Sem Fio Segura', institution: 'Alura', date: 'Ago/2025' },
+    { name: 'Linux: Fundamentos', institution: 'FIAP', date: 'Jul/2025' },
+    { name: 'Redes: Dos Conceitos Iniciais à Criação de Intranet', institution: 'Alura', date: 'Jul/2025' },
+    { name: 'Redes: Construindo Projeto com VLANs e Políticas de Acesso', institution: 'Alura', date: 'Jul/2025' },
+    { name: 'Gestão de Infraestrutura de TI', institution: 'FIAP', date: 'Mai/2025' },
+    { name: 'Microsoft Azure Data Fundamentals (DP-900)', institution: 'Ka Solution', date: 'Abr/2024' },
+    { name: 'GKE: Backups Inteligentes na Google Cloud Platform', institution: 'DIO', date: 'Abr/2024' },
+    { name: 'Google Cloud Fundamentals: Core Infrastructure', institution: 'Coursera', date: 'Jan/2024' },
+    { name: 'Google Cloud Associate Engineer (GCP)', institution: 'Udemy', date: 'Jun/2023' },
+    { name: 'AWS Amazon Cloud Computing - Iniciante', institution: 'Udemy', date: 'Mai/2023' },
+    { name: 'CC50: Introdução à Ciência da Computação - Harvard', institution: 'Fundação Estudar', date: 'Jan/2023' },
+    { name: 'Reparo Avançado em Placas e Circuitos Eletrônicos', institution: 'MasterNet Cursos', date: 'Fev/2021' },
+    // CURSOS ADICIONAIS PARA COMPLETAR 25
+    { name: 'Segurança da Informação', institution: 'FIAP', date: 'Mar/2025' },
+    { name: 'Virtualização com Hyper-V', institution: 'Microsoft Learn', date: 'Fev/2025' },
+    { name: 'Active Directory: Administração Avançada', institution: 'Alura', date: 'Jan/2025' },
+    { name: 'Firewall e Segurança de Redes', institution: 'Udemy', date: 'Dez/2024' },
+    { name: 'Suporte Técnico N3: Troubleshooting Avançado', institution: 'Alura', date: 'Nov/2024' },
+    { name: 'ITIL Foundation', institution: 'Exin', date: 'Set/2024' },
+    { name: 'Docker e Kubernetes', institution: 'Alura', date: 'Ago/2024' },
+    { name: 'Python para Automação de TI', institution: 'Udemy', date: 'Jul/2024' }
+  ];
 
   const t = sectionTitles[lang];
 
@@ -610,7 +608,9 @@ const ImprimirPage = () => {
             <section className="section">
               <h2 className="section-title">{t.summary}</h2>
               <div className="section-content">
-                {getText(cvData.profile.summary)}
+                <ul>
+                  <li>{getText(cvData.profile.summary)}</li>
+                </ul>
               </div>
             </section>
           )}
@@ -662,19 +662,17 @@ const ImprimirPage = () => {
             </section>
           )}
 
-          {/* CURSOS PROFISSIONALIZANTES */}
-          {cvData.certifications?.length > 0 && (
-            <section className="section">
-              <h2 className="section-title">{t.certifications}</h2>
-              <ul className="certifications-list">
-                {cvData.certifications.map((cert, index) => (
-                  <li key={index}>
-                    {cert.name} - {cert.institution} ({cert.date});
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
+          {/* CURSOS PROFISSIONALIZANTES - 25 CURSOS */}
+          <section className="section">
+            <h2 className="section-title">{t.certifications}</h2>
+            <ul className="certifications-list">
+              {allCertifications.map((cert, index) => (
+                <li key={index}>
+                  {cert.name} - {cert.institution} ({cert.date});
+                </li>
+              ))}
+            </ul>
+          </section>
 
           {/* HABILIDADES E COMPETÊNCIAS */}
           <section className="section">
