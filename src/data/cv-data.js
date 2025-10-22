@@ -155,6 +155,12 @@ export const cvData = {
         ]
   },
   softSkills: [
+              {
+      pt: 'Mentoria Técnica e Desenvolvimento de Talentos',
+      en: 'Technical Mentoring and Talent Development',
+      es: 'Mentoría Técnica y Desarrollo de Talentos'
+    },
+          
     {
       pt: 'Perfil analítico para diagnóstico de falhas',
       en: 'Analytical profile for troubleshooting',
