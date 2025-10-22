@@ -6,7 +6,8 @@ const PrintStylesV2 = () => (
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
     /* ========================================
-      ESTILOS BASE PARA TODOS OS DISPOSITIVOS
+      ESTILOS PARA VISUALIZAÇÃO NA TELA
+      (Mantém layout original com 2 colunas e foto)
       ======================================== */
     * {
       box-sizing: border-box;
@@ -20,226 +21,113 @@ const PrintStylesV2 = () => (
       color: #1f2937;
     }
     
-    /* ========================================
-      ESTILOS PARA DESKTOP (MIN-WIDTH: 769PX)
-      ======================================== */
-    @media (min-width: 769px) {
-      .cv-wrapper {
-        min-height: 100vh;
-        background: #f3f4f6;
-        padding: 2rem;
-      }
-      
-      .cv-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        background: white;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        padding: 3rem;
-      }
-
-      .no-print {
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-    }
-
-    /* ========================================
-      ESTILOS PARA TABLET (768PX ATÉ 1024PX)
-      ======================================== */
-    @media (min-width: 769px) and (max-width: 1024px) {
-      .cv-wrapper {
-        padding: 1.5rem;
-      }
-      
-      .cv-container {
-        padding: 2rem;
-      }
-
-      .no-print {
-        top: 0.5rem;
-        right: 0.5rem;
-      }
-
-      .header-main {
-        margin-bottom: 1.5rem;
-      }
-
-      .name-title {
-        font-size: 2rem;
-      }
-
-      .section-main {
-        margin-bottom: 1.2rem;
-      }
+    .cv-wrapper {
+      min-height: 100vh;
+      background: #f3f4f6;
+      padding: 2rem;
     }
     
-    /* ========================================
-      ESTILOS PARA DISPOSITIVOS MÓVEIS (MAX-WIDTH: 768PX)
-      ======================================== */
-    @media (max-width: 768px) {
-      .cv-wrapper {
-        padding: 0;
-        min-height: auto;
-        background: white;
-      }
-      
-      .cv-container {
-        min-height: auto;
-        box-shadow: none;
-        width: 100%;
-        padding: 1rem;
-      }
-      
-      /* CONTROLES NO MOBILE */
-      .no-print {
-        position: static !important;
-        top: auto !important;
-        right: auto !important;
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 0.75rem !important;
-        padding: 1rem;
-        width: 100%;
-        background: #f3f4f6;
-        border-bottom: 2px solid #e5e7eb;
-        margin-bottom: 1rem;
-      }
-
-      /* Container dos controles */
-      .no-print > div {
-        width: 100% !important;
-        max-width: 100% !important;
-      }
-
-      /* Botões de idioma */
-      .language-buttons {
-        display: flex !important;
-        justify-content: center !important;
-        gap: 0.5rem !important;
-        flex-wrap: wrap !important;
-      }
-
-      .language-buttons button {
-        flex: 1 1 auto !important;
-        min-width: 80px !important;
-        padding: 0.75rem 1rem !important;
-        font-size: 0.9rem !important;
-      }
-
-      /* Botão de impressão */
-      .print-button {
-        width: 100% !important;
-        padding: 0.875rem 1.5rem !important;
-        font-size: 1rem !important;
-        text-align: center !important;
-      }
-
-      /* Ajustes de fonte para mobile */
-      .name-title {
-        font-size: 1.75rem !important;
-        line-height: 1.3 !important;
-      }
-
-      .job-title {
-        font-size: 0.95rem !important;
-        line-height: 1.4 !important;
-      }
-
-      .section-title-main {
-        font-size: 1.1rem !important;
-        margin-bottom: 0.75rem !important;
-      }
-
-      .section-content-main {
-        font-size: 0.875rem !important;
-        line-height: 1.6 !important;
-      }
-
-      .experience-role {
-        font-size: 1rem !important;
-      }
-
-      .experience-company,
-      .experience-period {
-        font-size: 0.85rem !important;
-      }
-
-      .experience-tasks li {
-        font-size: 0.85rem !important;
-        padding-left: 1.25rem !important;
-        margin-bottom: 0.5rem !important;
-      }
-
-      .course-item-simple {
-        font-size: 0.85rem !important;
-        line-height: 1.5 !important;
-      }
-
-      .contact-info {
-        font-size: 0.85rem !important;
-      }
-
-      /* Espaçamentos mobile */
-      .header-main {
-        margin-bottom: 1.5rem !important;
-        padding-bottom: 1rem !important;
-      }
-
-      .section-main {
-        margin-bottom: 1.25rem !important;
-      }
-
-      .experience-item {
-        margin-bottom: 1.25rem !important;
-      }
+    .cv-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      min-height: 100vh;
     }
 
-    /* ========================================
-      ESTILOS PARA MOBILE PEQUENO (MAX-WIDTH: 480PX)
-      ======================================== */
-    @media (max-width: 480px) {
-      .cv-container {
-        padding: 0.75rem;
-      }
-
-      .no-print {
-        padding: 0.75rem;
-      }
-
-      .name-title {
-        font-size: 1.5rem !important;
-      }
-
-      .job-title {
-        font-size: 0.85rem !important;
-      }
-
-      .section-title-main {
-        font-size: 1rem !important;
-      }
-
-      .section-content-main {
-        font-size: 0.8rem !important;
-      }
-
-      .experience-tasks li {
-        font-size: 0.8rem !important;
-      }
-
-      .course-item-simple {
-        font-size: 0.8rem !important;
-      }
+    .no-print {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
-
-    /* ========================================
-      ESTILOS COMUNS (TODOS OS TAMANHOS)
-      ======================================== */
+    
+    /* COLUNA LATERAL ESQUERDA - 30% (TELA) */
+    .sidebar {
+      width: 30%;
+      background: linear-gradient(180deg, #1e40af 0%, #1e3a8a 100%);
+      color: white;
+      padding: 2rem 1.5rem;
+    }
+    
+    .sidebar-section {
+      margin-bottom: 2rem;
+    }
+    
+    .sidebar-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgba(255,255,255,0.3);
+    }
+    
+    .sidebar-content {
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    
+    .profile-photo-sidebar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 5px solid white;
+      margin: 0 auto 1.5rem;
+      display: block;
+      object-fit: cover;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 0.6rem;
+      font-size: 0.8rem;
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    
+    .contact-icon {
+      margin-right: 0.5rem;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+    
+    .skill-text {
+      font-size: 0.8rem;
+      line-height: 1.6;
+      margin-bottom: 0.4rem;
+      color: rgba(255,255,255,0.95);
+    }
+    
+    .language-item-sidebar {
+      margin-bottom: 0.8rem;
+      font-size: 0.85rem;
+    }
+    
+    .language-name {
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+    
+    .language-level {
+      font-size: 0.75rem;
+      opacity: 0.9;
+    }
+    
+    /* COLUNA PRINCIPAL DIREITA - 70% (TELA) */
+    .main-content {
+      width: 70%;
+      padding: 2rem 2.5rem;
+      background: white;
+      overflow-y: auto;
+    }
+    
     .header-main {
       margin-bottom: 2rem;
       border-bottom: 3px solid #1e40af;
@@ -258,29 +146,6 @@ const PrintStylesV2 = () => (
       font-size: 1.1rem;
       color: #4b5563;
       font-weight: 500;
-      line-height: 1.4;
-    }
-
-    /* Informações de contato no header */
-    .contact-info {
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid #e5e7eb;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      font-size: 0.85rem;
-      color: #4b5563;
-    }
-
-    .contact-info-item {
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-
-    .contact-divider {
-      color: #d1d5db;
     }
     
     .section-main {
@@ -305,45 +170,8 @@ const PrintStylesV2 = () => (
       text-align: justify;
     }
     
-    /* Competências em colunas */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .skill-category {
-      margin-bottom: 1rem;
-    }
-
-    .skill-category-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #1e40af;
-      margin-bottom: 0.5rem;
-    }
-
-    .skill-item {
-      font-size: 0.85rem;
-      color: #374151;
-      margin-bottom: 0.3rem;
-      padding-left: 1rem;
-      position: relative;
-    }
-
-    .skill-item:before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #1e40af;
-      font-weight: bold;
-    }
-    
-    /* Experiência */
     .experience-item {
       margin-bottom: 1.5rem;
-      page-break-inside: avoid;
     }
     
     .experience-header {
@@ -367,7 +195,6 @@ const PrintStylesV2 = () => (
       font-size: 0.8rem;
       color: #6b7280;
       font-weight: 400;
-      margin-left: 0.5rem;
     }
     
     .experience-tasks {
@@ -392,7 +219,6 @@ const PrintStylesV2 = () => (
       font-weight: bold;
     }
     
-    /* Educação */
     .education-item {
       margin-bottom: 1rem;
     }
@@ -409,37 +235,15 @@ const PrintStylesV2 = () => (
       color: #1e40af;
       font-weight: 500;
     }
-
-    .education-period {
-      font-size: 0.8rem;
-      color: #6b7280;
-    }
     
-    /* Cursos - Grid de 3 colunas */
-    .courses-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.3rem 1rem;
-      margin-top: 0.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .courses-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.4rem 0.75rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .courses-grid {
-        grid-template-columns: 1fr;
-        gap: 0.4rem;
-      }
+    .courses-list {
+      display: block;
     }
     
     .course-item-simple {
-      font-size: 0.8rem;
-      line-height: 1.4;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-bottom: 0.4rem;
       color: #374151;
       display: flex;
       align-items: baseline;
@@ -449,7 +253,7 @@ const PrintStylesV2 = () => (
       content: "•";
       color: #1e40af;
       font-weight: bold;
-      margin-right: 0.4rem;
+      margin-right: 0.5rem;
       flex-shrink: 0;
     }
     
@@ -459,7 +263,7 @@ const PrintStylesV2 = () => (
     }
     
     .course-divider {
-      margin: 0 0.3rem;
+      margin: 0 0.4rem;
       color: #9ca3af;
     }
     
@@ -470,31 +274,9 @@ const PrintStylesV2 = () => (
     
     .course-date {
       color: #6b7280;
-      font-size: 0.75rem;
-    }
-
-    /* Idiomas inline */
-    .languages-inline {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .language-item {
-      font-size: 0.9rem;
-    }
-
-    .language-name {
-      font-weight: 600;
-      color: #1f2937;
-    }
-
-    .language-level {
-      color: #6b7280;
-      margin-left: 0.25rem;
+      font-size: 0.8rem;
     }
     
-    /* Footer */
     .footer {
       margin-top: 2rem;
       padding-top: 1rem;
@@ -505,17 +287,80 @@ const PrintStylesV2 = () => (
     }
     
     /* ========================================
-       ESTILOS PARA IMPRESSÃO
+       RESPONSIVIDADE MOBILE
+       ======================================== */
+    @media (max-width: 768px) {
+      .cv-wrapper {
+        padding: 0;
+        min-height: auto;
+        background: white;
+      }
+      
+      .cv-container {
+        flex-direction: column;
+        min-height: auto;
+        box-shadow: none;
+        width: 100%;
+      }
+      
+      .no-print {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        padding: 1rem;
+        width: 100%;
+        background: #f3f4f6;
+        border-bottom: 2px solid #e5e7eb;
+      }
+
+      .no-print > div {
+        width: 100% !important;
+      }
+
+      .sidebar {
+        width: 100%;
+        padding: 1.5rem 1rem;
+      }
+
+      .main-content {
+        width: 100%;
+        padding: 1.5rem 1rem;
+      }
+
+      .name-title {
+        font-size: 2rem;
+      }
+
+      .job-title {
+        font-size: 1rem;
+      }
+
+      .section-title-main {
+        font-size: 1.1rem;
+      }
+
+      .profile-photo-sidebar {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    /* ========================================
+       ESTILOS PARA IMPRESSÃO (OTIMIZADO PARA ATS)
+       Layout simplificado SEM FOTO e SEM COLUNAS
        ======================================== */
     @media print {
       body { 
         -webkit-print-color-adjust: exact; 
         print-color-adjust: exact;
         font-size: 9pt;
-        line-height: 1.25;
+        line-height: 1.3;
         margin: 0;
         padding: 0;
         background: white;
+        color: #000;
       }
       
       .no-print { 
@@ -533,32 +378,57 @@ const PrintStylesV2 = () => (
       }
       
       .cv-container {
+        display: block !important;
+        flex-direction: column !important;
         width: 100%;
         max-width: none;
         box-shadow: none;
         margin: 0;
-        padding: 0;
+        background: white;
       }
       
+      /* ESCONDE A SIDEBAR AZUL NA IMPRESSÃO */
+      .sidebar {
+        display: none !important;
+      }
+      
+      /* MAIN CONTENT OCUPA 100% NA IMPRESSÃO */
+      .main-content {
+        width: 100% !important;
+        padding: 0 !important;
+        background: white !important;
+      }
+      
+      /* HEADER SIMPLIFICADO PARA IMPRESSÃO */
       .header-main {
         margin-bottom: 1em;
         padding-bottom: 0.5em;
+        border-bottom: 2px solid #000;
+        page-break-after: avoid;
       }
       
       .name-title {
         font-size: 18pt;
+        font-weight: 700;
+        color: #000;
         margin-bottom: 0.3em;
       }
       
       .job-title {
-        font-size: 9.5pt;
+        font-size: 10pt;
+        color: #333;
+        margin-bottom: 0.5em;
       }
 
-      .contact-info {
-        font-size: 7.5pt;
-        gap: 0.5rem;
-        margin-top: 0.6em;
-        padding-top: 0.6em;
+      /* ADICIONA INFORMAÇÕES DE CONTATO NO HEADER PARA IMPRESSÃO */
+      .header-main::after {
+        content: "Email: jonathan.moyano@outlook.com.br | Tel: (13) 97412-4438 | LinkedIn: linkedin.com/in/jonathansouzamoyano | São Vicente, SP";
+        display: block;
+        font-size: 8pt;
+        color: #333;
+        margin-top: 0.5em;
+        padding-top: 0.5em;
+        border-top: 1px solid #ddd;
       }
       
       .section-main {
@@ -567,33 +437,20 @@ const PrintStylesV2 = () => (
       }
       
       .section-title-main {
-        font-size: 9.5pt;
+        font-size: 10pt;
+        font-weight: 700;
+        color: #000;
         margin-bottom: 0.4em;
         padding-bottom: 0.3em;
+        border-bottom: 1px solid #000;
+        text-transform: uppercase;
       }
       
       .section-content-main {
-        font-size: 8pt;
-        line-height: 1.35;
-      }
-
-      .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.3rem 1rem;
-      }
-
-      .skill-category {
-        margin-bottom: 0.6em;
-      }
-
-      .skill-category-title {
         font-size: 8.5pt;
-        margin-bottom: 0.3em;
-      }
-
-      .skill-item {
-        font-size: 7.5pt;
-        margin-bottom: 0.2em;
+        line-height: 1.35;
+        color: #000;
+        text-align: justify;
       }
       
       .experience-item {
@@ -606,16 +463,21 @@ const PrintStylesV2 = () => (
       }
       
       .experience-role {
-        font-size: 9pt;
+        font-size: 9.5pt;
+        font-weight: 700;
+        color: #000;
         margin-bottom: 0.1em;
       }
       
       .experience-company {
-        font-size: 7.5pt;
+        font-size: 8.5pt;
+        color: #000;
+        font-weight: 600;
       }
       
       .experience-period {
-        font-size: 7pt;
+        font-size: 7.5pt;
+        color: #333;
       }
       
       .experience-tasks li {
@@ -623,6 +485,11 @@ const PrintStylesV2 = () => (
         margin-bottom: 0.2em;
         font-size: 7.5pt;
         line-height: 1.3;
+        color: #000;
+      }
+      
+      .experience-tasks li:before {
+        color: #000;
       }
       
       .education-item {
@@ -630,28 +497,20 @@ const PrintStylesV2 = () => (
       }
       
       .education-degree {
-        font-size: 8.5pt;
+        font-size: 9pt;
+        color: #000;
       }
       
       .education-institution {
-        font-size: 7.5pt;
-      }
-
-      .education-period {
-        font-size: 7pt;
-      }
-
-      .languages-inline {
-        gap: 1rem;
-      }
-
-      .language-item {
         font-size: 8pt;
+        color: #000;
       }
       
-      .courses-grid {
+      /* CURSOS EM 3 COLUNAS PARA IMPRESSÃO */
+      .courses-list {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 0.2rem 0.8rem;
+        gap: 0.2em 0.8em;
         margin-top: 0.3em;
       }
       
@@ -660,20 +519,32 @@ const PrintStylesV2 = () => (
         line-height: 1.3;
         margin-bottom: 0;
         page-break-inside: avoid;
+        color: #000;
+      }
+      
+      .course-item-simple:before {
+        color: #000;
+        margin-right: 0.3rem;
+      }
+      
+      .course-name {
+        color: #000;
+      }
+      
+      .course-institution {
+        color: #000;
       }
       
       .course-date {
         font-size: 6.5pt;
+        color: #333;
       }
       
       .footer {
         margin-top: 0.8em;
         padding-top: 0.4em;
         font-size: 6.5pt;
-      }
-
-      .page-break {
-        page-break-before: always;
+        color: #666;
       }
     }
   `}</style>
@@ -686,36 +557,42 @@ const PrintPageV2 = () => {
 
   const sectionTitles = {
     pt: {
-      contact: 'Contato',
-      skills: 'Competências Técnicas',
-      softSkills: 'Habilidades Profissionais',
-      languages: 'Idiomas',
-      summary: 'Resumo Profissional',
-      experience: 'Experiência Profissional',
-      education: 'Formação Acadêmica',
-      courses: 'Formação Complementar',
+      contact: 'CONTATO',
+      address: 'ENDEREÇO',
+      skills: 'COMPETÊNCIAS',
+      softSkills: 'HABILIDADES TÉCNICA',
+      languages: 'IDIOMAS',
+      objective: 'OBJETIVO PROFISSIONAL',
+      summary: 'RESUMO PROFISSIONAL',
+      experience: 'EXPERIÊNCIA PROFISSIONAL',
+      education: 'FORMAÇÃO ACADÊMICA',
+      courses: 'FORMAÇÃO COMPLEMENTAR',
       updatedOn: 'Atualizado em'
     },
     en: {
-      contact: 'Contact',
-      skills: 'Technical Skills',
-      softSkills: 'Professional Skills',
-      languages: 'Languages',
-      summary: 'Professional Summary',
-      experience: 'Professional Experience',
-      education: 'Education',
-      courses: 'Complementary Training',
+      contact: 'CONTACT',
+      address: 'ADDRESS',
+      skills: 'SKILLS',
+      softSkills: 'SOFT SKILLS',
+      languages: 'LANGUAGES',
+      objective: 'PROFESSIONAL OBJECTIVE',
+      summary: 'PROFESSIONAL SUMMARY',
+      experience: 'PROFESSIONAL EXPERIENCE',
+      education: 'EDUCATION',
+      courses: 'COMPLEMENTARY TRAINING',
       updatedOn: 'Updated on'
     },
     es: {
-      contact: 'Contacto',
-      skills: 'Competencias Técnicas',
-      softSkills: 'Habilidades Profesionales',
-      languages: 'Idiomas',
-      summary: 'Resumen Profesional',
-      experience: 'Experiencia Profesional',
-      education: 'Formación Académica',
-      courses: 'Formación Complementaria',
+      contact: 'CONTACTO',
+      address: 'DIRECCIÓN',
+      skills: 'COMPETENCIAS',
+      softSkills: 'HABILIDADES BLANDAS',
+      languages: 'IDIOMAS',
+      objective: 'OBJETIVO PROFESIONAL',
+      summary: 'RESUMEN PROFESIONAL',
+      experience: 'EXPERIENCIA PROFESIONAL',
+      education: 'FORMACIÓN ACADÉMICA',
+      courses: 'FORMACIÓN COMPLEMENTARIA',
       updatedOn: 'Actualizado el'
     }
   };
@@ -754,7 +631,7 @@ const PrintPageV2 = () => {
             marginBottom: '0.5rem',
             textAlign: 'center'
           }}>Language / Idioma</p>
-          <div className="language-buttons" style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
             <button 
               onClick={() => setLang('pt')} 
               style={{
@@ -807,8 +684,7 @@ const PrintPageV2 = () => {
         </div>
 
         <button 
-          onClick={handlePrint}
-          className="print-button"
+          onClick={handlePrint} 
           style={{
             background: '#16a34a',
             color: 'white',
@@ -819,8 +695,7 @@ const PrintPageV2 = () => {
             fontSize: '0.875rem',
             border: 'none',
             cursor: 'pointer',
-            transition: 'all 0.3s',
-            width: 'auto'
+            transition: 'all 0.3s'
           }}
           onMouseEnter={(e) => e.target.style.background = '#15803d'}
           onMouseLeave={(e) => e.target.style.background = '#16a34a'}
@@ -831,145 +706,163 @@ const PrintPageV2 = () => {
 
       <div className="cv-wrapper">
         <div className="cv-container">
-          
-          {/* HEADER */}
-          <header className="header-main">
-            <h1 className="name-title">{cvData.profile.name}</h1>
-            <p className="job-title">{getText(cvData.profile.title)}</p>
-            
-            {/* Informações de contato no header */}
-            <div className="contact-info">
-              <div className="contact-info-item">
-                <span>📧</span>
-                <span>{cvData.contact[0].value}</span>
-              </div>
-              <span className="contact-divider">|</span>
-              <div className="contact-info-item">
-                <span>📱</span>
-                <span>{cvData.contact[1].value}</span>
-              </div>
-              <span className="contact-divider">|</span>
-              <div className="contact-info-item">
-                <span>💼</span>
-                <span>{cvData.contact[3].displayValue}</span>
-              </div>
-              <span className="contact-divider">|</span>
-              <div className="contact-info-item">
-                <span>📍</span>
-                <span>São Vicente, SP</span>
-              </div>
-            </div>
-          </header>
+          {/* SIDEBAR ESQUERDA (VISÍVEL NA TELA, OCULTA NA IMPRESSÃO) */}
+          <aside className="sidebar">
+            {/* Foto */}
+            <img 
+              src={cvData.profile?.image || '/jonathan.jpeg'} 
+              alt={cvData.profile?.name || 'Jonathan Souza Moyano'}
+              className="profile-photo-sidebar"
+            />
 
-          {/* RESUMO PROFISSIONAL */}
-          <section className="section-main">
-            <h2 className="section-title-main">{t.summary}</h2>
-            <p className="section-content-main">{getText(cvData.profile.summary)}</p>
-          </section>
-
-          {/* COMPETÊNCIAS TÉCNICAS */}
-          <section className="section-main">
-            <h2 className="section-title-main">{t.skills}</h2>
-            <div className="skills-grid">
-              <div className="skill-category">
-                {cvData.skills.principal.map((skill, index) => (
-                  <div key={index} className="skill-item">{getText(skill)}</div>
-                ))}
-              </div>
-              <div className="skill-category">
-                {cvData.skills.sistemas.map((skill, index) => (
-                  <div key={index} className="skill-item">{getText(skill)}</div>
-                ))}
-                {cvData.skills.nuvem.map((skill, index) => (
-                  <div key={index} className="skill-item">{getText(skill)}</div>
-                ))}
-              </div>
-              <div className="skill-category">
-                {cvData.skills.infraestrutura.map((skill, index) => (
-                  <div key={index} className="skill-item">{getText(skill)}</div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* HABILIDADES PROFISSIONAIS */}
-          <section className="section-main">
-            <h2 className="section-title-main">{t.softSkills}</h2>
-            <div className="skills-grid">
-              {cvData.softSkills.map((skill, index) => (
-                <div key={index} className="skill-item">{getText(skill)}</div>
-              ))}
-            </div>
-          </section>
-
-          {/* IDIOMAS */}
-          <section className="section-main">
-            <h2 className="section-title-main">{t.languages}</h2>
-            <div className="languages-inline">
-              {cvData.languages.map((item, index) => (
-                <div key={index} className="language-item">
-                  <span className="language-name">{getText(item.language)}:</span>
-                  <span className="language-level">{getText(item.level)}</span>
+            {/* Endereço */}
+            <div className="sidebar-section">
+              <h3 className="sidebar-title">{t.address}</h3>
+              <div className="sidebar-content">
+                <div className="contact-item">
+                  <span>{cvData.profile?.address || ''}</span>
                 </div>
-              ))}
+              </div>
             </div>
-          </section>
 
-          {/* EXPERIÊNCIA PROFISSIONAL */}
-          <section className="section-main">
-            <h2 className="section-title-main">{t.experience}</h2>
-            {cvData.experience.map((exp, index) => (
-              <div key={index} className="experience-item">
-                <div className="experience-header">
-                  <h3 className="experience-role">{getText(exp.role)}</h3>
+            {/* Contato */}
+            <div className="sidebar-section">
+              <h3 className="sidebar-title">{t.contact}</h3>
+              <div className="sidebar-content">
+                {cvData.contact?.map((item, index) => (
+                  <div key={index} className="contact-item">
+                    <span>
+                      {item.displayValue || item.value}
+                      {item.label && ` (${item.label})`}
+                    </span>
+                  </div>
+                )) || null}
+              </div>
+            </div>
+
+            {/* Competências Técnicas */}
+            <div className="sidebar-section">
+              <h3 className="sidebar-title">{t.skills}</h3>
+              <div className="sidebar-content">
+                {[
+                  ...(cvData.skills?.principal || []),
+                  ...(cvData.skills?.sistemas || []),
+                  ...(cvData.skills?.infraestrutura || []),
+                  ...(cvData.skills?.nuvem || [])
+                ].map((skill, index) => {
+                  const skillText = getText(skill);
+                  return <div key={index} className="skill-text">• {skillText}</div>;
+                })}
+              </div>
+            </div>
+
+            {/* Soft Skills */}
+            <div className="sidebar-section">
+              <h3 className="sidebar-title">{t.softSkills}</h3>
+              <div className="sidebar-content">
+                {cvData.softSkills?.slice(0, 6).map((skill, index) => {
+                  const skillText = getText(skill);
+                  return <div key={index} className="skill-text">• {skillText}</div>;
+                }) || null}
+              </div>
+            </div>
+
+            {/* Idiomas */}
+            <div className="sidebar-section">
+              <h3 className="sidebar-title">{t.languages}</h3>
+              <div className="sidebar-content">
+                {cvData.languages?.map((item, index) => (
+                  <div key={index} className="language-item-sidebar">
+                    <div className="language-name">{getText(item.language)}</div>
+                    <div className="language-level">{getText(item.level)}</div>
+                  </div>
+                )) || null}
+              </div>
+            </div>
+          </aside>
+
+          {/* MAIN CONTENT DIREITA */}
+          <main className="main-content">
+            {/* HEADER */}
+            <header className="header-main">
+              <h1 className="name-title">{cvData.profile?.name || 'Nome'}</h1>
+              <p className="job-title">{getText(cvData.profile?.title)}</p>
+            </header>
+
+            {/* OBJETIVO */}
+            {cvData.profile?.objective && (
+              <section className="section-main">
+                <h2 className="section-title-main">{t.objective}</h2>
+                <p className="section-content-main">{getText(cvData.profile.objective)}</p>
+              </section>
+            )}
+
+            {/* RESUMO PROFISSIONAL */}
+            {cvData.profile?.summary && (
+              <section className="section-main">
+                <h2 className="section-title-main">{t.summary}</h2>
+                <p className="section-content-main">{getText(cvData.profile.summary)}</p>
+              </section>
+            )}
+
+            {/* EXPERIÊNCIA PROFISSIONAL */}
+            <section className="section-main">
+              <h2 className="section-title-main">{t.experience}</h2>
+              {cvData.experience?.map((exp, index) => (
+                <div key={index} className="experience-item">
+                  <div className="experience-header">
+                    <h3 className="experience-role">{getText(exp.role)}</h3>
+                    <div>
+                      <span className="experience-company">{getText(exp.company)}</span>
+                      <span className="experience-period"> | {getText(exp.period)}</span>
+                    </div>
+                  </div>
+                  {exp.tasks?.length > 0 && (
+                    <ul className="experience-tasks">
+                      {exp.tasks.map((task, taskIndex) => (
+                        <li key={taskIndex}>{getText(task)}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              )) || null}
+            </section>
+
+            {/* FORMAÇÃO ACADÊMICA */}
+            <section className="section-main">
+              <h2 className="section-title-main">{t.education}</h2>
+              {cvData.education?.map((edu, index) => (
+                <div key={index} className="education-item">
+                  <div className="education-degree">{getText(edu.degree)}</div>
                   <div>
-                    <span className="experience-company">{getText(exp.company)}</span>
-                    <span className="experience-period">{getText(exp.period)}</span>
+                    <span className="education-institution">{edu.institution}</span>
+                    <span> • {getText(edu.period)}</span>
                   </div>
                 </div>
-                <ul className="experience-tasks">
-                  {exp.tasks.map((task, taskIndex) => (
-                    <li key={taskIndex}>{getText(task)}</li>
-                  ))}
-                </ul>
+              )) || null}
+            </section>
+
+            {/* FORMAÇÃO COMPLEMENTAR */}
+            <section className="section-main">
+              <h2 className="section-title-main">{t.courses}</h2>
+              <div className="courses-list">
+                {cvData.certifications?.map((course, index) => (
+                  <div key={index} className="course-item-simple">
+                    <span className="course-name">{course.name}</span>
+                    <span className="course-divider">•</span>
+                    <span className="course-institution">{course.institution}</span>
+                    <span className="course-divider">•</span>
+                    <span className="course-date">{course.date}</span>
+                  </div>
+                )) || null}
               </div>
-            ))}
-          </section>
+            </section>
 
-          {/* FORMAÇÃO ACADÊMICA */}
-          <section className="section-main">
-            <h2 className="section-title-main">{t.education}</h2>
-            {cvData.education.map((edu, index) => (
-              <div key={index} className="education-item">
-                <div className="education-degree">{getText(edu.degree)}</div>
-                <div>
-                  <span className="education-institution">{edu.institution}</span>
-                  <span className="education-period"> • {getText(edu.period)}</span>
-                </div>
-              </div>
-            ))}
-          </section>
-
-          {/* FORMAÇÃO COMPLEMENTAR */}
-          <section className="section-main">
-            <h2 className="section-title-main">{t.courses}</h2>
-            <div className="courses-grid">
-              {cvData.certifications.map((course, index) => (
-                <div key={index} className="course-item-simple">
-                  <span className="course-name">{course.name}</span>
-                  <span className="course-divider">•</span>
-                  <span className="course-institution">{course.institution}</span>
-                  <span className="course-divider">•</span>
-                  <span className="course-date">{course.date}</span>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* FOOTER */}
-          <footer className="footer">
-            {t.updatedOn} {formatDate(lang)}
-          </footer>
+            {/* FOOTER */}
+            <footer className="footer">
+              {t.updatedOn} {formatDate(lang)}
+            </footer>
+          </main>
         </div>
       </div>
     </>
