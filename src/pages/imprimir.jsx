@@ -6,6 +6,72 @@ import { cvData } from '@/data/cv-data';
 const PrintStylesV2 = () => (
   <style jsx global>{`
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    /* ========================================
+      ESTILOS PARA DISPOSITIVOS MÓVEIS (MAX-WIDTH: 768PX)
+      ======================================== */
+    @media (max-width: 768px) {
+      .cv-wrapper {
+        padding: 0.5rem; /* Reduz o padding externo */
+      }
+      
+      .cv-container {
+        flex-direction: column; /* Empilha a barra lateral e o conteúdo principal */
+        min-height: auto; /* Não precisa de min-height total no mobile */
+        box-shadow: none; /* Remove a sombra para mobile */
+      }
+      
+      /* COLUNA LATERAL ESQUERDA (SIDEBAR) - Se torna 100% */
+      .sidebar {
+        width: 100%; /* Largura total */
+        padding: 1.5rem 1rem; /* Ajusta o padding */
+        border-radius: 0; /* Opcional: remover bordas se houver */
+      }
+
+      /* COLUNA PRINCIPAL DIREITA (MAIN-CONTENT) - Se torna 100% */
+      .main-content {
+        width: 100%; /* Largura total */
+        padding: 1.5rem 1rem; /* Ajusta o padding */
+        overflow-y: visible; /* Garante que o conteúdo role normalmente */
+      }
+
+      /* Ajustes de Fonte e Espaçamento para Mobile */
+      .name-title {
+        font-size: 2rem; /* Reduz o tamanho do nome */
+      }
+
+      .job-title {
+        font-size: 1rem; /* Reduz o tamanho do cargo */
+      }
+
+      .section-main {
+        margin-bottom: 1rem; /* Reduz o espaçamento entre as seções */
+      }
+
+      .section-title-main {
+        font-size: 1.1rem; /* Reduz o título da seção */
+      }
+
+      .section-content-main,
+      .experience-tasks li,
+      .course-item-simple {
+        font-size: 0.8rem; /* Reduz o tamanho do texto do corpo */
+      }
+
+      /* Ajusta a posição dos controles (opcional, mas recomendado) */
+      .no-print {
+        top: 0.5rem !important;
+        right: 0.5rem !important;
+        flex-direction: row !important;
+        gap: 0.5rem !important;
+        
+        /* Ajuste do container de idioma para que fique inline */
+        & > div:first-child { 
+             /* Se possível, use flex para o container dos botões de idioma */
+        }
+
+      }
+    }
     
     /* ========================================
        ESTILOS PARA TELA (VISUALIZAÇÃO)
