@@ -5,17 +5,17 @@ export const cvData = {
   profile: {
     name: 'Jonathan Souza Moyano',
     title: {
-      pt: 'Analista de Infraestrutura de TI Pleno | Especialista em Redes, Servidores e Suporte Técnico N3',
-      en: 'Mid-Level IT Infrastructure Analyst | Specialist in Networks, Servers, and Tier 3 (T3) Technical Support',
-      es: 'Analista de Infraestructura de TI Pleno | Especialista en Redes, Servidores y Soporte Técnico Nivel 3 (N3)'
+      pt: 'Analista de Infraestrutura de TI | Especialista em Redes, Servidores e Suporte Técnico N3',
+      en: 'IT Infrastructure Analyst | Specialist in Networks, Servers and N3 Technical Support',
+      es: 'Analista de Infraestructura de TI | Especialista en Redes, Servidores y Soporte Técnico N3'
     },
     image: '/jonathan.jpeg',
     address: 'Av. Nove de Julho, 610 - Vila Cascatinha, São Vicente, SP',
     
     objective: {
-      pt: 'Analista de Infraestrutura Pleno ou Analista de Suporte Técnico N3 com foco em ambientes corporativos.',
-      en: 'Mid-Level Infrastructure Analyst or Tier 3 (T3) Technical Support Analyst, focused on corporate environments.',
-      es: 'Analista de Infraestructura Pleno o Analista de Soporte Técnico Nivel 3 (N3), con enfoque en entornos corporativos.'
+      pt: 'Analista de Infraestrutura ou Analista de Suporte Técnico com foco em ambientes corporativos.',
+      en: 'Infrastructure Analyst or Technical Support Analyst focused on corporate environments.',
+      es: 'Analista de Infraestructura o Analista de Soporte Técnico con foco en ambientes corporativos.'
     },
     
     summary: {
@@ -97,6 +97,11 @@ export const cvData = {
       }
     ],
     infraestrutura: [
+      {
+        pt: 'Equipamentos Unifi (AP, Switches, Roteadores)',
+        en: 'Unifi Equipment (AP, Switches, Routers)',
+        es: 'Equipos Unifi (AP, Switches, Routers)'
+      },
       {
         pt: 'Redes Corporativas (VLANs, Roteamento)',
         en: 'Corporate Networks (VLANs, Routing)',
@@ -212,9 +217,9 @@ export const cvData = {
   experience: [
     {  
       role: {
-        pt: 'Analista de Infraestrutura Pleno e Suporte Técnico N3',
-        en: 'Mid-Level Infrastructure Analyst and Tier 3 Technical Support',
-        es: 'Analista de Infraestructura Semi-Senior y Soporte Técnico Nivel 3'
+        pt: 'Analista de Infraestrutura e Suporte Técnico',
+        en: 'Infrastructure and Technical Support Analyst',
+        es: 'Analista de Infraestructura y Soporte Técnico'
       },
       company: 'Colégio Jean Piaget', 
       period: {
@@ -224,9 +229,9 @@ export const cvData = {
       },
       tasks: [
         {
-          pt: 'Administro infraestrutura completa de TI incluindo servidores físicos e virtualizados (Hyper-V), rede corporativa segmentada com VLANs, firewall PFSense e proxy Squid/SquidGuard integrado ao Active Directory para controle de acesso web',
-          en: 'I manage complete IT infrastructure including physical and virtualized servers (Hyper-V), segmented corporate network with VLANs, PFSense firewall and Squid/SquidGuard proxy integrated with Active Directory for web access control',
-          es: 'Administro infraestructura completa de TI incluyendo servidores físicos y virtualizados (Hyper-V), red corporativa segmentada con VLANs, firewall PFSense y proxy Squid/SquidGuard integrado con Active Directory para control de acceso web'
+          pt: 'Administro infraestrutura completa de TI incluindo servidores físicos e virtualizados (Hyper-V), rede corporativa segmentada com VLANs usando equipamentos Unifi (Access Points, Switches e Roteadores), firewall PFSense e proxy Squid/SquidGuard integrado ao Active Directory para controle de acesso web',
+          en: 'I manage complete IT infrastructure including physical and virtualized servers (Hyper-V), segmented corporate network with VLANs using Unifi equipment (Access Points, Switches and Routers), PFSense firewall and Squid/SquidGuard proxy integrated with Active Directory for web access control',
+          es: 'Administro infraestructura completa de TI incluyendo servidores físicos y virtualizados (Hyper-V), red corporativa segmentada con VLANs usando equipos Unifi (Access Points, Switches y Routers), firewall PFSense y proxy Squid/SquidGuard integrado con Active Directory para control de acceso web'
         },
         {
           pt: 'Atuo como referência técnica para a equipe de suporte N1/N2, orientando na análise de incidentes, desenvolvimento de raciocínio lógico para troubleshooting e autonomia na resolução de problemas técnicos complexos',
