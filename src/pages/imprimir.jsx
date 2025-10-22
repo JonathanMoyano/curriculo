@@ -797,9 +797,6 @@ const PrintPageV2 = () => {
               </div>
             </section>
 
-            {/* Page Break */}
-            <div className="page-break"></div>
-
             {/* Cursos - LISTA SIMPLES */}
             <section className="courses-section">
               <h3 className="section-title-main">{t.courses}</h3>
