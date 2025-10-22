@@ -212,9 +212,9 @@ export const cvData = {
   experience: [
     {  
       role: {
-        pt: 'Analista de Infraestrutura Pleno ou Analista de Suporte Técnico N3',
-        en: 'Mid-Level Infrastructure Analyst or Tier 3 (T3) Technical Support Analyst',
-        es: 'Analista de Infraestructura Pleno o Analista de Soporte Técnico Nivel 3 (N3)'
+        pt: 'Analista de Infraestrutura Pleno e Suporte Técnico N3',
+        en: 'Mid-Level Infrastructure Analyst and Tier 3 Technical Support',
+        es: 'Analista de Infraestructura Semi-Senior y Soporte Técnico Nivel 3'
       },
       company: 'Colégio Jean Piaget', 
       period: {
