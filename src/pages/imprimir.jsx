@@ -488,7 +488,7 @@ const ImprimirPage = () => {
     }
   };
 
-  // LISTA COMPLETA DE CURSOS (25 CURSOS)
+  // LISTA COMPLETA DE CURSOS (24 CURSOS)
   const allCertifications = [
     { name: 'Windows Server', institution: 'Alura', date: 'Ago/2025' },
     { name: 'Windows: Prompt - Utilizando o CMD', institution: 'Alura', date: 'Ago/2025' },
@@ -499,23 +499,22 @@ const ImprimirPage = () => {
     { name: 'Linux: Fundamentos', institution: 'FIAP', date: 'Jul/2025' },
     { name: 'Redes: Dos Conceitos Iniciais à Criação de Intranet', institution: 'Alura', date: 'Jul/2025' },
     { name: 'Redes: Construindo Projeto com VLANs e Políticas de Acesso', institution: 'Alura', date: 'Jul/2025' },
+    { name: 'Introdução ao Desenvolvimento Moderno de Software', institution: 'DIO', date: 'Jun/2024' },
     { name: 'Gestão de Infraestrutura de TI', institution: 'FIAP', date: 'Mai/2025' },
     { name: 'Microsoft Azure Data Fundamentals (DP-900)', institution: 'Ka Solution', date: 'Abr/2024' },
     { name: 'GKE: Backups Inteligentes na Google Cloud Platform', institution: 'DIO', date: 'Abr/2024' },
     { name: 'Google Cloud Fundamentals: Core Infrastructure', institution: 'Coursera', date: 'Jan/2024' },
+    { name: 'IT Service Management: Serviços de TI (ITSM)', institution: 'Udemy', date: 'Ago/2023' },
+    { name: 'ChatGPT para Python', institution: 'Udemy', date: 'Ago/2023' },
+    { name: 'Banco de Dados SQL do Zero ao Avançado', institution: 'Udemy', date: 'Jul/2023' },
+    { name: 'Programação Python do Zero ao Avançado', institution: 'Udemy', date: 'Jul/2023' },
+    { name: 'Banco de Dados Oracle SQL', institution: 'Udemy', date: 'Jun/2023' },
     { name: 'Google Cloud Associate Engineer (GCP)', institution: 'Udemy', date: 'Jun/2023' },
+    { name: 'Introdução à Ciência de Dados 3.0', institution: 'Data Science Academy', date: 'Jun/2023' },
     { name: 'AWS Amazon Cloud Computing - Iniciante', institution: 'Udemy', date: 'Mai/2023' },
     { name: 'CC50: Introdução à Ciência da Computação - Harvard', institution: 'Fundação Estudar', date: 'Jan/2023' },
-    { name: 'Reparo Avançado em Placas e Circuitos Eletrônicos', institution: 'MasterNet Cursos', date: 'Fev/2021' },
-    // CURSOS ADICIONAIS PARA COMPLETAR 25
-    { name: 'Segurança da Informação', institution: 'FIAP', date: 'Mar/2025' },
-    { name: 'Virtualização com Hyper-V', institution: 'Microsoft Learn', date: 'Fev/2025' },
-    { name: 'Active Directory: Administração Avançada', institution: 'Alura', date: 'Jan/2025' },
-    { name: 'Firewall e Segurança de Redes', institution: 'Udemy', date: 'Dez/2024' },
-    { name: 'Suporte Técnico N3: Troubleshooting Avançado', institution: 'Alura', date: 'Nov/2024' },
-    { name: 'ITIL Foundation', institution: 'Exin', date: 'Set/2024' },
-    { name: 'Docker e Kubernetes', institution: 'Alura', date: 'Ago/2024' },
-    { name: 'Python para Automação de TI', institution: 'Udemy', date: 'Jul/2024' }
+    { name: 'Algoritmos e Lógica de Programação', institution: 'Udemy', date: 'Set/2022' },
+    { name: 'Reparo Avançado em Placas e Circuitos Eletrônicos', institution: 'MasterNet Cursos', date: 'Fev/2021' }
   ];
 
   const t = sectionTitles[lang];
@@ -608,9 +607,7 @@ const ImprimirPage = () => {
             <section className="section">
               <h2 className="section-title">{t.summary}</h2>
               <div className="section-content">
-                <ul>
-                  <li>{getText(cvData.profile.summary)}</li>
-                </ul>
+                {getText(cvData.profile.summary)}
               </div>
             </section>
           )}
