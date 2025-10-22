@@ -528,7 +528,12 @@ const ImprimirPage = () => {
             <div className="contact-line">
               <strong>
                 {lang === 'pt' ? 'Celular:' : lang === 'en' ? 'Mobile:' : 'Celular:'}
-              </strong> {cvData.contact?.[1]?.value || '(13) 97412-4438'} | <strong>E-mail:</strong> {cvData.contact?.[0]?.value || 'email@email.com'}
+              </strong> {cvData.contact?.[1]?.value || '(13) 97412-4438'}
+              {cvData.contact?.[2]?.value && (
+                <span> / {cvData.contact[2].value} ({cvData.contact[2].label || 'Contato'})</span>
+              )}
+              {' | '}
+              <strong>E-mail:</strong> {cvData.contact?.[0]?.value || 'email@email.com'}
             </div>
             
             <a 
@@ -558,11 +563,7 @@ const ImprimirPage = () => {
             <section className="section">
               <h2 className="section-title">{t.summary}</h2>
               <div className="section-content">
-                <ul>
-                  {getText(cvData.profile.summary).split('.').filter(item => item.trim()).map((item, index) => (
-                    <li key={index}>{item.trim()}.</li>
-                  ))}
-                </ul>
+                {getText(cvData.profile.summary)}
               </div>
             </section>
           )}
