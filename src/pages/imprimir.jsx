@@ -796,8 +796,7 @@ const PrintPageV2 = () => {
                 ))}
               </div>
             </section>
-        
-            <section className="section-main courses-section">
+      
               
             {/* Cursos - LISTA SIMPLES */}
             <section className="courses-section">
