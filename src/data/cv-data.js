@@ -149,6 +149,43 @@ export const cvData = {
         en: 'Microsoft Azure',
         es: 'Microsoft Azure'
       }
+    ],
+    infraestrutura: [
+      {
+        pt: 'Redes Corporativas (VLANs, Roteamento)',
+        en: 'Corporate Networks (VLANs, Routing)',
+        es: 'Redes Corporativas (VLANs, Enrutamiento)'
+      },
+      {
+        pt: 'Firewall PFSense',
+        en: 'PFSense Firewall',
+        es: 'Firewall PFSense'
+      },
+      {
+        pt: 'Proxy Squid/SquidGuard com Active Directory',
+        en: 'Squid/SquidGuard Proxy with Active Directory',
+        es: 'Proxy Squid/SquidGuard con Active Directory'
+      },
+      {
+        pt: 'Cabeamento Estruturado',
+        en: 'Structured Cabling',
+        es: 'Cableado Estructurado'
+      },
+      {
+        pt: 'Monitoramento (Zabbix)',
+        en: 'Monitoring (Zabbix)',
+        es: 'Monitoreo (Zabbix)'
+      },
+      {
+        pt: 'CFTV (Intelbras)',
+        en: 'CCTV (Intelbras)',
+        es: 'CCTV (Intelbras)'
+      },
+      {
+        pt: 'Telefonia Analógica',
+        en: 'Analog Telephony',
+        es: 'Telefonía Analógica'
+      }
     ]
   },
   softSkills: [
