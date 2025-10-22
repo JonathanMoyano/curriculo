@@ -3,11 +3,8 @@ import { cvData } from '@/data/cv-data';
 
 const PrintStyles = () => (
   <style jsx global>{`
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap');
 
-    /* ========================================
-      ESTILOS PARA TELA E IMPRESSÃO (IGUAIS)
-      ======================================== */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -15,26 +12,26 @@ const PrintStyles = () => (
     }
     
     body { 
-      font-family: 'Inter', sans-serif; 
-      background: #f5f5f5;
-      color: #1f2937;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #000000;
+      line-height: 1.4;
     }
     
     .cv-wrapper {
       min-height: 100vh;
-      background: #f5f5f5;
+      background: #ffffff;
       padding: 2rem 1rem;
     }
     
     .cv-container {
-      max-width: 900px;
+      max-width: 800px;
       margin: 0 auto;
       background: white;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      padding: 3rem;
+      padding: 2rem;
     }
 
-    /* Controles de idioma e impressão */
+    /* Controles */
     .controls-bar {
       position: fixed;
       top: 1rem;
@@ -49,14 +46,14 @@ const PrintStyles = () => (
       background: white;
       border-radius: 0.5rem;
       padding: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border: 2px solid #1e40af;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border: 2px solid #333;
     }
 
     .language-label {
       font-size: 0.75rem;
-      font-weight: 600;
-      color: #4b5563;
+      font-weight: 700;
+      color: #000;
       margin-bottom: 0.5rem;
       text-align: center;
       display: block;
@@ -70,31 +67,31 @@ const PrintStyles = () => (
     .language-button {
       padding: 0.5rem 1rem;
       border-radius: 0.375rem;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 0.875rem;
-      border: none;
+      border: 2px solid #333;
       cursor: pointer;
       transition: all 0.2s;
-      background: #f3f4f6;
-      color: #374151;
+      background: white;
+      color: #000;
     }
 
     .language-button.active {
-      background: #1e40af;
+      background: #000;
       color: white;
     }
 
     .language-button:hover {
-      opacity: 0.9;
+      opacity: 0.8;
     }
 
     .print-button {
-      background: #16a34a;
+      background: #000;
       color: white;
       padding: 0.75rem 1.5rem;
       border-radius: 0.5rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      font-weight: 500;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      font-weight: 600;
       font-size: 0.875rem;
       border: none;
       cursor: pointer;
@@ -106,269 +103,167 @@ const PrintStyles = () => (
     }
 
     .print-button:hover {
-      background: #15803d;
+      background: #333;
     }
     
     /* Header */
     .header {
       text-align: center;
-      padding-bottom: 1.5rem;
-      border-bottom: 3px solid #1e40af;
-      margin-bottom: 2rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid #000;
+      margin-bottom: 1rem;
     }
     
     .name {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 700;
-      color: #1e40af;
+      color: #000;
       margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .contact-line {
+      font-size: 0.85rem;
+      color: #000;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-line strong {
+      font-weight: 700;
+    }
+
+    .linkedin-link {
+      font-size: 0.85rem;
+      color: #000;
+      text-decoration: none;
     }
     
     .title {
-      font-size: 1.1rem;
-      color: #4b5563;
-      font-weight: 500;
-      margin-bottom: 1rem;
-    }
-
-    .contact-info {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      font-size: 0.85rem;
-      color: #4b5563;
-      padding-top: 1rem;
-      border-top: 1px solid #e5e7eb;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-
-    .contact-divider {
-      color: #d1d5db;
+      font-size: 0.95rem;
+      color: #000;
+      font-weight: 700;
+      margin-top: 0.75rem;
+      text-transform: uppercase;
     }
     
     /* Sections */
     .section {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       page-break-inside: avoid;
     }
     
     .section-title {
-      font-size: 1.3rem;
+      font-size: 1rem;
       font-weight: 700;
-      color: #1e40af;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid #e5e7eb;
+      color: #000;
+      background: #d3d3d3;
+      padding: 0.4rem 0.5rem;
+      margin-bottom: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
     
     .section-content {
-      font-size: 0.95rem;
-      color: #374151;
-      line-height: 1.7;
-      text-align: justify;
-    }
-
-    /* Skills Grid */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-
-    .skill-category {
-      margin-bottom: 1rem;
-    }
-
-    .skill-category-title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #1e40af;
-      margin-bottom: 0.75rem;
-      text-transform: uppercase;
       font-size: 0.9rem;
-      letter-spacing: 0.05em;
-    }
-
-    .skill-item {
-      font-size: 0.9rem;
-      color: #374151;
-      margin-bottom: 0.5rem;
-      padding-left: 1.25rem;
-      position: relative;
+      color: #000;
       line-height: 1.5;
     }
 
-    .skill-item:before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #1e40af;
-      font-weight: bold;
-      font-size: 1.2rem;
+    .section-content ul {
+      list-style: disc;
+      margin-left: 1.25rem;
     }
 
-    /* Soft Skills */
-    .soft-skills-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.5rem 1rem;
-    }
-
-    /* Languages */
-    .languages-list {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .language-item {
-      font-size: 0.95rem;
-    }
-
-    .language-name {
-      font-weight: 600;
-      color: #1f2937;
-    }
-
-    .language-level {
-      color: #6b7280;
-      margin-left: 0.5rem;
-    }
-    
-    /* Experience */
-    .experience-item {
-      margin-bottom: 1.5rem;
-      page-break-inside: avoid;
-    }
-    
-    .experience-header {
-      margin-bottom: 0.75rem;
-    }
-    
-    .experience-role {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #1f2937;
-      margin-bottom: 0.25rem;
-    }
-    
-    .experience-company {
-      font-size: 0.95rem;
-      color: #1e40af;
-      font-weight: 600;
-    }
-    
-    .experience-period {
-      font-size: 0.85rem;
-      color: #6b7280;
-      margin-left: 0.5rem;
-    }
-    
-    .experience-tasks {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .experience-tasks li {
-      padding-left: 1.5rem;
-      position: relative;
-      margin-bottom: 0.5rem;
+    .section-content ul li {
+      margin-bottom: 0.4rem;
       font-size: 0.9rem;
-      line-height: 1.6;
-      color: #374151;
+      line-height: 1.5;
     }
-    
-    .experience-tasks li:before {
-      content: "▸";
-      position: absolute;
-      left: 0;
-      color: #1e40af;
-      font-weight: bold;
+
+    /* Skills Grid */
+    .skills-list {
+      margin-left: 1.25rem;
     }
-    
+
+    .skills-list li {
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
     /* Education */
     .education-item {
       margin-bottom: 1rem;
     }
-    
-    .education-degree {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #1f2937;
-      margin-bottom: 0.25rem;
-    }
-    
-    .education-institution {
-      font-size: 0.9rem;
-      color: #1e40af;
-      font-weight: 500;
+
+    .education-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 0.15rem;
     }
 
-    .education-period {
+    .education-meta {
       font-size: 0.85rem;
-      color: #6b7280;
-      margin-left: 0.5rem;
+      color: #000;
+      margin-bottom: 0.1rem;
+    }
+
+    .education-meta strong {
+      font-weight: 700;
     }
     
-    /* Certifications Grid */
-    .certifications-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.5rem 1rem;
+    /* Experience */
+    .experience-item {
+      margin-bottom: 1.25rem;
+      page-break-inside: avoid;
     }
     
-    .certification-item {
+    .experience-header {
+      margin-bottom: 0.4rem;
+    }
+    
+    .experience-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 0.15rem;
+    }
+    
+    .experience-period {
       font-size: 0.85rem;
+      color: #000;
+      font-style: italic;
+      margin-bottom: 0.4rem;
+    }
+
+    .experience-description {
+      font-size: 0.9rem;
+      color: #000;
       line-height: 1.5;
-      color: #374151;
-      padding-left: 1rem;
-      position: relative;
+      text-align: justify;
     }
     
-    .certification-item:before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #1e40af;
-      font-weight: bold;
+    /* Certifications */
+    .certifications-list {
+      margin-left: 1.25rem;
     }
-    
-    .cert-name {
-      font-weight: 600;
-      color: #1f2937;
+
+    .certifications-list li {
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
     }
-    
-    .cert-divider {
-      margin: 0 0.25rem;
-      color: #9ca3af;
+
+    /* Languages */
+    .languages-list {
+      margin-left: 1.25rem;
     }
-    
-    .cert-institution {
-      color: #1e40af;
-      font-weight: 500;
-    }
-    
-    .cert-date {
-      color: #6b7280;
-      font-size: 0.8rem;
-    }
-    
-    /* Footer */
-    .footer {
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 1px solid #e5e7eb;
-      text-align: center;
-      font-size: 0.8rem;
-      color: #6b7280;
+
+    .languages-list li {
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
     }
 
     /* Responsive */
@@ -378,7 +273,7 @@ const PrintStyles = () => (
       }
 
       .cv-container {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1rem;
       }
 
       .controls-bar {
@@ -387,30 +282,15 @@ const PrintStyles = () => (
       }
 
       .name {
-        font-size: 2rem;
-      }
-
-      .skills-grid,
-      .soft-skills-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .certifications-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .contact-info {
-        flex-direction: column;
-        gap: 0.5rem;
+        font-size: 1.75rem;
       }
     }
     
-    /* ========================================
-       ESTILOS PARA IMPRESSÃO
-       ======================================== */
+    /* Print Styles */
     @media print {
       body { 
         background: white;
+        font-size: 10pt;
       }
       
       .controls-bar { 
@@ -428,126 +308,99 @@ const PrintStyles = () => (
       }
       
       .cv-container {
-        box-shadow: none;
         max-width: 100%;
         padding: 0;
       }
       
       .header {
-        margin-bottom: 1.5rem;
-        padding-bottom: 1rem;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.5rem;
       }
       
       .name {
-        font-size: 20pt;
+        font-size: 16pt;
         margin-bottom: 0.3rem;
+      }
+
+      .contact-line {
+        font-size: 8.5pt;
+      }
+
+      .linkedin-link {
+        font-size: 8.5pt;
       }
       
       .title {
-        font-size: 10pt;
-      }
-
-      .contact-info {
-        font-size: 8pt;
-        gap: 0.75rem;
-        padding-top: 0.75rem;
+        font-size: 9.5pt;
+        margin-top: 0.5rem;
       }
       
       .section {
-        margin-bottom: 1.2rem;
+        margin-bottom: 1rem;
         page-break-inside: avoid;
       }
       
       .section-title {
-        font-size: 11pt;
-        margin-bottom: 0.6rem;
-        padding-bottom: 0.3rem;
+        font-size: 10pt;
+        padding: 0.3rem 0.4rem;
+        margin-bottom: 0.5rem;
       }
       
       .section-content {
         font-size: 9pt;
-        line-height: 1.4;
-      }
-
-      .skills-grid {
-        gap: 1rem;
-      }
-
-      .skill-category-title {
-        font-size: 9pt;
-        margin-bottom: 0.5rem;
-      }
-
-      .skill-item {
-        font-size: 8pt;
-        margin-bottom: 0.3rem;
         line-height: 1.3;
       }
 
-      .soft-skills-grid {
-        gap: 0.3rem 0.75rem;
-      }
-
-      .languages-list {
-        gap: 1.5rem;
-      }
-
-      .language-item {
+      .section-content ul li {
+        margin-bottom: 0.25rem;
         font-size: 9pt;
+        line-height: 1.3;
+      }
+
+      .skills-list li {
+        margin-bottom: 0.25rem;
+        font-size: 9pt;
+      }
+
+      .education-item {
+        margin-bottom: 0.75rem;
+      }
+
+      .education-title {
+        font-size: 9.5pt;
+      }
+
+      .education-meta {
+        font-size: 8.5pt;
       }
       
       .experience-item {
         margin-bottom: 1rem;
       }
       
-      .experience-role {
-        font-size: 10pt;
-        margin-bottom: 0.2rem;
-      }
-      
-      .experience-company {
-        font-size: 9pt;
+      .experience-title {
+        font-size: 9.5pt;
+        margin-bottom: 0.1rem;
       }
       
       .experience-period {
-        font-size: 8pt;
-      }
-      
-      .experience-tasks li {
-        font-size: 8pt;
-        margin-bottom: 0.25rem;
-        line-height: 1.3;
-      }
-      
-      .education-degree {
-        font-size: 9pt;
-      }
-      
-      .education-institution {
-        font-size: 8pt;
+        font-size: 8.5pt;
+        margin-bottom: 0.3rem;
       }
 
-      .education-period {
-        font-size: 7.5pt;
-      }
-      
-      .certifications-grid {
-        gap: 0.3rem 0.75rem;
-      }
-      
-      .certification-item {
-        font-size: 7.5pt;
+      .experience-description {
+        font-size: 9pt;
         line-height: 1.3;
       }
       
-      .cert-date {
-        font-size: 7pt;
+      .certifications-list li {
+        margin-bottom: 0.25rem;
+        font-size: 9pt;
       }
-      
-      .footer {
-        margin-top: 1.5rem;
-        padding-top: 0.75rem;
-        font-size: 7pt;
+
+      .languages-list li {
+        margin-bottom: 0.25rem;
+        font-size: 9pt;
       }
     }
   `}</style>
@@ -560,48 +413,32 @@ const ImprimirPage = () => {
 
   const sectionTitles = {
     pt: {
+      objective: 'OBJETIVO PROFISSIONAL',
       summary: 'RESUMO PROFISSIONAL',
-      skills: 'COMPETÊNCIAS TÉCNICAS',
-      softSkills: 'HABILIDADES PROFISSIONAIS',
-      languages: 'IDIOMAS',
-      experience: 'EXPERIÊNCIA PROFISSIONAL',
       education: 'FORMAÇÃO ACADÊMICA',
-      certifications: 'CERTIFICAÇÕES E CURSOS',
-      updatedOn: 'Atualizado em'
+      experience: 'EXPERIÊNCIA PROFISSIONAL',
+      certifications: 'CURSOS PROFISSIONALIZANTES',
+      skills: 'HABILIDADES E COMPETÊNCIAS'
     },
     en: {
+      objective: 'PROFESSIONAL OBJECTIVE',
       summary: 'PROFESSIONAL SUMMARY',
-      skills: 'TECHNICAL SKILLS',
-      softSkills: 'PROFESSIONAL SKILLS',
-      languages: 'LANGUAGES',
+      education: 'ACADEMIC BACKGROUND',
       experience: 'PROFESSIONAL EXPERIENCE',
-      education: 'EDUCATION',
-      certifications: 'CERTIFICATIONS AND COURSES',
-      updatedOn: 'Updated on'
+      certifications: 'PROFESSIONAL COURSES',
+      skills: 'SKILLS AND COMPETENCIES'
     },
     es: {
+      objective: 'OBJETIVO PROFESIONAL',
       summary: 'RESUMEN PROFESIONAL',
-      skills: 'COMPETENCIAS TÉCNICAS',
-      softSkills: 'HABILIDADES PROFESIONALES',
-      languages: 'IDIOMAS',
-      experience: 'EXPERIENCIA PROFESIONAL',
       education: 'FORMACIÓN ACADÉMICA',
-      certifications: 'CERTIFICACIONES Y CURSOS',
-      updatedOn: 'Actualizado el'
+      experience: 'EXPERIENCIA PROFESIONAL',
+      certifications: 'CURSOS PROFESIONALES',
+      skills: 'HABILIDADES Y COMPETENCIAS'
     }
   };
 
   const t = sectionTitles[lang];
-
-  const formatDate = (lang) => {
-    const date = new Date();
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    switch(lang) {
-      case 'en': return date.toLocaleDateString('en-US', options);
-      case 'es': return date.toLocaleDateString('es-ES', options);
-      default: return date.toLocaleDateString('pt-BR', options);
-    }
-  };
 
   const getText = (obj) => typeof obj === 'object' && obj !== null && obj[lang] ? obj[lang] : obj;
 
@@ -612,7 +449,7 @@ const ImprimirPage = () => {
       {/* Controles */}
       <div className="controls-bar">
         <div className="language-selector">
-          <span className="language-label">Language / Idioma</span>
+          <span className="language-label">IDIOMA / LANGUAGE</span>
           <div className="language-buttons">
             <button 
               onClick={() => setLang('pt')} 
@@ -636,7 +473,7 @@ const ImprimirPage = () => {
         </div>
 
         <button onClick={handlePrint} className="print-button">
-          🖨️ {lang === 'pt' ? 'Imprimir / PDF' : lang === 'en' ? 'Print / PDF' : 'Imprimir / PDF'}
+          🖨️ {lang === 'pt' ? 'IMPRIMIR / PDF' : lang === 'en' ? 'PRINT / PDF' : 'IMPRIMIR / PDF'}
         </button>
       </div>
 
@@ -646,122 +483,74 @@ const ImprimirPage = () => {
           {/* HEADER */}
           <header className="header">
             <h1 className="name">{cvData.profile?.name || 'Nome'}</h1>
-            <p className="title">{getText(cvData.profile?.title)}</p>
             
-            <div className="contact-info">
-              <div className="contact-item">
-                <span>📧</span>
-                <span>{cvData.contact?.[0]?.value}</span>
-              </div>
-              <span className="contact-divider">|</span>
-              <div className="contact-item">
-                <span>📱</span>
-                <span>{cvData.contact?.[1]?.value}</span>
-              </div>
-              <span className="contact-divider">|</span>
-              <div className="contact-item">
-                <span>💼</span>
-                <span>{cvData.contact?.[3]?.displayValue}</span>
-              </div>
-              <span className="contact-divider">|</span>
-              <div className="contact-item">
-                <span>📍</span>
-                <span>São Vicente, SP</span>
-              </div>
+            <div className="contact-line">
+              <strong>
+                {lang === 'pt' ? 'Endereço:' : lang === 'en' ? 'Address:' : 'Dirección:'}
+              </strong> {cvData.profile?.address || 'São Vicente, SP'}
             </div>
+            
+            <div className="contact-line">
+              <strong>
+                {lang === 'pt' ? 'Celular:' : lang === 'en' ? 'Mobile:' : 'Celular:'}
+              </strong> {cvData.contact?.[1]?.value || '(13) 97412-4438'} | <strong>E-mail:</strong> {cvData.contact?.[0]?.value || 'email@email.com'}
+            </div>
+            
+            <a 
+              href={cvData.contact?.[3]?.href || '#'} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="linkedin-link"
+            >
+              {cvData.contact?.[3]?.displayValue || 'linkedin.com/in/profile'}
+            </a>
+
+            <p className="title">{getText(cvData.profile?.title)}</p>
           </header>
+
+          {/* OBJETIVO PROFISSIONAL */}
+          {cvData.profile?.objective && (
+            <section className="section">
+              <h2 className="section-title">{t.objective}</h2>
+              <div className="section-content">
+                {getText(cvData.profile.objective)}
+              </div>
+            </section>
+          )}
 
           {/* RESUMO PROFISSIONAL */}
           {cvData.profile?.summary && (
             <section className="section">
               <h2 className="section-title">{t.summary}</h2>
-              <p className="section-content">{getText(cvData.profile.summary)}</p>
-            </section>
-          )}
-
-          {/* COMPETÊNCIAS TÉCNICAS */}
-          {cvData.skills && (
-            <section className="section">
-              <h2 className="section-title">{t.skills}</h2>
-              <div className="skills-grid">
-                
-                {/* Coluna 1 */}
-                <div>
-                  {cvData.skills.principal?.length > 0 && (
-                    <div className="skill-category">
-                      <h3 className="skill-category-title">
-                        {lang === 'pt' ? 'Principais' : lang === 'en' ? 'Main' : 'Principales'}
-                      </h3>
-                      {cvData.skills.principal.map((skill, index) => (
-                        <div key={index} className="skill-item">{getText(skill)}</div>
-                      ))}
-                    </div>
-                  )}
-
-                  {cvData.skills.sistemas?.length > 0 && (
-                    <div className="skill-category">
-                      <h3 className="skill-category-title">
-                        {lang === 'pt' ? 'Sistemas' : lang === 'en' ? 'Systems' : 'Sistemas'}
-                      </h3>
-                      {cvData.skills.sistemas.map((skill, index) => (
-                        <div key={index} className="skill-item">{getText(skill)}</div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                {/* Coluna 2 */}
-                <div>
-                  {cvData.skills.infraestrutura?.length > 0 && (
-                    <div className="skill-category">
-                      <h3 className="skill-category-title">
-                        {lang === 'pt' ? 'Infraestrutura' : lang === 'en' ? 'Infrastructure' : 'Infraestructura'}
-                      </h3>
-                      {cvData.skills.infraestrutura.map((skill, index) => (
-                        <div key={index} className="skill-item">{getText(skill)}</div>
-                      ))}
-                    </div>
-                  )}
-
-                  {cvData.skills.nuvem?.length > 0 && (
-                    <div className="skill-category">
-                      <h3 className="skill-category-title">
-                        {lang === 'pt' ? 'Cloud Computing' : lang === 'en' ? 'Cloud Computing' : 'Computación en la Nube'}
-                      </h3>
-                      {cvData.skills.nuvem.map((skill, index) => (
-                        <div key={index} className="skill-item">{getText(skill)}</div>
-                      ))}
-                    </div>
-                  )}
-                </div>
+              <div className="section-content">
+                <ul>
+                  {getText(cvData.profile.summary).split(';').filter(item => item.trim()).map((item, index) => (
+                    <li key={index}>{item.trim()}</li>
+                  ))}
+                </ul>
               </div>
             </section>
           )}
 
-          {/* HABILIDADES PROFISSIONAIS */}
-          {cvData.softSkills?.length > 0 && (
+          {/* FORMAÇÃO ACADÊMICA */}
+          {cvData.education?.length > 0 && (
             <section className="section">
-              <h2 className="section-title">{t.softSkills}</h2>
-              <div className="soft-skills-grid">
-                {cvData.softSkills.map((skill, index) => (
-                  <div key={index} className="skill-item">{getText(skill)}</div>
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* IDIOMAS */}
-          {cvData.languages?.length > 0 && (
-            <section className="section">
-              <h2 className="section-title">{t.languages}</h2>
-              <div className="languages-list">
-                {cvData.languages.map((item, index) => (
-                  <div key={index} className="language-item">
-                    <span className="language-name">{getText(item.language)}:</span>
-                    <span className="language-level">{getText(item.level)}</span>
+              <h2 className="section-title">{t.education}</h2>
+              {cvData.education.map((edu, index) => (
+                <div key={index} className="education-item">
+                  <div className="education-title">{getText(edu.degree)}</div>
+                  <div className="education-meta">
+                    <strong>
+                      {lang === 'pt' ? 'Instituição:' : lang === 'en' ? 'Institution:' : 'Institución:'}
+                    </strong> {edu.institution}
                   </div>
-                ))}
-              </div>
+                  <div className="education-meta">
+                    <strong>
+                      {lang === 'pt' ? 'Conclusão:' : lang === 'en' ? 'Completion:' : 'Conclusión:'}
+                    </strong> {getText(edu.period)}
+                  </div>
+                </div>
+              ))}
             </section>
           )}
 
@@ -772,60 +561,66 @@ const ImprimirPage = () => {
               {cvData.experience.map((exp, index) => (
                 <div key={index} className="experience-item">
                   <div className="experience-header">
-                    <h3 className="experience-role">{getText(exp.role)}</h3>
-                    <div>
-                      <span className="experience-company">{getText(exp.company)}</span>
-                      <span className="experience-period">| {getText(exp.period)}</span>
-                    </div>
+                    <div className="experience-title">{getText(exp.role)}, {getText(exp.company)}</div>
+                    <div className="experience-period">{getText(exp.period)}</div>
                   </div>
                   {exp.tasks?.length > 0 && (
-                    <ul className="experience-tasks">
+                    <div className="experience-description">
                       {exp.tasks.map((task, taskIndex) => (
-                        <li key={taskIndex}>{getText(task)}</li>
+                        <span key={taskIndex}>
+                          {getText(task)}
+                          {taskIndex < exp.tasks.length - 1 ? '; ' : '.'}
+                        </span>
                       ))}
-                    </ul>
+                    </div>
                   )}
                 </div>
               ))}
             </section>
           )}
 
-          {/* FORMAÇÃO ACADÊMICA */}
-          {cvData.education?.length > 0 && (
-            <section className="section">
-              <h2 className="section-title">{t.education}</h2>
-              {cvData.education.map((edu, index) => (
-                <div key={index} className="education-item">
-                  <div className="education-degree">{getText(edu.degree)}</div>
-                  <span className="education-institution">{edu.institution}</span>
-                  <span className="education-period">• {getText(edu.period)}</span>
-                </div>
-              ))}
-            </section>
-          )}
-
-          {/* CERTIFICAÇÕES */}
+          {/* CURSOS PROFISSIONALIZANTES */}
           {cvData.certifications?.length > 0 && (
             <section className="section">
               <h2 className="section-title">{t.certifications}</h2>
-              <div className="certifications-grid">
+              <ul className="certifications-list">
                 {cvData.certifications.map((cert, index) => (
-                  <div key={index} className="certification-item">
-                    <span className="cert-name">{cert.name}</span>
-                    <span className="cert-divider">•</span>
-                    <span className="cert-institution">{cert.institution}</span>
-                    <span className="cert-divider">•</span>
-                    <span className="cert-date">{cert.date}</span>
-                  </div>
+                  <li key={index}>
+                    {cert.name} - {cert.institution} ({cert.date});
+                  </li>
                 ))}
-              </div>
+              </ul>
             </section>
           )}
 
-          {/* FOOTER */}
-          <footer className="footer">
-            {t.updatedOn} {formatDate(lang)}
-          </footer>
+          {/* HABILIDADES E COMPETÊNCIAS */}
+          <section className="section">
+            <h2 className="section-title">{t.skills}</h2>
+            <ul className="skills-list">
+              {/* Competências Técnicas */}
+              {cvData.skills?.principal?.map((skill, index) => (
+                <li key={`principal-${index}`}>{getText(skill)};</li>
+              ))}
+              
+              {/* Soft Skills */}
+              {cvData.softSkills?.map((skill, index) => (
+                <li key={`soft-${index}`}>{getText(skill)};</li>
+              ))}
+
+              {/* Idiomas */}
+              {cvData.languages?.map((item, index) => (
+                <li key={`lang-${index}`}>
+                  {getText(item.language)}: {getText(item.level)};
+                </li>
+              ))}
+
+              {/* Trabalho em equipe (adicionar manualmente se necessário) */}
+              <li>
+                {lang === 'pt' ? 'Trabalho em equipe' : lang === 'en' ? 'Teamwork' : 'Trabajo en equipo'}.
+              </li>
+            </ul>
+          </section>
+
         </div>
       </div>
     </>
