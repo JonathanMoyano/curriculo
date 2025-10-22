@@ -291,7 +291,7 @@ const PrintStyles = () => (
       }
     }
     
-    /* Print Styles - OTIMIZADO COM FUNDO CINZA */
+    /* Print Styles - OTIMIZADO PARA REDUZIR LACUNAS */
     @media print {
       * {
         -webkit-print-color-adjust: exact !important;
@@ -301,8 +301,8 @@ const PrintStyles = () => (
 
       body { 
         background: white;
-        font-size: 9pt;
-        line-height: 1.2;
+        font-size: 8.5pt;
+        line-height: 1.15;
       }
       
       .controls-bar { 
@@ -311,7 +311,7 @@ const PrintStyles = () => (
       
       @page { 
         size: A4; 
-        margin: 1.2cm 1.5cm;
+        margin: 1cm 1.3cm;
       }
       
       .cv-wrapper {
@@ -326,131 +326,131 @@ const PrintStyles = () => (
       }
       
       .header {
-        margin-bottom: 0.5rem;
-        padding-bottom: 0.4rem;
-        border-bottom: 3px solid #000;
+        margin-bottom: 0.4rem;
+        padding-bottom: 0.3rem;
+        border-bottom: 2.5px solid #000;
       }
       
       .name {
-        font-size: 15pt;
-        margin-bottom: 0.2rem;
-      }
-
-      .contact-line {
-        font-size: 8pt;
+        font-size: 14pt;
         margin-bottom: 0.15rem;
       }
 
+      .contact-line {
+        font-size: 7.5pt;
+        margin-bottom: 0.1rem;
+      }
+
       .linkedin-link {
-        font-size: 8pt;
+        font-size: 7.5pt;
       }
       
       .title {
-        font-size: 9pt;
-        margin-top: 0.3rem;
+        font-size: 8.5pt;
+        margin-top: 0.25rem;
       }
       
       .section {
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.45rem;
         page-break-inside: avoid;
       }
       
       .section-title {
-        font-size: 9.5pt;
-        padding: 0.25rem 0.4rem;
-        margin-bottom: 0.35rem;
+        font-size: 9pt;
+        padding: 0.2rem 0.35rem;
+        margin-bottom: 0.25rem;
         background: #d3d3d3 !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
       }
       
       .section-content {
-        font-size: 8.5pt;
-        line-height: 1.25;
+        font-size: 8pt;
+        line-height: 1.2;
         text-align: justify;
       }
 
       .section-content ul {
-        margin-left: 1rem;
-        margin-top: 0.2rem;
+        margin-left: 0.9rem;
+        margin-top: 0.15rem;
         text-align: justify;
         list-style: disc;
       }
 
       .section-content ul li {
-        margin-bottom: 0.2rem;
-        font-size: 8.5pt;
-        line-height: 1.25;
+        margin-bottom: 0.15rem;
+        font-size: 8pt;
+        line-height: 1.2;
         text-align: justify;
       }
 
       .skills-list {
-        margin-left: 1rem;
-        margin-top: 0.2rem;
+        margin-left: 0.9rem;
+        margin-top: 0.15rem;
         list-style: disc;
       }
 
       .skills-list li {
-        margin-bottom: 0.2rem;
-        font-size: 8.5pt;
-        line-height: 1.2;
+        margin-bottom: 0.15rem;
+        font-size: 8pt;
+        line-height: 1.15;
       }
 
       .education-item {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.4rem;
       }
 
       .education-title {
-        font-size: 9pt;
-        margin-bottom: 0.1rem;
+        font-size: 8.5pt;
+        margin-bottom: 0.08rem;
       }
 
       .education-meta {
-        font-size: 8pt;
-        margin-bottom: 0.05rem;
+        font-size: 7.5pt;
+        margin-bottom: 0.04rem;
       }
       
       .experience-item {
-        margin-bottom: 0.65rem;
+        margin-bottom: 0.5rem;
       }
       
       .experience-title {
-        font-size: 9pt;
-        margin-bottom: 0.1rem;
+        font-size: 8.5pt;
+        margin-bottom: 0.08rem;
       }
       
       .experience-period {
-        font-size: 8pt;
-        margin-bottom: 0.25rem;
+        font-size: 7.5pt;
+        margin-bottom: 0.2rem;
       }
 
       .experience-description {
-        font-size: 8.5pt;
-        line-height: 1.25;
+        font-size: 8pt;
+        line-height: 1.2;
         text-align: justify;
       }
       
       .certifications-list {
-        margin-left: 1rem;
-        margin-top: 0.2rem;
+        margin-left: 0.9rem;
+        margin-top: 0.15rem;
         list-style: disc;
       }
 
       .certifications-list li {
-        margin-bottom: 0.2rem;
-        font-size: 8.5pt;
-        line-height: 1.2;
+        margin-bottom: 0.15rem;
+        font-size: 8pt;
+        line-height: 1.15;
       }
 
       .languages-list {
-        margin-left: 1rem;
-        margin-top: 0.2rem;
+        margin-left: 0.9rem;
+        margin-top: 0.15rem;
       }
 
       .languages-list li {
-        margin-bottom: 0.2rem;
-        font-size: 8.5pt;
-        line-height: 1.2;
+        margin-bottom: 0.15rem;
+        font-size: 8pt;
+        line-height: 1.15;
       }
     }
   `}</style>
