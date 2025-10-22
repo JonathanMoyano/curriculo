@@ -238,7 +238,7 @@ const PrintStylesV2 = () => (
     
     /* CURSOS - LISTA SIMPLES (COMO NA IMAGEM) */
     .courses-section {
-      margin-top: 1.5rem;
+      
     }
     
     .courses-list {
@@ -796,7 +796,9 @@ const PrintPageV2 = () => {
                 ))}
               </div>
             </section>
-
+        
+            <section className="section-main courses-section">
+              
             {/* Cursos - LISTA SIMPLES */}
             <section className="courses-section">
               <h3 className="section-title-main">{t.courses}</h3>
