@@ -475,4 +475,5 @@ export const cvData = {
     { title: 'CC50: Introdução à Ciência da Computação - Harvard', institution: 'Fundação Estudar', date: 'Jan/2023' },
     { title: 'Algoritmos e Lógica de Programação', institution: 'Udemy', date: 'Set/2022' },
     { title: 'Reparo Avançado em Placas e Circuitos Eletrônicos', institution: 'MasterNet Cursos', date: 'Fev/2021' }
-  ],
+  ]
+};
