@@ -5,9 +5,9 @@ export const cvData = {
   profile: {
     name: 'Jonathan Souza Moyano',
     title: {
-      pt: 'Analista de Infraestrutura de TI | Especialista em Redes, Servidores e Suporte Técnico N3',
-      en: 'IT Infrastructure Analyst | Specialist in Networks, Servers and N3 Technical Support',
-      es: 'Analista de Infraestructura de TI | Especialista en Redes, Servidores y Soporte Técnico N3'
+      pt: 'Analista de Infraestrutura de TI | Suporte Técnico N3',
+      en: 'IT Infrastructure Analyst | N3 Technical Support',
+      es: 'Analista de Infraestructura de TI | Soporte Técnico N3'
     },
     image: '/jonathan.jpeg',
     address: 'Av. Nove de Julho, 610 - Vila Cascatinha, São Vicente, SP',
@@ -208,9 +208,9 @@ export const cvData = {
         es: 'Inglés'
       },
       level: {
-        pt: 'Intermediário (A2)',
-        en: 'Intermediate (A2)',
-        es: 'Intermedio (A2)'
+        pt: 'Basico (A2)',
+        en: 'Basic (A2)',
+        es: 'Basico (A2)'
       }
     }
   ],
@@ -229,9 +229,9 @@ export const cvData = {
       },
       tasks: [
         {
-          pt: 'Administro infraestrutura completa de TI incluindo servidores físicos e virtualizados (Hyper-V), rede corporativa segmentada com VLANs usando equipamentos Unifi (Access Points, Switches e Roteadores), firewall PFSense e proxy Squid/SquidGuard integrado ao Active Directory para controle de acesso web',
-          en: 'I manage complete IT infrastructure including physical and virtualized servers (Hyper-V), segmented corporate network with VLANs using Unifi equipment (Access Points, Switches and Routers), PFSense firewall and Squid/SquidGuard proxy integrated with Active Directory for web access control',
-          es: 'Administro infraestructura completa de TI incluyendo servidores físicos y virtualizados (Hyper-V), red corporativa segmentada con VLANs usando equipos Unifi (Access Points, Switches y Routers), firewall PFSense y proxy Squid/SquidGuard integrado con Active Directory para control de acceso web'
+          pt: 'Apoio na administração infraestrutura de TI incluindo servidores físicos e virtualizados (Hyper-V), rede corporativa segmentada com VLANs usando equipamentos Unifi (Access Points, Switches e Roteadores), firewall PFSense e proxy Squid/SquidGuard integrado ao Active Directory para controle de acesso web',
+          en: 'Support in the administration of IT infrastructure including physical and virtualized servers (Hyper-V), segmented corporate network with VLANs using Unifi equipment (Access Points, Switches, and Routers), PFSense firewall, and Squid/SquidGuard proxy integrated with Active Directory for web access control',
+          es: 'Apoyo en la administración de infraestructura de TI, incluyendo servidores físicos y virtualizados (Hyper-V), red corporativa segmentada con VLANs utilizando equipos Unifi (Puntos de Acceso, Switches y Enrutadores), firewall PFSense y proxy Squid/SquidGuard integrado con Active Directory para el control de acceso web'
         },
         {
           pt: 'Atuo como referência técnica para a equipe de suporte N1/N2, orientando na análise de incidentes, desenvolvimento de raciocínio lógico para troubleshooting e autonomia na resolução de problemas técnicos complexos',
