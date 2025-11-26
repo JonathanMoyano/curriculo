@@ -5,7 +5,7 @@ export const cvData = {
   profile: {
     name: 'Jonathan Souza Moyano',
     title: {
-      pt: 'Analista de Infraestrutura de TI | Suporte Técnico N2/N3',
+      pt: 'Analista de Suporte Técnico N2/N3 | Analista de Infraestrutura de TI',
       en: 'IT Infrastructure Analyst | N2/N3 Technical Support',
       es: 'Analista de Infraestructura de TI | Soporte Técnico N2/N3'
     },
@@ -13,9 +13,9 @@ export const cvData = {
     address: 'Av. Nove de Julho, 610 - Vila Cascatinha, São Vicente, SP',
     
     objective: {
-      pt: 'Analista de Suporte Técnico N2/N3 com foco em ambientes corporativos.',
-      en: 'Infrastructure Analyst or N2/N3 Technical Support Analyst focused on corporate environments.',
-      es: 'Analista de Infraestructura o Analista de Soporte Técnico N2/N3 con foco en ambientes corporativos.'
+      pt: 'Analista de Suporte Técnico N2/N3',
+      en: 'N2/N3 Technical Support Analyst.',
+      es: 'Analista de Soporte Técnico N2/N3.'
     },
     
     summary: {
@@ -217,9 +217,9 @@ export const cvData = {
   experience: [
     {  
       role: {
-        pt: 'Analista de Infraestrutura e Suporte Técnico',
-        en: 'Infrastructure and Technical Support Analyst',
-        es: 'Analista de Infraestructura y Soporte Técnico'
+        pt: 'Analista de Infraestrutura e Suporte Técnico N2/N3',
+        en: 'Infrastructure and N2/N3 Technical Support Analyst',
+        es: 'Analista de Infraestructura y Soporte Técnico N2/N3'
       },
       company: 'Colégio Jean Piaget', 
       period: {
