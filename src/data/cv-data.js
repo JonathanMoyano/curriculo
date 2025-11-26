@@ -5,23 +5,23 @@ export const cvData = {
   profile: {
     name: 'Jonathan Souza Moyano',
     title: {
-      pt: 'Analista de Infraestrutura de TI | Suporte Técnico N3',
-      en: 'IT Infrastructure Analyst | N3 Technical Support',
-      es: 'Analista de Infraestructura de TI | Soporte Técnico N3'
+      pt: 'Analista de Infraestrutura de TI | Suporte Técnico N2/N3',
+      en: 'IT Infrastructure Analyst | N2/N3 Technical Support',
+      es: 'Analista de Infraestructura de TI | Soporte Técnico N2/N3'
     },
     image: '/jonathan.jpeg',
     address: 'Av. Nove de Julho, 610 - Vila Cascatinha, São Vicente, SP',
     
     objective: {
-      pt: 'Analista de Infraestrutura ou Analista de Suporte Técnico com foco em ambientes corporativos.',
-      en: 'Infrastructure Analyst or Technical Support Analyst focused on corporate environments.',
-      es: 'Analista de Infraestructura o Analista de Soporte Técnico con foco en ambientes corporativos.'
+      pt: 'Analista de Suporte Técnico N2/N3 com foco em ambientes corporativos.',
+      en: 'Infrastructure Analyst or N2/N3 Technical Support Analyst focused on corporate environments.',
+      es: 'Analista de Infraestructura o Analista de Soporte Técnico N2/N3 con foco en ambientes corporativos.'
     },
     
     summary: {
-      pt: 'Analista de Infraestrutura com mais de 10 anos de experiência em suporte técnico, administração de servidores e manutenção de ambientes corporativos. Atuo como referência técnica para equipes de suporte, orientando profissionais N1/N2 no desenvolvimento de visão analítica e autonomia para resolução de problemas. Experiência consolidada em administração de servidores Windows Server e Linux, gerenciamento de redes corporativas, Active Directory, virtualização com Hyper-V e sistemas ERP. Conhecimento prático em segurança de redes com implementação de firewall PFSense e proxy corporativo Squid integrado ao Active Directory. Diferenciais técnicos incluem expertise em cabeamento estruturado, diagnóstico avançado de hardware e reparo de componentes eletrônicos. Busco continuamente atualização técnica através de certificações em redes, cloud computing e infraestrutura de TI.',
-      en: 'Infrastructure Analyst with over 10 years of experience in technical support, server administration and corporate environment maintenance. I act as technical reference for support teams, guiding N1/N2 professionals in developing analytical vision and autonomy for problem resolution. Consolidated experience in Windows Server and Linux server administration, corporate network management, Active Directory, Hyper-V virtualization and ERP systems. Practical knowledge in network security with PFSense firewall implementation and Squid corporate proxy integrated with Active Directory. Technical differentials include expertise in structured cabling, advanced hardware diagnostics and electronic component repair. I continuously seek technical updates through certifications in networks, cloud computing and IT infrastructure.',
-      es: 'Analista de Infraestructura con más de 10 años de experiencia en soporte técnico, administración de servidores y mantenimiento de ambientes corporativos. Actúo como referencia técnica para equipos de soporte, orientando profesionales N1/N2 en el desarrollo de visión analítica y autonomía para resolución de problemas. Experiencia consolidada en administración de servidores Windows Server y Linux, gestión de redes corporativas, Active Directory, virtualización con Hyper-V y sistemas ERP. Conocimiento práctico en seguridad de redes con implementación de firewall PFSense y proxy corporativo Squid integrado con Active Directory. Diferenciales técnicos incluyen expertise en cableado estructurado, diagnóstico avanzado de hardware y reparación de componentes electrónicos. Busco continuamente actualización técnica a través de certificaciones en redes, cloud computing e infraestructura de TI.'
+      pt: 'Analista de suporte Técnico N2/N3 com mais de 10 anos de experiência. Atuo como referência técnica para equipes de suporte, orientando profissionais N1/N2 no desenvolvimento de visão analítica e autonomia para resolução de problemas. Experiência consolidada em administração de servidores Windows Server e Linux, gerenciamento de redes corporativas, Active Directory, virtualização com Hyper-V e sistemas ERP. Conhecimento prático em segurança de redes com implementação de firewall PFSense e proxy corporativo Squid integrado ao Active Directory. Diferenciais técnicos incluem expertise em cabeamento estruturado, diagnóstico avançado de hardware e reparo de componentes eletrônicos. Busco continuamente atualização técnica através de certificações em redes, cloud computing e infraestrutura de TI.',
+      en: 'Technical Support Analyst N2/N3 with over 10 years of experience. I serve as a technical reference for support teams, mentoring N1/N2 professionals to develop an analytical mindset and autonomy in problem-solving. Consolidated experience in Windows Server and Linux server administration, corporate network management, Active Directory, virtualization (Hyper-V), and ERP systems. Practical knowledge in network security, including the implementation of PFSense firewall and Squid corporate proxy integrated with Active Directory. Technical differentiators include expertise in structured cabling, advanced hardware diagnostics, and electronic component repair. I continuously pursue technical updates through certifications in networking, cloud computing, and IT infrastructure.',
+      es: 'Analista de Soporte Técnico N2/N3 con más de 10 años de experiencia. Me desempeño como referencia técnica para equipos de soporte, capacitando a profesionales N1/N2 en el desarrollo de visión analítica y autonomía para la resolución de problemas. Experiencia consolidada en la administración de servidores Windows Server y Linux, gestión de redes corporativas, Active Directory, virtualización con Hyper-V y sistemas ERP. Conocimiento práctico en seguridad de redes con implementación de firewall PFSense y proxy corporativo Squid integrado con Active Directory. Las ventajas técnicas diferenciales incluyen experiencia en cableado estructurado, diagnóstico avanzado de hardware y reparación de componentes electrónicos. Busco continuamente la actualización técnica a través de certificaciones en redes, cloud computing e infraestructura de TI.'
     }
   },
   contact: [
