@@ -429,9 +429,22 @@ export const cvData = {
       },
       institution: 'UNIBR',
       period: {
-        pt: 'Concluído',
-        en: 'Completed',
-        es: 'Concluido'
+        pt: 'Concluído (2025)',
+        en: 'Completed (2025',
+        es: 'Concluido(2025)'
+      }
+    },
+        { 
+      degree: {
+        pt: 'Especialização em Engenharia de Redes (Lato Sensu)',
+        en: 'Postgraduate Specialization in Network Engineering',
+        es: 'Especialización de Posgrado en Ingeniería de Redes'
+      },
+      institution: 'Pontifícia Universidade Católica de Minas Gerais (PUC Minas)',
+      period: {
+        pt: 'Em andamento (Início: 2026 / Previsão: 2027)',
+        en: 'In progress (Start: 2026 / Expected Completion: 2027)',
+        es: 'En curso (Inicio: 2026 / Finalización Prevista: 2027)'
       }
     }
   ],
